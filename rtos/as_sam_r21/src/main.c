@@ -34,41 +34,25 @@
  */
 void tarefa_1(void);
 void tarefa_2(void);
-void tarefa_3(void);
-void tarefa_4(void);
-void tarefa_5(void);
-void tarefa_6(void);
-void tarefa_7(void);
-void tarefa_8(void);
-void tarefa_9(void);
+void tarefa_periodica_preemp(void); // Nova tarefa periódica
+void tarefa_periodica_cooperativa(void); // Nova tarefa periódica
+void RTT_Handler(void);
 /*
  * Configuracao dos tamanhos das pilhas
  */
 #define TAM_PILHA_1			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_2			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_3			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_4			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_5			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
-
+#define TAM_PILHA_PERIODICA_PREEMP (TAM_MINIMO_PILHA + 24) // Tamanho da pilha da tarefa periódica
+#define TAM_PILHA_PERIODICA_COOP (TAM_MINIMO_PILHA + 24) // Tamanho da pilha da tarefa periódica
 /*
  * Declaracao das pilhas das tarefas
  */
 uint32_t PILHA_TAREFA_1[TAM_PILHA_1];
 uint32_t PILHA_TAREFA_2[TAM_PILHA_2];
-uint32_t PILHA_TAREFA_3[TAM_PILHA_3];
-uint32_t PILHA_TAREFA_4[TAM_PILHA_4];
-uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
-uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
-uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
-uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
-uint32_t PILHA_TAREFA_9[TAM_PILHA_9];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
-
+uint32_t PILHA_PERIODICA_PREEMP[TAM_PILHA_PERIODICA_PREEMP]; // Pilha da tarefa periódica
+uint32_t PILHA_PERIODICA_COOP[TAM_PILHA_PERIODICA_COOP]; // Pilha da tarefa periódica
 /*
  * Funcao principal de entrada do sistema
  */
@@ -78,17 +62,17 @@ int main(void)
 	
 		/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
-	
-	//CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
-	
-	//CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
-	
-	//CriaTarefa(tarefa_4, "Tarefa 4", PILHA_TAREFA_4, TAM_PILHA_4, 4);
-	
-	//CriaTarefa(tarefa_5, "Tarefa 5", PILHA_TAREFA_5, TAM_PILHA_5, 1);
+	rtt_enable_interrupt(RTT, RTT_MR_RTTINCIEN | RTT_MR_RTTINC(1000));
+    NVIC_EnableIRQ(RTT_IRQn);
 
-	CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 1);
+	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
 	
+	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
+
+	 /* Criar tarefa periódica */
+    CriaTarefa(tarefa_periodica_preemp, "Tarefa Periódica Preemptiva", PILHA_PERIODICA_PREEMP, TAM_PILHA_PERIODICA_PREEMP, 1);
+	/* Criar tarefa periódica */
+    CriaTarefa(tarefa_periodica_cooperativa, "Tarefa Periódica Cooperativa", PILHA_PERIODICA_COOP, TAM_PILHA_PERIODICA_COOP, 1);
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
@@ -127,145 +111,45 @@ void tarefa_2(void)
 		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
 	}
 }
-
-/* Tarefas de exemplo que usam funcoes para suspender as tarefas por algum tempo (atraso/delay) */
-void tarefa_3(void)
+/* Função de interrupção do RTT */
+void RTT_Handler(void)
 {
-	volatile uint16_t a = 0;
-	for(;;)
-	{
-		a++;	
-			
-		/* Liga LED. */
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		/* Desliga LED. */
-		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-	}
+    milissegundos++; // Incrementa o contador de milissegundos
+    TarefaContinua(1); // Ativa a tarefa periódica
 }
 
-void tarefa_4(void)
+/* Tarefa periódica executada a cada 100 ms, no modo preemptivo */
+void tarefa_periodica_preemp(void)
 {
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		b++;
-		TarefaEspera(5);	/* tarefa se coloca em espera por 5 marcas de tempo (ticks) */
-	}
+      static uint32_t contador = 0;
+    port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
+    TarefaSuspende(1);
 }
 
-/* Tarefas de exemplo que usam funcoes de semaforo */
-
-semaforo_t SemaforoTeste = {0,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_5(void)
+/* Tarefa periódica executada a cada 100 ms, no modo cooperativo */
+void tarefa_periodica_cooperativa(void)
 {
+      static uint32_t contador = 0;
 
-	uint32_t a = 0;			/* inicializa��es para a tarefa */
-	
-	for(;;)
-	{
-		
-		a++;				/* c�digo exemplo da tarefa */
+    while (1) {
+        // Executa o código da tarefa
 
-		TarefaEspera(3); 	/* tarefa se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		SemaforoLibera(&SemaforoTeste); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-	}
-}
+        // Incrementa o contador
+        contador++;
 
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_6(void)
-{
-	
-	uint32_t b = 0;	    /* inicializa��es para a tarefa */
-	
-	for(;;)
-	{
-		
-		b++; 			/* c�digo exemplo da tarefa */
-		
-		SemaforoAguarda(&SemaforoTeste); /* tarefa se coloca em espera por semaforo */
+        // Verifica se passaram 100 iterações (100 ms)
+        if (contador == 100) {
+            // Reseta o contador
+            contador = 0;
 
-	}
-}
+            port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
 
-/* solu�ao com buffer compartihado */
-/* Tarefas de exemplo que usam funcoes de semaforo */
+            // Ponto de cooperação: permite que outras tarefas executem
+            TarefaSuspende(1); // Suspender a tarefa periódica
+            TarefaContinua(2); // Continuar a tarefa 2
+        }
 
-#define TAM_BUFFER 10
-uint8_t buffer[TAM_BUFFER]; /* declaracao de um buffer (vetor) ou fila circular */
-
-semaforo_t SemaforoCheio = {0,0}; /* declaracao e inicializacao de um semaforo */
-semaforo_t SemaforoVazio = {TAM_BUFFER,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_7(void)
-{
-
-	uint8_t a = 1;			/* inicializa��es para a tarefa */
-	uint8_t i = 0;
-	
-	for(;;)
-	{
-		SemaforoAguarda(&SemaforoVazio);
-		
-		buffer[i] = a++;
-		i = (i+1)%TAM_BUFFER;
-		
-		SemaforoLibera(&SemaforoCheio); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-		TarefaEspera(10); 	/* tarefa se coloca em espera por 10 marcas de tempo (ticks), equivale a 10ms */		
-	}
-}
-
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_8(void)
-{
-	static uint8_t f = 0;
-	volatile uint8_t valor;
-		
-	for(;;)
-	{
-		volatile uint8_t contador;
-		
-		do{
-			REG_ATOMICA_INICIO();			
-				contador = SemaforoCheio.contador;			
-			REG_ATOMICA_FIM();
-			
-			if (contador == 0)
-			{
-				TarefaEspera(100);
-			}
-				
-		} while (!contador);
-		
-		SemaforoAguarda(&SemaforoCheio);
-		
-		valor = buffer[f];
-		f = (f+1) % TAM_BUFFER;	
-		
-		(void)valor;	/* leitura da vari�vel para evitar aviso (warning) do compilador */
-		
-		SemaforoLibera(&SemaforoVazio);
-	}
-}
-void tarefa_9(void)
-{
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		/* Liga LED. */
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-		TarefaEspera(b*10); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		/* Desliga LED. */
-		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
-		TarefaEspera(b*10); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-		b++;
-		
-	}
+        // Espera um curto período de tempo antes de executar novamente
+        delay_ms(1);
+    }
 }
