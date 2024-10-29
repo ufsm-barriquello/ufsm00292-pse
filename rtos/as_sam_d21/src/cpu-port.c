@@ -46,7 +46,7 @@ stackptr_t CriaContexto(tarefa_t endereco_tarefa, stackptr_t ptr_pilha)
 void ConfiguraMarcaTempo(void)
 {   
 	
-	    uint32_t cpu_clock_hz = system_cpu_clock_get_hz();
+	    uint32_t cpu_clock_hz = 48000000UL; //system_cpu_clock_get_hz();
 		uint16_t valor_comparador = cpu_clock_hz/cfg_MARCA_TEMPO_HZ; //(cfg_CPU_CLOCK_HZ / cfg_MARCA_TEMPO_HZ);
 		
 		*(NVIC_SYSTICK_CTRL) = 0;						// Desabilita SysTick Timer
@@ -54,7 +54,7 @@ void ConfiguraMarcaTempo(void)
 		*(NVIC_SYSTICK_CTRL) = NVIC_SYSTICK_CLK | NVIC_SYSTICK_INT | NVIC_SYSTICK_ENABLE;  // Inicia
 }
 
-/* rotinas de interrupção necessárias */
+/* rotinas de interrupcao necessarias */
 __attribute__ ((naked)) void SVC_Handler(void)
 {
 	/* Make PendSV and SysTick the lowest priority interrupts. */

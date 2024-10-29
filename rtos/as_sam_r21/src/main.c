@@ -17,8 +17,8 @@
  * \par Conteudo
  *
  * -# Inclui funcoes do sistema multitarefas (atraves de multitarefas.h)
- * -# Inicialização do processador e do sistema multitarefas
- * -# Criação de tarefas de demonstração
+ * -# Inicializacao do processador e do sistema multitarefas
+ * -# Criacao de tarefas de demonstracao
  *
  */
 
@@ -70,10 +70,11 @@ uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 /*
  * Funcao principal de entrada do sistema
  */
-int main(void)
+int main(int argc, char** argv)
 {
+#if 0
 	system_init();
-	
+#endif	
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
 	
@@ -85,12 +86,14 @@ int main(void)
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
 	/* Configura marca de tempo */
-	ConfiguraMarcaTempo();   
-	
+#if 0
+    ConfiguraMarcaTempo();   
+#endif	
 	/* Inicia sistema multitarefas */
 	IniciaMultitarefas();
 	
 	/* Nunca chega aqui */
+    return (EXIT_SUCCESS);
 	while (1)
 	{
 	}
@@ -103,7 +106,7 @@ void tarefa_1(void)
 	for(;;)
 	{
 		a++;
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE); /* Liga LED. */
+		//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE); /* Liga LED. */
 		TarefaContinua(2);
 	
 	}
@@ -116,7 +119,7 @@ void tarefa_2(void)
 	{
 		b++;
 		TarefaSuspende(2);	
-		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
+		//port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
 	}
 }
 
@@ -155,12 +158,12 @@ semaforo_t SemaforoTeste = {0,0}; /* declaracao e inicializacao de um semaforo *
 void tarefa_5(void)
 {
 
-	uint32_t a = 0;			/* inicializações para a tarefa */
+	uint32_t a = 0;			/* inicializacoes para a tarefa */
 	
 	for(;;)
 	{
 		
-		a++;				/* código exemplo da tarefa */
+		a++;				/* codigo exemplo da tarefa */
 
 		TarefaEspera(3); 	/* tarefa se coloca em espera por 3 marcas de tempo (ticks) */
 		
@@ -173,19 +176,19 @@ void tarefa_5(void)
 void tarefa_6(void)
 {
 	
-	uint32_t b = 0;	    /* inicializações para a tarefa */
+	uint32_t b = 0;	    /* inicializacoes para a tarefa */
 	
 	for(;;)
 	{
 		
-		b++; 			/* código exemplo da tarefa */
+		b++; 			/* codigo exemplo da tarefa */
 		
 		SemaforoAguarda(&SemaforoTeste); /* tarefa se coloca em espera por semaforo */
 
 	}
 }
 
-/* soluçao com buffer compartihado */
+/* solucao com buffer compartilhado */
 /* Tarefas de exemplo que usam funcoes de semaforo */
 
 #define TAM_BUFFER 10
@@ -197,7 +200,7 @@ semaforo_t SemaforoVazio = {TAM_BUFFER,0}; /* declaracao e inicializacao de um s
 void tarefa_7(void)
 {
 
-	uint8_t a = 1;			/* inicializações para a tarefa */
+	uint8_t a = 1;			/* inicializacoes para a tarefa */
 	uint8_t i = 0;
 	
 	for(;;)
@@ -240,7 +243,7 @@ void tarefa_8(void)
 		valor = buffer[f];
 		f = (f+1) % TAM_BUFFER;	
 		
-		(void)valor;	/* leitura da variável para evitar aviso (warning) do compilador */
+		(void)valor;	/* leitura da variavel para evitar aviso (warning) do compilador */
 		
 		SemaforoLibera(&SemaforoVazio);
 	}

@@ -17,7 +17,7 @@
 /* numero de tarefas */
 #define NUMERO_DE_TAREFAS	3
 
-/* número de prioridades/tarefas */
+/* numero de prioridades/tarefas */
 #define PRIORIDADE_MAXIMA   4
 
 /* frequencia de clock da CPU */

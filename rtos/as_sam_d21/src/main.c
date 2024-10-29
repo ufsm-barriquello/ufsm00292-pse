@@ -72,11 +72,14 @@ uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
  */
 int main(void)
 {
+    
+#if 0
 	system_init();
+#endif
 	
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
-	
+    
 	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
 	
 	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
@@ -155,12 +158,12 @@ semaforo_t SemaforoTeste = {0,0}; /* declaracao e inicializacao de um semaforo *
 void tarefa_5(void)
 {
 
-	uint32_t a = 0;			/* inicializações para a tarefa */
+	uint32_t a = 0;			/* inicializacoes para a tarefa */
 	
 	for(;;)
 	{
 		
-		a++;				/* código exemplo da tarefa */
+		a++;				/* codigo exemplo da tarefa */
 
 		TarefaEspera(3); 	/* tarefa se coloca em espera por 3 marcas de tempo (ticks) */
 		
@@ -173,19 +176,19 @@ void tarefa_5(void)
 void tarefa_6(void)
 {
 	
-	uint32_t b = 0;	    /* inicializações para a tarefa */
+	uint32_t b = 0;	    /* inicializacoes para a tarefa */
 	
 	for(;;)
 	{
 		
-		b++; 			/* código exemplo da tarefa */
+		b++; 			/* codigo exemplo da tarefa */
 		
 		SemaforoAguarda(&SemaforoTeste); /* tarefa se coloca em espera por semaforo */
 
 	}
 }
 
-/* soluçao com buffer compartihado */
+/* solucao com buffer compartihado */
 /* Tarefas de exemplo que usam funcoes de semaforo */
 
 #define TAM_BUFFER 10
@@ -197,7 +200,7 @@ semaforo_t SemaforoVazio = {TAM_BUFFER,0}; /* declaracao e inicializacao de um s
 void tarefa_7(void)
 {
 
-	uint8_t a = 1;			/* inicializações para a tarefa */
+	uint8_t a = 1;			/* inicializacoes para a tarefa */
 	uint8_t i = 0;
 	
 	for(;;)

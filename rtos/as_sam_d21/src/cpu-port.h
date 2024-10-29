@@ -24,19 +24,19 @@ typedef uint32_t* stackptr_t;
 #define NVIC_SYSTICK_CTRL       ( ( volatile unsigned long *) 0xe000e010 )
 #define NVIC_SYSTICK_LOAD       ( ( volatile unsigned long *) 0xe000e014 )
 
-#define NVIC_PENDSVSET      			0x10000000         			// Dispara exceção PendSV
+#define NVIC_PENDSVSET      			0x10000000         			// Dispara excecao PendSV
 #define NVIC_PENDSVCLR      			0x08000000         			// Limpa a flag PendSV
 #define NVIC_SYSTICK_CLK        		0x00000004
 #define NVIC_SYSTICK_INT        		0x00000002
 #define NVIC_SYSTICK_ENABLE     		0x00000001
-#define PRIO_BITS       		        4        					// 15 níveis de prioridade
+#define PRIO_BITS       		        4        					// 15 niveis de prioridade
 #define LOWEST_INTERRUPT_PRIORITY		0xF
 #define KERNEL_INTERRUPT_PRIORITY 		(LOWEST_INTERRUPT_PRIORITY << (8 - PRIO_BITS) )
 #define NVIC_PENDSV_PRI					( ( ( unsigned long ) KERNEL_INTERRUPT_PRIORITY ) << 16 )
 #define NVIC_SYSTICK_PRI				( ( ( unsigned long ) KERNEL_INTERRUPT_PRIORITY ) << 24 )
 
 
-/* macros dependentes de hardware, instruções em assembly */
+/* macros dependentes de hardware, instrucoes em assembly */
 #define REG_ATOMICA_INICIO()  	  __asm(" CPSID I");
 #define REG_ATOMICA_FIM()  		  __asm(" CPSIE I");
 
