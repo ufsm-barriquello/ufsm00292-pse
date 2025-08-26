@@ -1,0 +1,158 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+// Definições do protocolo
+#define STX 0x02
+#define ETX 0x03
+
+typedef enum {
+    FSM_WAIT_STX,
+    FSM_WAIT_QTD,
+    FSM_WAIT_DADOS,
+    FSM_WAIT_CHK,
+    FSM_WAIT_ETX,
+    FSM_COMPLETE,
+    FSM_ERROR
+} fsm_state_t;
+
+typedef struct {
+    fsm_state_t state;
+    uint8_t qtd;
+    uint8_t buffer[256];
+    uint8_t index;
+    uint8_t checksum;
+} fsm_t;
+
+// ---------- Inicialização ----------
+void fsm_Init(fsm_t *fsm) {
+    fsm->state = FSM_WAIT_STX;
+    fsm->index = 0;
+    fsm->qtd = 0;
+    fsm->checksum = 0;
+}
+
+/////////////////////// RECEPTOR ///////////////////
+bool fsm_ProcessByte(fsm_t *fsm, uint8_t byte) {
+    switch (fsm->state) {
+        case FSM_WAIT_STX:
+            if (byte == STX) {
+                fsm->state = FSM_WAIT_QTD;
+                fsm->checksum = 0;
+                fsm->index = 0;
+            }
+            break;
+
+        case FSM_WAIT_QTD:
+            fsm->qtd = byte;
+            fsm->checksum ^= byte;
+            fsm->state = FSM_WAIT_DADOS;
+            break;
+
+        case FSM_WAIT_DADOS:
+            fsm->buffer[fsm->index++] = byte;
+            fsm->checksum ^= byte;
+            if (fsm->index >= fsm->qtd) {
+                fsm->state = FSM_WAIT_CHK;
+            }
+            break;
+
+        case FSM_WAIT_CHK:
+            if (fsm->checksum == byte) {
+                fsm->state = FSM_WAIT_ETX;
+            } else {
+                fsm->state = FSM_ERROR;
+            }
+            break;
+
+        case FSM_WAIT_ETX:
+            if (byte == ETX) {
+                fsm->state = FSM_COMPLETE;
+                return true; // quadro válido
+            } else {
+                fsm->state = FSM_ERROR;
+            }
+            break;
+
+        case FSM_COMPLETE:
+        case FSM_ERROR:
+            fsm_Init(fsm); // reinicia FSM
+            break;
+    }
+    return false;
+}
+
+/////////////////////// TRANSMISSOR ///////////////////
+typedef struct {
+    uint8_t frame[260];
+    uint8_t length;
+} tx_frame_t;
+
+void buildFrame(tx_frame_t *tx, uint8_t *dados, uint8_t qtd) {
+    uint8_t checksum = 0;
+    int i = 0;
+
+    tx->frame[i++] = STX;
+    tx->frame[i++] = qtd;
+    checksum ^= qtd;
+
+    for (int j = 0; j < qtd; j++) {
+        tx->frame[i++] = dados[j];
+        checksum ^= dados[j];
+    }
+
+    tx->frame[i++] = checksum;
+    tx->frame[i++] = ETX;
+
+    tx->length = i;
+}
+
+/////////////////////// TESTES TDD ///////////////////
+void test_receptor_ok() {
+    fsm_t fsm;
+    fsm_Init(&fsm);
+
+    uint8_t dados[3] = {0x10, 0x20, 0x30};
+    tx_frame_t tx;
+    buildFrame(&tx, dados, 3);
+
+    bool result = false;
+    for (int i = 0; i < tx.length; i++) {
+        result = fsm_ProcessByte(&fsm, tx.frame[i]);
+    }
+
+    assert(result == true);
+    assert(fsm.state == FSM_COMPLETE);
+    assert(fsm.qtd == 3);
+    assert(fsm.buffer[0] == 0x10);
+    assert(fsm.buffer[1] == 0x20);
+    assert(fsm.buffer[2] == 0x30);
+
+    printf("Teste receptor OK passou!\n");
+}
+
+void test_receptor_erro_checksum() {
+    fsm_t fsm;
+    fsm_Init(&fsm);
+
+    // Frame válido, mas checksum errado
+    uint8_t frame[] = {STX, 2, 0xAA, 0xBB, 0x00, ETX};
+
+    bool result = false;
+    for (int i = 0; i < (int)(sizeof(frame) / sizeof(frame[0])); i++) {
+        result = fsm_ProcessByte(&fsm, frame[i]);
+    }
+
+    assert(result == false);
+    assert(fsm.state == FSM_ERROR);
+
+    printf("Teste receptor erro checksum passou!\n");
+}
+
+int main() {
+    test_receptor_ok();
+    test_receptor_erro_checksum();
+    return 0;
+}
