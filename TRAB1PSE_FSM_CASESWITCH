@@ -1,0 +1,117 @@
+#include <assert.h>
+#include <stdio.h>
+#include <stdint.h>
+
+// Definição dos estados
+enum Estados { STX=0, QTD, DADOS, CHK, ETX, ERRO };
+
+// Estrutura de resultado da FSM
+struct Resultado {
+    int proximo_estado;
+    int saida; // 0 = nada, 1 = sucesso, -1 = erro
+};
+
+// Função da FSM (versão simplificada para testes unitários)
+struct Resultado fsm(int estado_atual, uint8_t byte) {
+    struct Resultado r;
+    r.proximo_estado = estado_atual;
+    r.saida = 0;
+
+    switch (estado_atual) {
+        case STX:
+            if (byte == 0x02) r.proximo_estado = QTD;
+            else { r.proximo_estado = ERRO; r.saida = -1; }
+            break;
+
+        case QTD:
+            if (byte > 0) r.proximo_estado = DADOS;
+            else r.proximo_estado = CHK;
+            break;
+
+        case DADOS:
+            // Para simplificar, sempre vai pro CHK
+            r.proximo_estado = CHK;
+            break;
+
+        case CHK:
+            r.proximo_estado = ETX;
+            break;
+
+        case ETX:
+            if (byte == 0x03) { r.saida = 1; } // OK
+            else { r.saida = -1; r.proximo_estado = ERRO; }
+            break;
+
+        default:
+            r.proximo_estado = ERRO;
+            r.saida = -1;
+            break;
+    }
+    return r;
+}
+
+// ---------- TESTES ----------
+
+void teste_stx_valido() {
+    struct Resultado r = fsm(STX, 0x02);
+    assert(r.proximo_estado == QTD);
+    assert(r.saida == 0);
+    printf("Teste STX válido OK\n");
+}
+
+void teste_stx_invalido() {
+    struct Resultado r = fsm(STX, 0x55);
+    assert(r.proximo_estado == ERRO);
+    assert(r.saida == -1);
+    printf("Teste STX inválido OK\n");
+}
+
+void teste_qtd_maior_zero() {
+    struct Resultado r = fsm(QTD, 5);
+    assert(r.proximo_estado == DADOS);
+    assert(r.saida == 0);
+    printf("Teste QTD > 0 OK\n");
+}
+
+void teste_qtd_zero() {
+    struct Resultado r = fsm(QTD, 0);
+    assert(r.proximo_estado == CHK);
+    assert(r.saida == 0);
+    printf("Teste QTD = 0 OK\n");
+}
+
+void teste_dados() {
+    struct Resultado r = fsm(DADOS, 10);
+    assert(r.proximo_estado == CHK);
+    assert(r.saida == 0);
+    printf("Teste DADOS OK\n");
+}
+
+void teste_etx_valido() {
+    struct Resultado r = fsm(ETX, 0x03);
+    assert(r.proximo_estado == ETX);
+    assert(r.saida == 1);
+    printf("Teste ETX válido OK\n");
+}
+
+void teste_etx_invalido() {
+    struct Resultado r = fsm(ETX, 0x99);
+    assert(r.proximo_estado == ERRO);
+    assert(r.saida == -1);
+    printf("Teste ETX inválido OK\n");
+}
+
+// ---------- MAIN ----------
+
+int main() {
+    teste_stx_valido();
+    teste_stx_invalido();
+    teste_qtd_maior_zero();
+    teste_qtd_zero();
+    teste_dados();
+    teste_etx_valido();
+    teste_etx_invalido();
+
+    printf("\nTodos os testes passaram!\n");
+    return 0;
+}

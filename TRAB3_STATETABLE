@@ -1,0 +1,121 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <assert.h>
+
+//****************************************************************************//
+// Definições de estados e eventos
+//****************************************************************************//
+typedef enum { ST_STX, ST_QTD, ST_DADOS, ST_CHK, ST_ETX, ST_ERRO, NR_STATES } Estado;
+typedef enum { EV_BYTE, NR_EVENTS } Evento;
+
+//****************************************************************************//
+// Estrutura da tabela FSM
+//****************************************************************************//
+typedef struct {
+    void (*ptrFunc)(uint8_t byte);
+    Estado nextState;
+} FSM_STATE_TABLE;
+
+//****************************************************************************//
+// Variáveis globais
+//****************************************************************************//
+static uint8_t qtd_esperada = 0;
+static uint8_t qtd_recebida = 0;
+static uint8_t checksum = 0;
+static int resultado = 0; // 0 = nada, 1 = sucesso, -1 = erro
+
+//****************************************************************************//
+// Ações
+//****************************************************************************//
+void acao_reset(uint8_t byte) { (void)byte; qtd_esperada=0; qtd_recebida=0; checksum=0; resultado=0; }
+void acao_stx(uint8_t byte) { if(byte==0x02) resultado=0; else resultado=-1; }
+void acao_qtd(uint8_t byte) { qtd_esperada=byte; qtd_recebida=0; checksum=0; }
+void acao_dado(uint8_t byte) { checksum+=byte; qtd_recebida++; }
+void acao_chk(uint8_t byte) { if(byte==(checksum & 0xFF)) resultado=0; else resultado=-1; }
+void acao_etx(uint8_t byte) { if(byte==0x03 && resultado==0) resultado=1; else resultado=-1; }
+void acao_erro(uint8_t byte) { (void)byte; resultado=-1; }
+
+//****************************************************************************//
+// Tabela de estados (visualmente igual ao exemplo que você enviou)
+//****************************************************************************//
+FSM_STATE_TABLE StateTable[NR_STATES][NR_EVENTS] = {
+    /* ST_STX  */ { {acao_stx,  ST_QTD} },
+    /* ST_QTD  */ { {acao_qtd, ST_DADOS} },
+    /* ST_DADOS*/ { {acao_dado,ST_DADOS} },
+    /* ST_CHK  */ { {acao_chk, ST_ETX} },
+    /* ST_ETX  */ { {acao_etx, ST_ETX} },
+    /* ST_ERRO */ { {acao_erro,ST_ERRO} }
+};
+
+//****************************************************************************//
+// FSM executor
+//****************************************************************************//
+int fsm_executa(uint8_t *pacote, size_t tamanho) {
+    Estado estado = ST_STX;
+    size_t i;
+    uint8_t b;
+
+    acao_reset(0);
+
+    for (i = 0; i < tamanho; i++) {
+        b = pacote[i];
+
+        // executa ação
+        StateTable[estado][EV_BYTE].ptrFunc(b);
+
+        // se erro, vai para ST_ERRO e sai
+        if(resultado==-1) {
+            estado=ST_ERRO;
+            break;
+        }
+
+        // regra dinâmica: se terminou dados, vai para CHK
+        if(estado==ST_DADOS && qtd_recebida==qtd_esperada) {
+            estado=ST_CHK;
+        } else {
+            estado=StateTable[estado][EV_BYTE].nextState;
+        }
+    }
+
+    return resultado;
+}
+
+//****************************************************************************//
+// TESTES
+//****************************************************************************//
+void teste_pacote_valido() {
+    uint8_t pacote[] = {0x02,3,10,20,30,(uint8_t)((10+20+30)&0xFF),0x03};
+    int r = fsm_executa(pacote,sizeof(pacote));
+    assert(r==1); printf("Teste pacote válido OK\n");
+}
+
+void teste_chk_errado() {
+    uint8_t pacote[] = {0x02,2,5,7,99,0x03};
+    int r = fsm_executa(pacote,sizeof(pacote));
+    assert(r==-1); printf("Teste checksum errado OK\n");
+}
+
+void teste_stx_errado() {
+    uint8_t pacote[] = {0x55,2,1,2,3,0x03};
+    int r = fsm_executa(pacote,sizeof(pacote));
+    assert(r==-1); printf("Teste STX errado OK\n");
+}
+
+void teste_etx_errado() {
+    uint8_t pacote[] = {0x02,1,10,10,0x99};
+    int r = fsm_executa(pacote,sizeof(pacote));
+    assert(r==-1); printf("Teste ETX errado OK\n");
+}
+
+//****************************************************************************//
+// MAIN
+//****************************************************************************//
+int main() {
+    teste_pacote_valido();
+    teste_chk_errado();
+    teste_stx_errado();
+    teste_etx_errado();
+
+    printf("\nTodos os testes passaram!\n");
+    return 0;
+}
