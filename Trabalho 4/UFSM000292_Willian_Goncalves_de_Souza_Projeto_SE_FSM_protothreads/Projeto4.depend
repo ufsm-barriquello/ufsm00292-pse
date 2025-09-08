@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1757345500 source:c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\testes_protothreads.c
+	<stdio.h>
+	<string.h>
+	"protothreads_protocolo.h"
+
+1757355860 c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\protothreads_protocolo.h
+	<stdint.h>
+	<string.h>
+	"pt.h"
+
+1757355860 c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\pt.h
+
+1757344171 source:c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\hardware.c
+	"protocolo_pt.h"
+	<stdio.h>
+
+1757343968 c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\protocolo_pt.h
+	"pt.h"
+	<stdint.h>
+
+1757344189 source:c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\testes_protocolo_pt.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"protocolo_pt.h"
+	"hardware.c"
+
+1757344171 c:\users\202526060009\documents\willian\graduacao\20252\embarcados\projeto4\hardware.c
+	"protocolo_pt.h"
+	<stdio.h>
+

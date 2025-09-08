@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1756132852 source:c:\users\202526060009\documents\willian\graduacao\20252\embarcados\embarcados\protocolo_fsm.c
+	"protocolo_fsm.h"
+	<string.h>
+
+1756132851 c:\users\202526060009\documents\willian\graduacao\20252\embarcados\embarcados\protocolo_fsm.h
+	<stdint.h>
+
+1756132462 source:c:\users\202526060009\documents\willian\graduacao\20252\embarcados\embarcados\testes_protocolo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"protocolo_fsm.h"
+
