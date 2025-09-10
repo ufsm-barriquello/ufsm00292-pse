@@ -1,0 +1,206 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <assert.h>
+
+// Protothreads simplificado
+struct pt {
+  unsigned short lc;
+};
+
+#define PT_WAITING 0
+#define PT_YIELDED 1
+#define PT_EXITED  2
+#define PT_ENDED   3
+
+#define PT_THREAD(name_args) char name_args
+
+#define PT_BEGIN(pt) { char PT_YIELD_FLAG = 1; switch((pt)->lc) { case 0:
+#define PT_END(pt) } (pt)->lc = 0; return PT_ENDED; }
+
+#define PT_WAIT_UNTIL(pt, condition) \
+  do { \
+    (pt)->lc = __LINE__; case __LINE__: \
+    if(!(condition)) return PT_WAITING; \
+  } while(0)
+
+#define PT_YIELD(pt) \
+  do { \
+    (pt)->lc = __LINE__; case __LINE__: \
+    if(PT_YIELD_FLAG) { PT_YIELD_FLAG=0; return PT_YIELDED; } \
+  } while(0)
+
+#define PT_INIT(pt)   ((pt)->lc = 0)
+
+#define STX 0x02
+#define ETX 0x03
+#define ACK 0x06
+
+#define MAX_DADOS 10
+#define MAX_PACOTE 16
+#define TIMEOUT 3
+
+uint8_t buffer[MAX_PACOTE];
+uint8_t buffer_len = 0;
+uint8_t ack_received = 0;
+
+uint8_t calc_checksum(uint8_t *dados, uint8_t qtd) {
+    uint16_t soma = 0;
+    int i;
+    for(i=0; i<qtd; i++)
+        soma += dados[i];
+    return (uint8_t)(soma & 0xFF);
+}
+
+uint8_t monta_pacote(uint8_t *dados, uint8_t qtd, uint8_t *pacote) {
+    uint8_t idx = 0;
+    int i;
+    pacote[idx++] = STX;
+    pacote[idx++] = qtd;
+    for(i=0; i<qtd; i++)
+        pacote[idx++] = dados[i];
+    pacote[idx++] = calc_checksum(dados, qtd);
+    pacote[idx++] = ETX;
+    return idx;
+}
+
+int valida_pacote(uint8_t *pacote, uint8_t tam) {
+    uint8_t qtd;
+    if(tam < 5) return 0;
+    if(pacote[0] != STX) return 0;
+    if(pacote[tam-1] != ETX) return 0;
+    qtd = pacote[1];
+    if(qtd + 4 != tam) return 0;
+    if(pacote[2+qtd] != calc_checksum(&pacote[2], qtd)) return 0;
+    return 1;
+}
+
+struct pt pt_tx, pt_rx;
+
+// Variável para simular perda de pacote no receptor
+static int tentativas_receptor = 0;
+
+PT_THREAD(transmissor(struct pt *pt)) {
+    static uint8_t dados[MAX_DADOS] = {0x10, 0x20, 0x30};
+    static uint8_t pacote[MAX_PACOTE];
+    static uint8_t tentativas;
+    static uint8_t espera;
+
+    PT_BEGIN(pt);
+
+    tentativas = 0;
+    ack_received = 0;
+
+    while(tentativas < 5 && !ack_received) {
+        buffer_len = monta_pacote(dados, 3, pacote);
+        memcpy(buffer, pacote, buffer_len);
+        printf("Transmissor: Enviando pacote (tentativa %d)...\n", tentativas+1);
+
+        espera = 0;
+        while(espera < TIMEOUT && !ack_received) {
+            espera++;
+            PT_YIELD(pt);
+        }
+
+        if(!ack_received) {
+            printf("Transmissor: Timeout! Reenviando...\n");
+            tentativas++;
+        } else {
+            printf("Transmissor: ACK recebido!\n");
+        }
+    }
+
+    if(!ack_received) {
+        printf("Transmissor: Falha após 5 tentativas.\n");
+    }
+
+    PT_END(pt);
+}
+
+PT_THREAD(receptor(struct pt *pt)) {
+    PT_BEGIN(pt);
+
+    tentativas_receptor++;
+
+    if(tentativas_receptor <= 2) {
+        printf("Receptor: Pacote perdido (simulação). Tentativa %d\n", tentativas_receptor);
+        // Ignora pacote (sem ACK)
+    } else if(valida_pacote(buffer, buffer_len)) {
+        printf("Receptor: Pacote recebido com sucesso.\n");
+        ack_received = 1;
+    } else {
+        printf("Receptor: Erro no pacote recebido.\n");
+    }
+
+    PT_END(pt);
+}
+
+void testes_protocolo() {
+    uint8_t dados[] = {0x11, 0x22};
+    uint8_t pacote[MAX_PACOTE];
+    uint8_t tam;
+    int i;
+
+    // Teste 1: pacote
+    tam = monta_pacote(dados, 2, pacote);
+    printf("Teste 1 - Pacote : ");
+    for(i=0; i<tam; i++) printf("%02X ", pacote[i]);
+    printf("\n");
+    assert(valida_pacote(pacote, tam) == 1);
+    printf("Teste 1 passou ✅\n\n");
+
+    // Teste 2: checksum
+    pacote[tam-2] ^= 0xFF; // altera checksum
+    printf("Teste 2 - Checksum : ");
+    assert(valida_pacote(pacote, tam) == 0);
+    printf("Teste 2 passou ✅\n\n");
+    pacote[tam-2] ^= 0xFF; // corrige checksum
+
+    // Teste 3: ETX
+    pacote[tam-1] = 0x00;
+    printf("Teste 3 - ETX : ");
+    assert(valida_pacote(pacote, tam) == 0);
+    printf("Teste 3 passou ✅\n\n");
+    pacote[tam-1] = ETX;
+
+    // Teste 4: STX
+    pacote[0] = 0x00;
+    printf("Teste 4 - STX : ");
+    assert(valida_pacote(pacote, tam) == 0);
+    printf("Teste 4 passou ✅\n\n");
+    pacote[0] = STX;
+
+    // Teste 5: tamanho
+    pacote[1] = 5; // quantidade maior que real
+    printf("Teste 5 - Tamanho : ");
+    assert(valida_pacote(pacote, tam) == 0);
+    printf("Teste 5 passou ✅\n\n");
+    pacote[1] = 2; // corrige
+
+    printf("✅ Todos testes de protocolo passaram!\n\n");
+}
+
+
+int main(void) {
+    testes_protocolo();
+
+    PT_INIT(&pt_tx);
+    PT_INIT(&pt_rx);
+
+    int ciclos = 0;
+    int max_ciclos = 30; // para evitar loop infinito
+
+    while(!ack_received && ciclos < max_ciclos) {
+        transmissor(&pt_tx);
+        receptor(&pt_rx);
+        ciclos++;
+    }
+
+    if(ack_received) {
+        printf("Protocolo finalizado com sucesso.\n");
+    } else {
+        printf("Falha ao receber ACK após %d tentativas.\n", ciclos);
+    }
+
+    return 0;
+}
