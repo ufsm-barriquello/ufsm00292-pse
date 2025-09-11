@@ -1,0 +1,22 @@
+@startuml receiver_state
+[*] --> ESPERA_STX
+
+ESPERA_STX --> RECEBE_QUANTIDADE : STX == 0x02
+ESPERA_STX --> ERRO : outro byte
+
+
+RECEBE_QUANTIDADE --> RECEBE_DADOS : quantidade de dados
+RECEBE_QUANTIDADE --> ERRO : quantidade inválida
+
+RECEBE_DADOS --> RECEBE_DADOS : coletar dados (até N)
+RECEBE_DADOS --> RECEBE_CHK : recebidos N dados
+
+RECEBE_CHK --> RECEBE_ETX : CHK válido
+RECEBE_CHK --> ERRO : CHK inválido
+
+RECEBE_ETX --> SUCESSO : ETX == 0x03
+RECEBE_ETX --> ERRO : ETX diferente
+
+ERRO --> ESPERA_STX : descartar pacote
+SUCESSO --> ESPERA_STX
+@enduml
