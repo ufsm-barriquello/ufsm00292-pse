@@ -40,6 +40,7 @@ void tarefa_5(void);
 void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
+void tarefa_9(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
@@ -52,6 +53,7 @@ void tarefa_8(void);
 #define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -65,6 +67,7 @@ uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
 uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
+uint32_t PILHA_TAREFA_9[TAM_PILHA_9];        
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
 /*
@@ -83,6 +86,8 @@ int main(void)
 	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
 	
 	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+    
+    CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 9);
 	
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
@@ -246,3 +251,27 @@ void tarefa_8(void)
 		SemaforoLibera(&SemaforoVazio);
 	}
 }
+
+
+void tarefa_9(void)
+{
+    volatile uint8_t c = 0;
+    uint8_t valor;
+
+    for (;;)
+    {
+        SemaforoAguarda(&SemaforoCheio); 
+        REG_ATOMICA_INICIO(); 
+            valor = buffer[c];
+            c = (c + 1)%TAM_BUFFER;
+        REG_ATOMICA_FIM();
+
+        SemaforoLibera(&SemaforoVazio);      
+
+        port_pin_toggle_output_level(LED_0_PIN);
+    }
+   
+}
+
+
+

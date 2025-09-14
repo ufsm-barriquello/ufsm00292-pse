@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1756564407 source:c:\users\jaque\onedrive\documents\codeblocksprojects\ponteiro\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stdint.h"
+	"string.h"
+
