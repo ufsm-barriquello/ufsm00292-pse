@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>0</defaultConf>
+  <defaultConf>1</defaultConf>
   <confs>
     <conf name="Release" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\GNU_Arm_Embedded_Toolchain\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Users\joaos\Downloads\arm-gnu-toolchain-6.3.1.508-win32.any.x86\arm-none-eabi\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -21,9 +21,9 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="Debug" type="2">
+    <conf name="Debug" type="3">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\GNU_Arm_Embedded_Toolchain\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Users\joaos\Downloads\arm-gnu-toolchain-6.3.1.508-win32.any.x86\arm-none-eabi\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
