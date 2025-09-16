@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1757448774 source:c:\users\nicol\onedrive\documentos\c\protothreads\main.c
+	"pt.h"
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+
+1159775576 c:\users\nicol\onedrive\documentos\c\protothreads\pt.h
+	"lc.h"
+
+1109241419 c:\users\nicol\onedrive\documentos\c\protothreads\lc.h
+	"lc-switch.h"
+
+1149334183 c:\users\nicol\onedrive\documentos\c\protothreads\lc-switch.h
+
