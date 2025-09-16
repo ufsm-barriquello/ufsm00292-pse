@@ -40,6 +40,7 @@ void tarefa_5(void);
 void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
+void tarefa_9(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
@@ -52,6 +53,7 @@ void tarefa_8(void);
 #define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_9         (TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -65,6 +67,7 @@ uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
 uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
+uint32_t PILHA_TAREFA_9[TAM_PILHA_9];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
 /*
@@ -79,18 +82,17 @@ int main(void)
 	
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
+    	
+    CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
+	
+	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
     
-	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
-	
-	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
-	
-	/* Cria tarefa ociosa do sistema */
+    CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 3);
+
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
-	/* Configura marca de tempo */
 	ConfiguraMarcaTempo();   
 	
-	/* Inicia sistema multitarefas */
 	IniciaMultitarefas();
 	
 	/* Nunca chega aqui */
@@ -245,4 +247,15 @@ void tarefa_8(void)
 		
 		SemaforoLibera(&SemaforoVazio);
 	}
+}
+
+volatile uint32_t contador_tarefa9 = 0;
+
+void tarefa_9(void)
+{
+    for(;;)
+    {
+        contador_tarefa9++;
+        TarefaEspera(500);
+    }
 }
