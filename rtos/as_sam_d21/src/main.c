@@ -255,9 +255,9 @@ void tarefa_9(void)
 {
 	for(;;)
 	{
-		port_pin_set_output_level(LED_1_PIN, LED_0_ACTIVE);   // liga LED1
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);   // liga LED1
 		TarefaEspera(100);
-		port_pin_set_output_level(LED_1_PIN, !LED_0_ACTIVE);  // desliga LED1
+		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);  // desliga LED1
 		TarefaEspera(900);  // pisca a cada 1 segundo
 	}
 }
