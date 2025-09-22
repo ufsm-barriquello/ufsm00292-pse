@@ -316,12 +316,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
         <languageToolchain>ARM</languageToolchain>
-        <languageToolchainVersion>10.3.1</languageToolchainVersion>
+        <languageToolchainVersion>6.3.1</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAMR21_DFP" vendor="Microchip" version="2.0.46"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -350,7 +350,7 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../src/ASF/common/boards/board.h" ex="true" overriding="false">
+      <item path="../src/ASF/common/boards/board.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -366,7 +366,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/ASF/common/utils/interrupt.h" ex="true" overriding="false">
+      <item path="../src/ASF/common/utils/interrupt.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -383,7 +383,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -400,7 +400,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/ASF/common/utils/parts.h" ex="true" overriding="false">
+      <item path="../src/ASF/common/utils/parts.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -417,7 +417,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -434,7 +434,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/ASF/sam0/drivers/port/port.h" ex="true" overriding="false">
+      <item path="../src/ASF/sam0/drivers/port/port.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -451,7 +451,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -469,7 +469,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -487,7 +487,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_config_check.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -505,7 +505,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -523,7 +523,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/gclk.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -541,7 +541,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -559,7 +559,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21/system_interrupt_features.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -577,7 +577,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/pinmux.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -595,7 +595,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -613,7 +613,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/power/power_sam_d_r_h/power.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -631,7 +631,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h/reset.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -649,7 +649,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/system.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -667,7 +667,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/ac.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -685,7 +685,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/adc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -703,7 +703,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/dmac.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -721,7 +721,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/dsu.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -739,7 +739,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/eic.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -757,7 +757,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/evsys.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -775,7 +775,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/gclk.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -793,7 +793,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/hmatrixb.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -811,7 +811,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/mtb.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -829,7 +829,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/nvmctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -847,7 +847,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/pac.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -865,7 +865,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/pm.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -883,7 +883,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/port.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -901,7 +901,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/rfctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -919,7 +919,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/rtc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -937,7 +937,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/sercom.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -955,7 +955,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/sysctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -973,7 +973,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/tc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -991,7 +991,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/tcc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1009,7 +1009,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/usb.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1027,7 +1027,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/wdt.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1045,7 +1045,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/ac.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1063,7 +1063,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/adc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1081,7 +1081,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/dmac.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1099,7 +1099,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/dsu.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1117,7 +1117,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/eic.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1135,7 +1135,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/evsys.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1153,7 +1153,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/gclk.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1171,7 +1171,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/mtb.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1189,7 +1189,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/nvmctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1207,7 +1207,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac0.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1225,7 +1225,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac1.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1243,7 +1243,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac2.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1261,7 +1261,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pm.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1279,7 +1279,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/port.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1297,7 +1297,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/rfctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1315,7 +1315,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/rtc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1333,7 +1333,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sbmatrix.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1351,7 +1351,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom0.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1369,7 +1369,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom1.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1387,7 +1387,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom2.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1405,7 +1405,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom3.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1423,7 +1423,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom4.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1441,7 +1441,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom5.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1459,7 +1459,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sysctrl.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1477,7 +1477,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc3.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1495,7 +1495,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc4.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1513,7 +1513,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc5.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1531,7 +1531,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc0.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1549,7 +1549,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc1.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1567,7 +1567,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc2.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1585,7 +1585,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/usb.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1603,7 +1603,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/wdt.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1621,7 +1621,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e16a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1639,7 +1639,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e17a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1657,7 +1657,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e18a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1675,7 +1675,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e19a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1693,7 +1693,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g16a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1711,7 +1711,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g17a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1729,7 +1729,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g18a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1747,7 +1747,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1765,7 +1765,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e16a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1783,7 +1783,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e17a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1801,7 +1801,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e18a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1819,7 +1819,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e19a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1837,7 +1837,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g16a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1855,7 +1855,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g17a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1873,7 +1873,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g18a.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1891,7 +1891,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/source/system_samr21.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1908,7 +1908,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/ASF/sam0/utils/compiler.h" ex="true" overriding="false">
+      <item path="../src/ASF/sam0/utils/compiler.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -1925,7 +1925,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/header_files/io.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1943,7 +1943,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/linker_scripts/samr21/gcc/samr21g18a_flash.ld"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1961,7 +1961,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/make/Makefile.sam.in"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1979,7 +1979,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrecursion.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -1997,7 +1997,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrepeat.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2015,7 +2015,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/preprocessor.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2033,7 +2033,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/stringz.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2051,7 +2051,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/tpaste.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2068,7 +2068,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/ASF/sam0/utils/status_codes.h" ex="true" overriding="false">
+      <item path="../src/ASF/sam0/utils/status_codes.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -2085,7 +2085,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2103,7 +2103,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2121,7 +2121,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/arm_math.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2139,7 +2139,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2157,7 +2157,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2175,7 +2175,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2193,7 +2193,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2211,7 +2211,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/license.txt"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2229,7 +2229,7 @@
         </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/README.txt"
-            ex="true"
+            ex="false"
             overriding="false">
         <ARM-AR>
         </ARM-AR>
@@ -2246,7 +2246,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/asf.h" ex="true" overriding="false">
+      <item path="../src/asf.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -2262,7 +2262,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/config/conf_board.h" ex="true" overriding="false">
+      <item path="../src/config/conf_board.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -2278,7 +2278,7 @@
         <ARM-LD>
         </ARM-LD>
       </item>
-      <item path="../src/config/conf_clocks.h" ex="true" overriding="false">
+      <item path="../src/config/conf_clocks.h" ex="false" overriding="false">
         <ARM-AR>
         </ARM-AR>
         <ARM-AS>
@@ -2299,18 +2299,15 @@
       </ARM-AR>
       <ARM-AS>
         <property key="announce-version" value="false"/>
-        <property key="include-paths"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="include-paths" value=""/>
         <property key="suppress-warnings" value="false"/>
       </ARM-AS>
       <ARM-AS-PRE>
         <property key="announce-version" value="false"/>
-        <property key="include-paths"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="include-paths" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="preprocessor-macros-undefined" value=""/>
         <property key="suppress-warnings" value="false"/>
-        <appendMe value="-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__"/>
       </ARM-AS-PRE>
       <ARM-CPP>
         <property key="additional-warnings" value="true"/>
@@ -2323,11 +2320,11 @@
         <property key="extra-warnings" value="false"/>
         <property key="fast-math" value="false"/>
         <property key="garbage-collect-data" value="false"/>
-        <property key="garbage-collect-functions" value="false"/>
+        <property key="garbage-collect-functions" value="true"/>
         <property key="inhibit-all" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-Os"/>
         <property key="position-independent" value="false"/>
         <property key="preprocess-only" value="false"/>
         <property key="preprocessor-macros" value=""/>
@@ -2345,8 +2342,7 @@
         <property key="called-functions-located" value="true"/>
         <property key="default-bitfield-type" value="false"/>
         <property key="default-char-type" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="extra-include-directories" value=""/>
         <property key="extra-warnings" value="false"/>
         <property key="fast-math" value="false"/>
         <property key="garbage-collect-data" value="false"/>
@@ -2356,8 +2352,7 @@
         <property key="no-system-directories" value="false"/>
         <property key="optimization-level" value="-Os"/>
         <property key="position-independent" value="false"/>
-        <property key="preprocessor-macros"
-                  value="NDEBUG;__SAMR21G18A__;BOARD=SAMR21_XPLAINED_PRO;ARM_MATH_CM0PLUS=true"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="preprocessor-macros-undefined" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="strict-ansi-errors" value="false"/>
@@ -2366,28 +2361,26 @@
         <property key="undefined-identifier" value="false"/>
         <property key="unsafe-math" value="false"/>
         <property key="verbose" value="false"/>
-        <appendMe value="-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -fdata-sections"/>
       </ARM-GCC>
       <ARM-Global>
-        <property key="bin" value="true"/>
+        <property key="bin" value="false"/>
         <property key="common-include-directories" value=""/>
-        <property key="eep" value="true"/>
+        <property key="eep" value="false"/>
         <property key="hex" value="true"/>
-        <property key="lss" value="true"/>
-        <property key="omit-pack-options" value="true"/>
+        <property key="lss" value="false"/>
+        <property key="omit-pack-options" value="false"/>
         <property key="processor-mode" value="-mthumb"/>
-        <property key="srec" value="true"/>
+        <property key="srec" value="false"/>
         <property key="user-pack-include" value=""/>
       </ARM-Global>
       <ARM-LD>
-        <property key="additional-specs" value=""/>
+        <property key="additional-specs" value="--specs=nosys.specs"/>
         <property key="exclude-standard-libraries" value="false"/>
-        <property key="extra-lib-directories"
-                  value="../src/ASF/thirdparty/CMSIS/Lib/GCC"/>
+        <property key="extra-lib-directories" value=""/>
         <property key="fast-math" value="false"/>
         <property key="flash-segment" value=""/>
         <property key="generate-map-file" value="true"/>
-        <property key="input-libraries" value="libarm_cortexM0l_math;libm"/>
+        <property key="input-libraries" value=""/>
         <property key="no-default-libs" value="false"/>
         <property key="no-shared-libraries" value="false"/>
         <property key="no-startup-files" value="false"/>
@@ -2395,10 +2388,9 @@
         <property key="other-options" value=""/>
         <property key="position-independent" value="false"/>
         <property key="remove-unused-sections" value="true"/>
-        <property key="size-optimized-library" value="true"/>
+        <property key="size-optimized-library" value="false"/>
         <property key="sram-segment" value=""/>
         <property key="unsafe-math" value="false"/>
-        <appendMe value="-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam0/utils/linker_scripts/samr21/gcc/samr21g18a_flash.ld"/>
       </ARM-LD>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
@@ -2718,6 +2710,9 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W0500_BMX_EXECUTE_OUTSIDE_BOUNDARY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0501_BMX_WRITE_IRAM" value="report"/>
         <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>
@@ -3193,6 +3188,9 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W0500_BMX_EXECUTE_OUTSIDE_BOUNDARY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0501_BMX_WRITE_IRAM" value="report"/>
         <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>
@@ -3351,7 +3349,7 @@
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Tool>
     </conf>
-    <conf name="Debug" type="2">
+    <conf name="Debug" type="3">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>ATSAMR21G18A</targetDevice>
@@ -3359,7 +3357,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
         <languageToolchain>ARM</languageToolchain>
-        <languageToolchainVersion>10.3.1</languageToolchainVersion>
+        <languageToolchainVersion>6.3.1</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -3394,1966 +3392,1963 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../src/ASF/common/boards/board.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/common/utils/interrupt.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/common/utils/parts.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/port/port.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_config_check.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/gclk.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21/system_interrupt_features.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/pinmux.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/power/power_sam_d_r_h/power.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h/reset.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/drivers/system/system.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/ac.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/adc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/dmac.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/dsu.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/eic.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/evsys.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/gclk.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/hmatrixb.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/mtb.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/nvmctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/pac.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/pm.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/port.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/rfctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/rtc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/sercom.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/sysctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/tc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/tcc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/usb.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/component/wdt.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/ac.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/adc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/dmac.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/dsu.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/eic.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/evsys.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/gclk.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/mtb.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/nvmctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac0.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac1.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pac2.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/pm.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/port.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/rfctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/rtc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sbmatrix.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom0.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom1.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom2.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom3.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom4.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sercom5.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/sysctrl.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc3.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc4.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tc5.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc0.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc1.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/tcc2.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/usb.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/instance/wdt.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e16a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e17a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e18a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21e19a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g16a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g17a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/pio/samr21g18a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e16a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e17a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e18a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21e19a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g16a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g17a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/include/samr21g18a.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samr21/source/system_samr21.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/compiler.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/header_files/io.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/linker_scripts/samr21/gcc/samr21g18a_flash.ld"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/make/Makefile.sam.in"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrecursion.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrepeat.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/preprocessor.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/stringz.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/tpaste.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/sam0/utils/status_codes.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/arm_math.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/license.txt"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/README.txt"
             ex="true"
             overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/asf.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/config/conf_board.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../src/config/conf_clocks.h" ex="true" overriding="false">
-        <ARM-AR>
-        </ARM-AR>
-        <ARM-AS>
-        </ARM-AS>
-        <ARM-AS-PRE>
-        </ARM-AS-PRE>
-        <ARM-CPP>
-        </ARM-CPP>
-        <ARM-GCC>
-        </ARM-GCC>
-        <ARM-Global>
-        </ARM-Global>
-        <ARM-LD>
-        </ARM-LD>
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <ARM-AR>
         <property key="archiver-flags" value="-r"/>
       </ARM-AR>
       <ARM-AS>
         <property key="announce-version" value="false"/>
-        <property key="include-paths"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="include-paths" value=""/>
         <property key="suppress-warnings" value="false"/>
       </ARM-AS>
       <ARM-AS-PRE>
         <property key="announce-version" value="false"/>
-        <property key="include-paths"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="include-paths" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="preprocessor-macros-undefined" value=""/>
         <property key="suppress-warnings" value="false"/>
-        <appendMe value="-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__"/>
       </ARM-AS-PRE>
       <ARM-CPP>
         <property key="additional-warnings" value="true"/>
@@ -5366,11 +5361,11 @@
         <property key="extra-warnings" value="false"/>
         <property key="fast-math" value="false"/>
         <property key="garbage-collect-data" value="false"/>
-        <property key="garbage-collect-functions" value="false"/>
+        <property key="garbage-collect-functions" value="true"/>
         <property key="inhibit-all" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-Os"/>
         <property key="position-independent" value="false"/>
         <property key="preprocess-only" value="false"/>
         <property key="preprocessor-macros" value=""/>
@@ -5388,8 +5383,7 @@
         <property key="called-functions-located" value="true"/>
         <property key="default-bitfield-type" value="false"/>
         <property key="default-char-type" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src/ASF/common/boards;../src/ASF/sam0/utils;../src/ASF/sam0/utils/header_files;../src/ASF/sam0/utils/preprocessor;../src/ASF/thirdparty/CMSIS/Include;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/common/utils;../src/ASF/sam0/utils/cmsis/samr21/include;../src/ASF/sam0/utils/cmsis/samr21/source;../src/ASF/sam0/drivers/port;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/power/power_sam_d_r_h;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h;../src/ASF/sam0/boards;../src/ASF/sam0/boards/samr21_xplained_pro;../src;../src/config"/>
+        <property key="extra-include-directories" value=""/>
         <property key="extra-warnings" value="false"/>
         <property key="fast-math" value="false"/>
         <property key="garbage-collect-data" value="false"/>
@@ -5397,10 +5391,9 @@
         <property key="inhibit-all" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-Os"/>
         <property key="position-independent" value="false"/>
-        <property key="preprocessor-macros"
-                  value="DEBUG;__SAMR21G18A__;BOARD=SAMR21_XPLAINED_PRO;ARM_MATH_CM0PLUS=true"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="preprocessor-macros-undefined" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="strict-ansi-errors" value="false"/>
@@ -5409,28 +5402,26 @@
         <property key="undefined-identifier" value="false"/>
         <property key="unsafe-math" value="false"/>
         <property key="verbose" value="false"/>
-        <appendMe value="-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -fdata-sections -g3"/>
       </ARM-GCC>
       <ARM-Global>
-        <property key="bin" value="true"/>
+        <property key="bin" value="false"/>
         <property key="common-include-directories" value=""/>
-        <property key="eep" value="true"/>
+        <property key="eep" value="false"/>
         <property key="hex" value="true"/>
-        <property key="lss" value="true"/>
-        <property key="omit-pack-options" value="true"/>
+        <property key="lss" value="false"/>
+        <property key="omit-pack-options" value="false"/>
         <property key="processor-mode" value="-mthumb"/>
-        <property key="srec" value="true"/>
+        <property key="srec" value="false"/>
         <property key="user-pack-include" value=""/>
       </ARM-Global>
       <ARM-LD>
-        <property key="additional-specs" value=""/>
+        <property key="additional-specs" value="--specs=nosys.specs"/>
         <property key="exclude-standard-libraries" value="false"/>
-        <property key="extra-lib-directories"
-                  value="../src/ASF/thirdparty/CMSIS/Lib/GCC"/>
+        <property key="extra-lib-directories" value=""/>
         <property key="fast-math" value="false"/>
         <property key="flash-segment" value=""/>
         <property key="generate-map-file" value="true"/>
-        <property key="input-libraries" value="libarm_cortexM0l_math;libm"/>
+        <property key="input-libraries" value=""/>
         <property key="no-default-libs" value="false"/>
         <property key="no-shared-libraries" value="false"/>
         <property key="no-startup-files" value="false"/>
@@ -5438,11 +5429,181 @@
         <property key="other-options" value=""/>
         <property key="position-independent" value="false"/>
         <property key="remove-unused-sections" value="true"/>
-        <property key="size-optimized-library" value="true"/>
+        <property key="size-optimized-library" value="false"/>
         <property key="sram-segment" value=""/>
         <property key="unsafe-math" value="false"/>
-        <appendMe value="-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam0/utils/linker_scripts/samr21/gcc/samr21g18a_flash.ld"/>
       </ARM-LD>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="cast-align" value="false"/>
+        <property key="code-model" value="default"/>
+        <property key="const-model" value="default"/>
+        <property key="data-model" value="default"/>
+        <property key="disable-instruction-scheduling" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-procedural-abstraction" value="false"/>
+        <property key="enable-short-double" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="expand-pragma-config" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="keep-inline" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="oXC16gcc-errata" value=""/>
+        <property key="oXC16gcc-large-aggregate" value="false"/>
+        <property key="oXC16gcc-mpa-lvl" value=""/>
+        <property key="oXC16gcc-name-text-sec" value=""/>
+        <property key="oXC16gcc-near-chars" value="false"/>
+        <property key="oXC16gcc-no-isr-warn" value="false"/>
+        <property key="oXC16gcc-sfr-warn" value="false"/>
+        <property key="oXC16gcc-smar-io-lvl" value="1"/>
+        <property key="oXC16gcc-smart-io-fmt" value=""/>
+        <property key="optimization-level" value="-O0"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="scalar-model" value="default"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-extra-opts" value=""/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="false"/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
+      </C32-CO>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="enable-data-init" value="true"/>
+        <property key="enable-default-isr" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value=""/>
+        <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-device-startup-code" value="false"/>
+        <property key="no-ivt" value="false"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC16ld-force-link" value="false"/>
+        <property key="oXC16ld-no-smart-io" value="false"/>
+        <property key="oXC16ld-stackguard" value="16"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="false"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="combine-sourcefiles" value="false"/>
+        <property key="common-include-directories" value=""/>
+        <property key="common-macros" value=""/>
+        <property key="dual-boot-partition" value="0"/>
+        <property key="generic-16-bit" value="false"/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="mdtcm" value=""/>
+        <property key="mitcm" value=""/>
+        <property key="mpreserve-all" value="false"/>
+        <property key="mstacktcm" value="false"/>
+        <property key="omit-pack-options" value="1"/>
+        <property key="preserve-all" value="false"/>
+        <property key="preserve-file" value=""/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
@@ -5761,6 +5922,9 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W0500_BMX_EXECUTE_OUTSIDE_BOUNDARY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0501_BMX_WRITE_IRAM" value="report"/>
         <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>
@@ -6236,6 +6400,9 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W0500_BMX_EXECUTE_OUTSIDE_BOUNDARY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0501_BMX_WRITE_IRAM" value="report"/>
         <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>

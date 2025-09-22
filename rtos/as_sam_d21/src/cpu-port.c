@@ -86,9 +86,40 @@ __attribute__ ((naked)) void PendSV_Handler(void)
    realizar a marca de tempo do sistema multitarefas - interrupcao */
 void SysTick_Handler(void)
 {	
-	 
-	 ExecutaMarcaDeTempo();    
-	 //TrocaContexto();   /* para o uso como sistema preemptivo */
+    
+	/********************************************************************************
+    * Diferença na Execução da Tarefa: Cooperativo vs. Preemptivo
+    *
+    * MODO COOPERATIVO:
+    * Uma tarefa executa até que ela voluntariamente ceda o controle do processador
+    * (ex: chamando TarefaEspera). Uma tarefa mal comportada em um loop infinito
+    * pode travar todo o sistema, pois nunca liberará o processador para as outras.
+    * A execução de tarefas periódicas pode sofrer atrasos (jitter).
+    * 
+    * Exemplo: A tarefa_9 (P3) inicia e monopoliza o processador até decidir parar.
+    * Somente então, as tarefas de prioridade 2 (tarefa_2, tarefa_periodica) rodam,
+    * uma de cada vez, até que também cedam sua vez. A tarefa_1 (P1) só executa
+    * se todas as de maior prioridade estiverem esperando. A execução depende da
+    * "boa vontade" de cada tarefa.
+    *
+    * MODO PREEMPTIVO:
+    * O RTOS pode forçar a interrupção (preempção) de uma tarefa em execução
+    * para dar lugar a uma tarefa de maior prioridade que acabou de ficar pronta.
+    * Isso garante que tarefas importantes e de alta prioridade respondam rapidamente,
+    * tornando o sistema mais robusto e o tempo de execução mais previsível.
+    * 
+    * A tarefa de maior prioridade que estiver pronta SEMPRE está no controle.
+    * Exemplo: Se a tarefa_1 (P1) está rodando e a tarefa_periodica (P2) acorda,
+    * o sistema INTERROMPE a tarefa_1 à força para rodar a tarefa_periodica
+    * imediatamente. A ordem é ditada pela prioridade para garantir que tarefas
+    * importantes não atrasem.
+    ********************************************************************************/
+        
+	 ExecutaMarcaDeTempo(); 
+     //Para executar a nova tarefa periodica no modo cooperativo e preemptivo, primeiro foi testada em modo cooperativo com a linha TrocaContexto comentada.
+     //Para o teste de execução da nova tarefa em modo preemptivo a linha foi descomentada.
+      
+	 TrocaContexto();
 }
 
 void HardFault_Handler(void)

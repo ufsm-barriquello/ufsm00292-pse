@@ -27,7 +27,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=mplab_sam_r21.X
 
 # Active Configuration
-DEFAULTCONF=Release
+DEFAULTCONF=Debug
 CONF=${DEFAULTCONF}
 
 # All Configurations

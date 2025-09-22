@@ -16,7 +16,7 @@
                 </confElem>
                 <confElem>
                     <name>Debug</name>
-                    <type>2</type>
+                    <type>3</type>
                 </confElem>
             </confList>
             <formatting>
