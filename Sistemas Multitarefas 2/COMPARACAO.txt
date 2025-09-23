@@ -1,0 +1,2 @@
+	No modo cooperativo a própria tarefa chama a função de espera, controlando o ciclo e uso do processador, ela continua a ser executada até chamar a função de espera, até lá outras tarefas tem que esperar.
+	Utilizando o modo preemptivo a tarefa pode ser interrompida a qualquer momento pelo sistema, podendo assim dividir melhor o processamento entre múltiplas tarefas, porém tem um funcionamento mais complexo que  o modo cooperativo;
