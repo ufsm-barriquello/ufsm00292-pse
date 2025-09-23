@@ -358,9 +358,9 @@
         <targetDevice>ATSAMD21J18A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>ARM</languageToolchain>
-        <languageToolchainVersion>10.3.1</languageToolchainVersion>
+        <languageToolchainVersion>6.3.1</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -395,598 +395,2740 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../src/ASF/common/boards/board.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/interrupt.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/parts.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/boards/samd21_xplained_pro/samd21_xplained_pro.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/port/port.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_config_check.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_feature.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21/system_interrupt_features.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/pinmux.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/power/power_sam_d_r/power.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/reset/reset_sam_d_r/reset.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/system.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/ac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/adc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dmac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dsu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/eic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/evsys.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/hmatrixb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/i2s.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/mtb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/nvmctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/pac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/pm.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/port.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/rtc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/sercom.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/sysctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tcc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tcc_lighting.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/usb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/wdt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/ac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/ac1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/adc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dmac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dsu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/eic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/evsys.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/i2s.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/mtb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/nvmctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pm.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/port.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/rtc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sbmatrix.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom3.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom4.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom5.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sysctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc3.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc4.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc5.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc6.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc7.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/usb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/wdt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g17au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g18au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/source/system_samd21.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/compiler.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/header_files/io.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/make/Makefile.sam.in"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrecursion.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrepeat.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/preprocessor.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/stringz.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/tpaste.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/status_codes.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/arm_math.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/license.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/README.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/asf.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/config/conf_board.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/config/conf_clocks.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <ARM-AR>
         <property key="archiver-flags" value="-r"/>
@@ -1103,7 +3245,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>ARM</languageToolchain>
-        <languageToolchainVersion>10.3.1</languageToolchainVersion>
+        <languageToolchainVersion>6.3.1</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1138,598 +3280,2740 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../src/ASF/common/boards/board.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/interrupt.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/common/utils/parts.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/boards/samd21_xplained_pro/samd21_xplained_pro.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/port/port.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_config_check.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_feature.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/clock/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21/system_interrupt_features.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/pinmux.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/power/power_sam_d_r/power.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/reset/reset_sam_d_r/reset.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/drivers/system/system.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/ac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/adc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dmac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/dsu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/eic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/evsys.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/hmatrixb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/i2s.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/mtb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/nvmctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/pac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/pm.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/port.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/rtc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/sercom.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/sysctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tcc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/tcc_lighting.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/usb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/component/wdt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/ac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/ac1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/adc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dmac.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/dsu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/eic.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/evsys.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/gclk.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/i2s.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/mtb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/nvmctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pac2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/pm.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/port.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/rtc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sbmatrix.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom3.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom4.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom5.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/sysctrl.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc3.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc4.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc5.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc6.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tc7.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc0.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc1.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc2.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/usb.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/instance/wdt.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16bu.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21e18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g15l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g16l.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g17au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21g18au.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j15a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j15b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j16a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j16b.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j17a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/include/samd21j18a.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/cmsis/samd21/source/system_samd21.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/compiler.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/header_files/io.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/make/Makefile.sam.in"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrecursion.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/mrepeat.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/preprocessor.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/stringz.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/preprocessor/tpaste.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/sam0/utils/status_codes.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/arm_math.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/Lib/license.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/ASF/thirdparty/CMSIS/README.txt"
             ex="true"
             overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/asf.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/config/conf_board.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <item path="../src/config/conf_clocks.h" ex="true" overriding="false">
+        <ARM-AR>
+        </ARM-AR>
+        <ARM-AS>
+        </ARM-AS>
+        <ARM-AS-PRE>
+        </ARM-AS-PRE>
+        <ARM-CPP>
+        </ARM-CPP>
+        <ARM-GCC>
+        </ARM-GCC>
+        <ARM-Global>
+        </ARM-Global>
+        <ARM-LD>
+        </ARM-LD>
       </item>
       <ARM-AR>
         <property key="archiver-flags" value="-r"/>
