@@ -40,6 +40,12 @@ void tarefa_5(void);
 void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
+void tarefa_9(void);
+void tarefa_10(void);
+
+/* --- ADICIONADO PARA O EXEMPLO PERIÓDICO --- */
+void tarefa_periodica(void);
+void tarefa_cpu_intensiva(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
@@ -52,6 +58,10 @@ void tarefa_8(void);
 #define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_10        (TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_PERIODICA (TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_INTENSIVA (TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -65,6 +75,10 @@ uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
 uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
+uint32_t PILHA_TAREFA_9[TAM_PILHA_9]; 
+uint32_t PILHA_TAREFA_10[TAM_PILHA_10];
+uint32_t PILHA_TAREFA_PERIODICA[TAM_PILHA_PERIODICA];
+uint32_t PILHA_TAREFA_INTENSIVA[TAM_PILHA_INTENSIVA];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
 /*
@@ -84,6 +98,11 @@ int main(void)
 	
 	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
 	
+    CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 1);
+    
+    CriaTarefa(tarefa_periodica, "Tarefa Periodica", PILHA_TAREFA_PERIODICA, TAM_PILHA_PERIODICA, 4);
+    CriaTarefa(tarefa_cpu_intensiva, "Tarefa Intensiva", PILHA_TAREFA_INTENSIVA, TAM_PILHA_INTENSIVA, 1);
+    
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
@@ -245,4 +264,57 @@ void tarefa_8(void)
 		
 		SemaforoLibera(&SemaforoVazio);
 	}
+}
+
+void tarefa_9(void)
+{
+	for(;;)
+	{
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);   // liga LED1
+		TarefaEspera(100);
+		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);  // desliga LED1
+		TarefaEspera(900);  // pisca a cada 1 segundo
+	}
+}
+
+/* --- TAREFAS PARA TESTE COOPERATIVO VS. PREEMPTIVO --- */
+
+/*
+ * Tarefa periódica executada a cada 100ms.
+ * Ela alterna o estado do LED e depois espera 100 ticks.
+ * Se o tick do sistema for de 1ms, isso equivale a 100ms.
+ *
+ * No modo cooperativo:
+ *   pode atrasar se outra tarefa nunca liberar a CPU.
+ *
+ * No modo preemptivo:
+ *   o escalonador garante que rode no tempo certo.
+ */
+void tarefa_periodica(void)
+{
+    for (;;)
+    {
+        port_pin_toggle_output_level(LED_0_PIN); // alterna o LED
+        TarefaEspera(100);                       // espera 100ms
+    }
+}
+
+/*
+ * Tarefa de carga intensa de CPU.
+ * Fica incrementando uma variável sem nunca ceder a CPU.
+ *
+ * No modo cooperativo:
+ *   pode travar as outras tarefas.
+ *
+ * No modo preemptivo:
+ *   o RTOS força a troca de contexto e evita o travamento.
+ */
+void tarefa_cpu_intensiva(void)
+{
+    volatile uint32_t contador = 0;
+
+    for (;;)
+    {
+        contador++; // ocupa CPU sem yield
+    }
 }
