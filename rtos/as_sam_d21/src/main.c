@@ -40,6 +40,8 @@ void tarefa_5(void);
 void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
+void tarefa_9(void);
+void tarefa_10(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
@@ -52,6 +54,8 @@ void tarefa_8(void);
 #define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_10		(TAM_MINIMO_PILHA + 24) // <-- CORRIGIDO ESPAÇAMENTO
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -65,6 +69,8 @@ uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
 uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
+uint32_t PILHA_TAREFA_9[TAM_PILHA_9];
+uint32_t PILHA_TAREFA_10[TAM_PILHA_10];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
 /*
@@ -80,15 +86,39 @@ int main(void)
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
     
-	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+	/********************************************************************************************
+	* INSTRUÇÕES PARA O TESTE
+	*
+	* Para testar o Cenário A (Preemptivo), deixe o Bloco A ativo e o Bloco B comentado.
+	* Para testar o Cenário B (Falha Cooperativa), comente o Bloco A e descomente o Bloco B.
+	*
+	********************************************************************************************/
+
+	// Tarefas originais (deixe comentadas durante os testes da tarefa_10)
+	//CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+	//CriaTarefa(tarefa_2, "Tarefa 2 Original", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+	//CriaTarefa(tarefa_9, "Tarefa 9 LED", PILHA_TAREFA_9, TAM_PILHA_9, 3);
 	
-	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
-	
-	/* Cria tarefa ociosa do sistema */
+	/* --- BLOCO A: CENÁRIO PREEMPTIVO (LED DEVE PISCAR) --- */
+	/* Neste cenário, a tarefa_10 tem prioridade alta e coopera, liberando o processador. */
+	CriaTarefa(tarefa_10, "Tarefa Periodica", PILHA_TAREFA_10, TAM_PILHA_10, 2);
+	/* --- FIM DO BLOCO A --- */
+
+
+	/* --- BLOCO B: CENÁRIO FALHA COOPERATIVA (LED NÃO DEVE PISCAR) --- */
+	/* Para testar: comente o BLOCO A acima e descomente as 2 linhas abaixo.                 */
+	/* A tarefa_2 (modificada para ser "egoísta") tem prioridade alta e nunca libera a CPU,  */
+	/* impedindo a tarefa_10 de executar.                                                    */
+	//CriaTarefa(tarefa_2, "Tarefa Bloqueante", PILHA_TAREFA_2, TAM_PILHA_2, 2);
+	//CriaTarefa(tarefa_10, "Tarefa Periodica", PILHA_TAREFA_10, TAM_PILHA_10, 1);
+	/* --- FIM DO BLOCO B --- */
+
+
+	/* Cria tarefa ociosa do sistema (sempre necessária) */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
 	/* Configura marca de tempo */
-	ConfiguraMarcaTempo();   
+	ConfiguraMarcaTempo();    
 	
 	/* Inicia sistema multitarefas */
 	IniciaMultitarefas();
@@ -118,7 +148,14 @@ void tarefa_2(void)
 	for(;;)
 	{
 		b++;
-		TarefaSuspende(2);	
+		
+		/*****************************************************************************************
+		* MODIFICAÇÃO PARA O CENÁRIO B:
+		* A linha abaixo foi comentada para transformar esta tarefa em "egoísta" ou "bloqueante".
+		* Ela entra em loop infinito e nunca devolve o controle ao sistema operacional.
+		*****************************************************************************************/
+		// TarefaSuspende(2); 
+		
 		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
 	}
 }
@@ -245,4 +282,37 @@ void tarefa_8(void)
 		
 		SemaforoLibera(&SemaforoVazio);
 	}
+}
+
+/* Nova tarefa para piscar o LED a cada 250ms */
+void tarefa_9(void)
+{
+	for(;;) // Loop infinito, toda tarefa deve ter um
+	{
+		/* Liga o LED */
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+		
+		/* Coloca a tarefa em espera por 250 marcas de tempo (ticks) */
+		/* Supondo que 1 tick = 1ms, isso equivale a 250ms */
+		TarefaEspera(250);
+		
+		/* Desliga o LED */
+		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
+		
+		/* Coloca a tarefa em espera por mais 250ms */
+		TarefaEspera(250);
+	}
+}
+
+/* Tarefa 10 - Periódica a cada 100ms */
+void tarefa_10(void)
+{
+    for(;;) // Loop infinito obrigatório
+    {
+        /* Inverte o estado atual do LED. Se estiver aceso, apaga; se apagado, acende. */
+        port_pin_toggle_output_level(LED_0_PIN);
+
+        /* Coloca a tarefa em espera por 100ms, tornando-a periódica */
+        TarefaEspera(100);
+    }
 }
