@@ -41,7 +41,8 @@ void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
 void tarefa_9(void);
-
+void tarefa_EX2(void);
+void tarefa_EX2_Preemp(void);
 /*
  * Configuracao dos tamanhos das pilhas
  */
@@ -54,6 +55,8 @@ void tarefa_9(void);
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_EX2		(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_EX2_PREEMP (TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -68,6 +71,8 @@ uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
 uint32_t PILHA_TAREFA_9[TAM_PILHA_9];
+uint32_t PILHA_TAREFA_EX2[TAM_PILHA_EX2];
+uint32_t PILHA_TAREFA_EX2_PREEMP[TAM_PILHA_EX2_PREEMP];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
 /*
@@ -82,15 +87,9 @@ int main(void)
 	
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
+    CriaTarefa(tarefa_EX2,"Tarefa COOP",PILHA_TAREFA_EX2,TAM_PILHA_EX2,2);
     
-	//CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
-	
-	//CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
-	
-    //CriaTarefa(tarefa_4,"Tarefa 4",PILHA_TAREFA_4,TAM_PILHA_4,2);
-    
-    CriaTarefa(tarefa_9,"Tarefa 9",PILHA_TAREFA_9,TAM_PILHA_9,3);
-    
+    CriaTarefa(tarefa_EX2_Preemp,"Tarefa Preemp",PILHA_TAREFA_EX2_PREEMP,TAM_PILHA_EX2_PREEMP,1);
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
 	
@@ -107,6 +106,46 @@ int main(void)
 }
 
 /* Tarefas de exemplo que usam funcoes para suspender/continuar as tarefas */
+
+void tarefa_EX2(void){ //esse é no modo cooperativo 
+    volatile uint16_t contador=0;
+    
+    for(;;) {
+        contador++;   // incrementa a cada 100 ms
+        printf("Contador Coop = %lu\n", contador);
+
+        TarefaEspera(100);   // pausa 100 ms → execução periódica
+    }
+}
+
+
+void tarefa_EX2_Preemp(void){
+   static uint32_t contador = 0;       
+    static uint32_t soma = 0;           
+    static uint32_t ciclos_completos = 0;
+    for(;;) {
+        contador++;
+        
+        soma+=contador;
+        
+        if(soma>=1000){
+            contador = 0;
+            ciclos_completos++;
+        }
+
+
+        TarefaEspera(100);  // garante execução exata a cada 100 ms
+    }
+    
+}
+
+//A tarefa cooperativa e a preemptiva irão funcionar sempre que a CPU estiver livre
+//Coop: a troca de contexto só acontece quando a tarefa chama "TarefaEspera()" ou "TarefaSuspende()". Acontece que se não houver essa chamada a arefa coop irá monopolizar a cpu
+//Premmp: RTOS pode interromper a tarefa automaticamente garantindo que tarefas de mesma ou maior prioridade executem "ticks" corretos, o rtos força a troca de contexto a cada tick
+//Resumindo o modo preemptivo garante mais estabilidade ao sistema, evitando a monopolização da CPU, o modo COOP depende da disciplina das tarefas em ceder CPU, isso que pode gerar atrasos em tarefas de alta prioridade 
+
+
+
 void tarefa_9(void){
 
     volatile uint16_t cont=0;
