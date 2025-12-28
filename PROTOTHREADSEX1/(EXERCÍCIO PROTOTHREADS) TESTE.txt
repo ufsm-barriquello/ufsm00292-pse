@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+// A ser implementado
+void encode_packet(const unsigned char *data, unsigned char data_len, unsigned char *packet, unsigned char *packet_len);
+unsigned char calculate_checksum(const unsigned char *data, unsigned char length);
+
+void test_encode_packet() {
+    printf("Teste: Codificador de pacote\n");
+
+    unsigned char data[] = "Hello";
+    unsigned char data_len = 5;
+    unsigned char packet[255];
+    unsigned char packet_len = 0;
+    
+    // O pacote esperado, calculado manualmente
+    // STX (0x02), QTD (5), DADOS (H,e,l,l,o), CHK (soma de H,e,l,l,o), ETX (0x03)
+    unsigned char expected_packet[] = {0x02, 0x05, 'H', 'e', 'l', 'l', 'o', 0x03 + 0x05 + 'H' + 'e' + 'l' + 'l' + 'o', 0x03};
+
+    encode_packet(data, data_len, packet, &packet_len);
+
+    // Verifica se o tamanho do pacote é o esperado
+    if (packet_len == (1 + 1 + data_len + 1 + 1)) {
+        printf("  - Tamanho do pacote OK\n");
+    } else {
+        printf("  - Tamanho do pacote FALHA\n");
+    }
+    
+    // Compara o conteúdo do pacote gerado com o esperado
+    if (memcmp(packet, expected_packet, packet_len) == 0) {
+        printf("  - Conteúdo do pacote OK\n");
+    } else {
+        printf("  - Conteúdo do pacote FALHA\n");
+    }
+}

@@ -1,0 +1,30 @@
+#include "protocol.h" // Inclui o cabeçalho com a função encode_packet e calculate_checksum
+
+// Retorna 0 em caso de sucesso, ou um código de erro em caso de falha
+int decode_packet(const unsigned char *packet, unsigned char packet_len, unsigned char *data, unsigned char *data_len) {
+    if (packet_len < 4) {
+        return -1; // Tamanho mínimo do pacote não alcançado
+    }
+    if (packet[0] != 0x02 || packet[packet_len - 1] != 0x03) {
+        return -2; // STX ou ETX inválidos
+    }
+    
+    unsigned char expected_data_len = packet[1];
+    unsigned char expected_packet_len = 4 + expected_data_len;
+    
+    if (packet_len != expected_packet_len) {
+        return -3; // Tamanho do pacote incorreto
+    }
+    
+    unsigned char received_chk = packet[packet_len - 2];
+    unsigned char calculated_chk = calculate_checksum(&packet[2], expected_data_len);
+    
+    if (received_chk != calculated_chk) {
+        return -4; // Checksum inválido
+    }
+    
+    *data_len = expected_data_len;
+    memcpy(data, &packet[2], *data_len);
+    
+    return 0; // Sucesso
+}

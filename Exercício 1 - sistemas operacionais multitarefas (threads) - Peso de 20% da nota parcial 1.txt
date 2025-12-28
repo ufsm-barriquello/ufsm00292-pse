@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+osThreadId_t thread0_handle;
+osThreadId_t thread1_handle;
+osThreadId_t thread2_handle;
+osThreadId_t thread3_handle;
+osThreadId_t thread4_handle;
+osThreadId_t print_sum_handle; 
+
+volatile int thread0_counter = 0; [cite: 1]
+volatile int thread1_counter = 0; [cite: 1]
+volatile int thread2_counter = 0; [cite: 2]
+volatile int thread3_counter = 0; [cite: 2]
+volatile int thread4_counter = 0; [cite: 2]
+
+void thread_task(void *argument, int *counter, osThreadId_t next_thread_handle) { [cite: 9]
+    while (1) {
+        // Incrementa o contador específico da tarefa [cite: 10]
+        (*counter)++; [cite: 10]
+
+        // "Acorda" a próxima tarefa de maior prioridade, se aplicável [cite: 10]
+        if (next_thread_handle != NULL) { [cite: 11]
+            osThreadResume(next_thread_handle); [cite: 11]
+        } else {
+            // Esta é a tarefa de mais alta prioridade,
+            // então ela apenas se suspende. O scheduler retorna à tarefa de mais baixa prioridade
+            // uma vez que todas as tarefas de prioridade mais alta estão suspensas. [cite: 12]
+        }
+
+        // Suspende a tarefa atual [cite: 13]
+        osThreadSuspend(NULL); [cite: 13]
+    }
+}
+
+// Função para a Tarefa de Mais Baixa Prioridade de Contagem (Thread4)
+// Esta é a única tarefa que começa não-suspensa e inicia o ciclo. [cite: 6]
+void thread4_task(void *argument) {
+    while (1) {
+        // Incrementa seu contador [cite: 6]
+        thread4_counter++; [cite: 6]
+
+        // "Acorda" a próxima tarefa de maior prioridade (Thread3) [cite: 7]
+        osThreadResume(thread3_handle); [cite: 7]
+        
+        // Suspende a si mesma para permitir que as outras threads rodem [cite: 8, 9]
+        osThreadSuspend(NULL); [cite: 9]
+    }
+}
+
+// Função para a Sexta Tarefa: Imprime a Soma Total 
+void print_sum_task(void *argument) { [cite: 3]
+    while (1) {
+        // Calcula a soma de todos os contadores [cite: 3]
+        int total_sum = thread0_counter + thread1_counter + thread2_counter + thread3_counter + thread4_counter; [cite: 3]
+
+        // Imprime a soma no terminal [cite: 4]
+        printf("Total sum of counters: %d\n", total_sum); [cite: 4]
+
+        // Delay de 30 segundos (o valor depende da função de delay do RTOS) [cite: 5, 6]
+        osDelay(30000); [cite: 5]
+    }
+}
+
+int main(void) {
+    // Inicializa o scheduler do RTOS
+    // osKernelInitialize(); 
+
+    // Cria as tarefas de contagem com prioridades decrescentes
+    osThreadCreate(thread4_task, NULL, osPriorityLow, &thread4_handle); [cite: 14] // Mais baixa prioridade de contagem
+    osThreadCreate(thread3_task, NULL, osPriorityNormal, &thread3_handle); [cite: 14]
+    osThreadCreate(thread2_task, NULL, osPriorityHigh, &thread2_handle); [cite: 14]
+    osThreadCreate(thread1_task, NULL, osPriorityVeryHigh, &thread1_handle); [cite: 15]
+    osThreadCreate(thread0_task, NULL, osPriorityHighest, &thread0_handle); // Mais alta prioridade [cite: 15]
+
+    osThreadCreate(print_sum_task, NULL, osPriorityLow, &print_sum_handle); [cite: 16]
+
+    // Inicia o scheduler do RTOS [cite: 16]
+    osKernelStart(); [cite: 16]
+
+    return 0; [cite: 17]
+}

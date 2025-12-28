@@ -1,0 +1,68 @@
+#include "pt.h"
+#include <stdio.h>
+#include <string.h>
+
+// Mock de variáveis de hardware e estado
+static struct pt pt_encoder, pt_decoder;
+static unsigned char data_to_send[] = "Protothreads";
+static unsigned char encoded_packet[255];
+static unsigned char encoded_len = 0;
+static unsigned char decoded_data[255];
+static unsigned char decoded_len = 0;
+
+static int start_encoding = 1;
+static int packet_ready = 0;
+static int decoding_done = 0;
+
+PT_THREAD(encoder_thread(struct pt *pt)) {
+    PT_BEGIN(pt);
+    while (1) {
+        PT_WAIT_UNTIL(pt, start_encoding);
+        printf("Encoder: Iniciando codificacao...\n");
+        
+        encode_packet(data_to_send, strlen((char*)data_to_send), encoded_packet, &encoded_len);
+        packet_ready = 1;
+        start_encoding = 0; // Sinaliza que o trabalho foi feito
+        
+        PT_WAIT_UNTIL(pt, 0); // Espera indefinidamente para ser reiniciado
+    }
+    PT_END(pt);
+}
+
+PT_THREAD(decoder_thread(struct pt *pt)) {
+    PT_BEGIN(pt);
+    while (1) {
+        PT_WAIT_UNTIL(pt, packet_ready);
+        printf("Decoder: Pacote recebido. Iniciando decodificacao...\n");
+
+        int result = decode_packet(encoded_packet, encoded_len, decoded_data, &decoded_len);
+        if (result == 0) {
+            printf("Decoder: Pacote decodificado com sucesso. Dados: '%.*s'\n", decoded_len, decoded_data);
+            decoding_done = 1;
+        } else {
+            printf("Decoder: Falha na decodificacao. Codigo de erro: %d\n", result);
+        }
+        packet_ready = 0;
+        PT_WAIT_UNTIL(pt, 0);
+    }
+    PT_END(pt);
+}
+
+int main() {
+    PT_INIT(&pt_encoder);
+    PT_INIT(&pt_decoder);
+
+    while (!decoding_done) {
+        PT_SCHEDULE(encoder_thread(&pt_encoder));
+        PT_SCHEDULE(decoder_thread(&pt_decoder));
+    }
+    
+    printf("Teste de integracao finalizado. Dados de saida: '%.*s'\n", decoded_len, decoded_data);
+    if (strcmp((char*)data_to_send, (char*)decoded_data) == 0) {
+        printf("Resultado: SUCESSO. Os dados foram transmitidos e recebidos corretamente.\n");
+    } else {
+        printf("Resultado: FALHA. Os dados nao correspondem.\n");
+    }
+
+    return 0;
+}
