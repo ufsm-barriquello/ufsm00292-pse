@@ -1,0 +1,277 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+
+// Constantes do Protocolo
+#define STX_VALUE 0x02
+#define ETX_VALUE 0x03
+#define MAX_DATA_SIZE 255
+
+// Estados da FSM do Receptor
+typedef enum {
+    STATE_IDLE,
+    STATE_WAIT_QTD,
+    STATE_RECEIVE_DATA,
+    STATE_WAIT_CHK,
+    STATE_WAIT_ETX,
+    STATE_PACKET_OK,
+    STATE_PACKET_ERROR
+} ReceiverState_t;
+
+// Estrutura da FSM do Receptor
+typedef struct {
+    ReceiverState_t currentState;
+    uint8_t dataBuffer[MAX_DATA_SIZE];
+    uint8_t dataLength;
+    uint8_t dataIndex;
+    uint8_t receivedChecksum;
+} ReceiverFSM_t;
+
+// Estados da FSM do Transmissor
+typedef enum {
+    TX_STATE_IDLE,
+    TX_STATE_SEND_STX,
+    TX_STATE_SEND_QTD,
+    TX_STATE_SEND_DATA,
+    TX_STATE_SEND_CHK,
+    TX_STATE_SEND_ETX
+} TransmitterState_t;
+
+// Estrutura da FSM do Transmissor
+typedef struct {
+    TransmitterState_t currentState;
+    const uint8_t *dataToSend;
+    uint8_t dataLength;
+    uint8_t dataIndex;
+} TransmitterFSM_t;
+
+// Protótipos das Funções
+void receiver_fsm_init(ReceiverFSM_t *fsm);
+void receiver_fsm_process_byte(ReceiverFSM_t *fsm, uint8_t byte);
+uint8_t calculate_checksum(const uint8_t *data, uint8_t length);
+
+void transmitter_fsm_init(TransmitterFSM_t *fsm);
+void transmitter_fsm_start(TransmitterFSM_t *fsm, const uint8_t *data, uint8_t length);
+int transmitter_fsm_get_next_byte(TransmitterFSM_t *fsm, uint8_t *byte);
+
+// Inicializa a FSM do receptor
+void receiver_fsm_init(ReceiverFSM_t *fsm) {
+    fsm->currentState = STATE_IDLE;
+    fsm->dataLength = 0;
+    fsm->dataIndex = 0;
+    memset(fsm->dataBuffer, 0, MAX_DATA_SIZE);
+}
+
+// Processa um único byte para a FSM do receptor
+void receiver_fsm_process_byte(ReceiverFSM_t *fsm, uint8_t byte) {
+    switch (fsm->currentState) {
+        case STATE_IDLE:
+            if (byte == STX_VALUE) {
+                fsm->currentState = STATE_WAIT_QTD;
+            }
+            break;
+        case STATE_WAIT_QTD:
+            fsm->dataLength = byte;
+            fsm->dataIndex = 0;
+            if (fsm->dataLength > 0) {
+                fsm->currentState = STATE_RECEIVE_DATA;
+            } else {
+                fsm->currentState = STATE_WAIT_CHK;
+            }
+            break;
+        case STATE_RECEIVE_DATA:
+            fsm->dataBuffer[fsm->dataIndex++] = byte;
+            if (fsm->dataIndex == fsm->dataLength) {
+                fsm->currentState = STATE_WAIT_CHK;
+            }
+            break;
+        case STATE_WAIT_CHK:
+            fsm->receivedChecksum = byte;
+            fsm->currentState = STATE_WAIT_ETX;
+            break;
+        case STATE_WAIT_ETX:
+            if (byte == ETX_VALUE) {
+                uint8_t calculated_checksum = calculate_checksum(fsm->dataBuffer, fsm->dataLength);
+                if (calculated_checksum == fsm->receivedChecksum) {
+                    fsm->currentState = STATE_PACKET_OK;
+                } else {
+                    fsm->currentState = STATE_PACKET_ERROR;
+                }
+            } else {
+                fsm->currentState = STATE_PACKET_ERROR;
+            }
+            break;
+        case STATE_PACKET_OK:
+        case STATE_PACKET_ERROR:
+            // O usuário deve chamar init para recomeçar
+            break;
+    }
+}
+
+// Calcula o checksum dos dados
+uint8_t calculate_checksum(const uint8_t *data, uint8_t length) {
+    uint8_t chk = 0;
+    for (uint8_t i = 0; i < length; i++) {
+        chk ^= data[i];
+    }
+    return chk;
+}
+
+// Inicializa a FSM do transmissor
+void transmitter_fsm_init(TransmitterFSM_t *fsm) {
+    fsm->currentState = TX_STATE_IDLE;
+    fsm->dataToSend = NULL;
+    fsm->dataLength = 0;
+    fsm->dataIndex = 0;
+}
+
+// Inicia o processo de transmissão
+void transmitter_fsm_start(TransmitterFSM_t *fsm, const uint8_t *data, uint8_t length) {
+    if (fsm->currentState == TX_STATE_IDLE) {
+        fsm->dataToSend = data;
+        fsm->dataLength = length;
+        fsm->dataIndex = 0;
+        fsm->currentState = TX_STATE_SEND_STX;
+    }
+}
+
+// Obtém o próximo byte a ser transmitido
+int transmitter_fsm_get_next_byte(TransmitterFSM_t *fsm, uint8_t *byte) {
+    if (fsm->currentState == TX_STATE_IDLE) {
+        return -1; // Nada a enviar
+    }
+
+    switch (fsm->currentState) {
+        case TX_STATE_SEND_STX:
+            *byte = STX_VALUE;
+            fsm->currentState = TX_STATE_SEND_QTD;
+            break;
+        case TX_STATE_SEND_QTD:
+            *byte = fsm->dataLength;
+            if (fsm->dataLength > 0) {
+                fsm->currentState = TX_STATE_SEND_DATA;
+            } else {
+                fsm->currentState = TX_STATE_SEND_CHK;
+            }
+            break;
+        case TX_STATE_SEND_DATA:
+            *byte = fsm->dataToSend[fsm->dataIndex++];
+            if (fsm->dataIndex == fsm->dataLength) {
+                fsm->currentState = TX_STATE_SEND_CHK;
+            }
+            break;
+        case TX_STATE_SEND_CHK:
+            *byte = calculate_checksum(fsm->dataToSend, fsm->dataLength);
+            fsm->currentState = TX_STATE_SEND_ETX;
+            break;
+        case TX_STATE_SEND_ETX:
+            *byte = ETX_VALUE;
+            fsm->currentState = TX_STATE_IDLE;
+            break;
+        default:
+            return -1;
+    }
+    return 0; // Sucesso
+}
+
+// --- Framework de Teste Simulado ---
+#define TEST_ASSERT_EQUAL(expected, actual) \
+    if ((expected) != (actual)) { \
+        printf("Falha na asserção: esperado %d, foi %d\n", (int)(expected), (int)(actual)); \
+    } else { \
+        printf("Asserção passou.\n"); \
+    }
+
+// --- Casos de Teste ---
+
+void test_receiver_fsm_should_transition_to_wait_qtd_on_stx() {
+    printf("\n--- Executando teste: %s ---\n", __FUNCTION__);
+    // Configuração
+    ReceiverFSM_t fsm;
+    receiver_fsm_init(&fsm);
+
+    // Exercício
+    receiver_fsm_process_byte(&fsm, STX_VALUE);
+
+    // Verificação
+    TEST_ASSERT_EQUAL(STATE_WAIT_QTD, fsm.currentState);
+}
+
+void test_receiver_fsm_should_receive_data_bytes_correctly() {
+    printf("\n--- Executando teste: %s ---\n", __FUNCTION__);
+    // Configuração
+    ReceiverFSM_t fsm;
+    receiver_fsm_init(&fsm);
+    uint8_t data[] = {0x10, 0x20, 0x30};
+    uint8_t data_len = sizeof(data);
+
+    // Exercício
+    receiver_fsm_process_byte(&fsm, STX_VALUE);
+    receiver_fsm_process_byte(&fsm, data_len);
+    for (int i = 0; i < data_len; ++i) {
+        receiver_fsm_process_byte(&fsm, data[i]);
+    }
+
+    // Verificação
+    TEST_ASSERT_EQUAL(STATE_WAIT_CHK, fsm.currentState);
+    TEST_ASSERT_EQUAL(data_len, fsm.dataLength);
+    TEST_ASSERT_EQUAL(0, memcmp(data, fsm.dataBuffer, data_len));
+}
+
+void test_receiver_fsm_should_result_in_packet_ok_for_valid_packet() {
+    printf("\n--- Executando teste: %s ---\n", __FUNCTION__);
+    // Configuração
+    ReceiverFSM_t fsm;
+    receiver_fsm_init(&fsm);
+    uint8_t data[] = {'O', 'l', 'a'};
+    uint8_t data_len = sizeof(data);
+    uint8_t checksum = calculate_checksum(data, data_len);
+
+    // Exercício
+    receiver_fsm_process_byte(&fsm, STX_VALUE);
+    receiver_fsm_process_byte(&fsm, data_len);
+    for (int i = 0; i < data_len; ++i) {
+        receiver_fsm_process_byte(&fsm, data[i]);
+    }
+    receiver_fsm_process_byte(&fsm, checksum);
+    receiver_fsm_process_byte(&fsm, ETX_VALUE);
+
+    // Verificação
+    TEST_ASSERT_EQUAL(STATE_PACKET_OK, fsm.currentState);
+}
+
+void test_receiver_fsm_should_result_in_packet_error_for_invalid_checksum() {
+    printf("\n--- Executando teste: %s ---\n", __FUNCTION__);
+    // Configuração
+    ReceiverFSM_t fsm;
+    receiver_fsm_init(&fsm);
+    uint8_t data[] = {'M', 'u', 'n', 'd', 'o'};
+    uint8_t data_len = sizeof(data);
+    uint8_t wrong_checksum = 0xFF;
+
+    // Exercício
+    receiver_fsm_process_byte(&fsm, STX_VALUE);
+    receiver_fsm_process_byte(&fsm, data_len);
+    for (int i = 0; i < data_len; ++i) {
+        receiver_fsm_process_byte(&fsm, data[i]);
+    }
+    receiver_fsm_process_byte(&fsm, wrong_checksum);
+    receiver_fsm_process_byte(&fsm, ETX_VALUE);
+
+    // Verificação
+    TEST_ASSERT_EQUAL(STATE_PACKET_ERROR, fsm.currentState);
+}
+
+// --- Função principal para executar os testes ---
+int main() {
+    test_receiver_fsm_should_transition_to_wait_qtd_on_stx();
+    test_receiver_fsm_should_receive_data_bytes_correctly();
+    test_receiver_fsm_should_result_in_packet_ok_for_valid_packet();
+    test_receiver_fsm_should_result_in_packet_error_for_invalid_checksum();
+
+    return 0;
+}
+
+
+

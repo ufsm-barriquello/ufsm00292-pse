@@ -1,0 +1,20 @@
+// Função para calcular o checksum (soma de todos os bytes exceto CHK e ETX)
+unsigned char calculate_checksum(const unsigned char *data, unsigned char length) {
+    unsigned char chk = 0;
+    for (int i = 0; i < length; ++i) {
+        chk += data[i];
+    }
+    return chk;
+}
+
+// Função para construir o pacote de comunicação
+void encode_packet(const unsigned char *data, unsigned char data_len, unsigned char *packet, unsigned char *packet_len) {
+    unsigned char chk = calculate_checksum(data, data_len);
+    
+    packet[0] = 0x02; // STX
+    packet[1] = data_len; // QTD
+    memcpy(&packet[2], data, data_len); // DADOS
+    packet[2 + data_len] = chk; // CHK
+    packet[3 + data_len] = 0x03; // ETX
+    *packet_len = 4 + data_len;
+}

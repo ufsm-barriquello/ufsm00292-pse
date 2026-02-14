@@ -1,0 +1,9 @@
+A principal diferença entre os dois métodos de agendamento está em quem controla a troca de contexto — a tarefa ou o escalonador.
+
+Controle e Previsibilidade: Em um sistema preemptivo, uma tarefa de alta prioridade tem garantia de execução assim que estiver pronta, assegurando a execução no tempo certo de funções críticas. Isso torna o agendamento preemptivo mais adequado para aplicações com requisitos de tempo rigorosos. Por outro lado, o tempo de um sistema cooperativo depende inteiramente de quando cada tarefa decide ceder o controle, o que pode ser imprevisível.
+
+Sobrecarga (Overhead): O agendamento cooperativo geralmente tem menos sobrecarga de sistema, pois não precisa realizar uma troca de contexto a menos que a tarefa explicitamente peça. O agendamento preemptivo tem mais sobrecarga, pois o escalonador está constantemente verificando se há tarefas de maior prioridade prontas para rodar, o que envolve salvar e restaurar o contexto das tarefas.
+
+Robustez: O agendamento preemptivo é mais robusto. Se uma tarefa entrar em um loop infinito ou realizar um cálculo longo sem ceder o controle, ela não travará o sistema inteiro. O escalonador simplesmente mudará para outra tarefa quando seu "fatiamento de tempo" terminar. Em um sistema cooperativo, uma única tarefa mal projetada pode monopolizar a CPU e travar o sistema.
+
+Simplicidade: O agendamento cooperativo pode ser mais simples de implementar porque você não precisa se preocupar com a interrupção de uma tarefa em um momento inesperado. Isso significa que você não precisa escrever funções reentrantes ou usar mecanismos de exclusão mútua (como semáforos ou mutexes) para proteger recursos compartilhados com tanta frequência. No entanto, a responsabilidade pela estabilidade do sistema recai sobre o programador para garantir que cada tarefa ceda o controle regularmente.

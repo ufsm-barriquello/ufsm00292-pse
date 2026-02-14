@@ -1,0 +1,78 @@
+// Define the global counters for each task
+volatile int thread0_counter = 0;
+volatile int thread1_counter = 0;
+volatile int thread2_counter = 0;
+volatile int thread3_counter = 0;
+volatile int thread4_counter = 0;
+
+// Function for the task that prints the sum
+void print_sum_task(void *argument) {
+    while (1) {
+        // Calculate the sum of all counters
+        int total_sum = thread0_counter + thread1_counter + thread2_counter + thread3_counter + thread4_counter;
+
+        // Print the sum to the terminal
+        printf("Total sum of counters: %d\n", total_sum);
+
+        // Delay for 30 seconds (adjust based on RTOS delay function)
+        osDelay(30000); // Example using a hypothetical osDelay function
+    }
+}
+
+// Function for the lowest priority task (e.g., Thread4)
+void thread4_task(void *argument) {
+    // This is the only task that starts unsuspended
+    while (1) {
+        // Increment its counter
+        thread4_counter++;
+
+        // "Wake up" the next highest priority task
+        osThreadResume(thread3_handle); // Example resume function
+        
+        // Suspend itself to allow the other threads to run
+        osThreadSuspend(NULL);
+    }
+}
+
+// Function for the other tasks (e.g., Thread0, Thread1, Thread2, Thread3)
+// All of these tasks start suspended
+void thread_task(void *argument, int *counter, osThreadId_t next_thread_handle) {
+    while (1) {
+        // Increment the task's specific counter
+        (*counter)++;
+
+        // "Wake up" the next highest priority task, if applicable
+        if (next_thread_handle != NULL) {
+            osThreadResume(next_thread_handle);
+        } else {
+            // This is the highest priority task, so it just suspends itself
+            // and the scheduler will return to the lowest priority task
+            // once all higher priority tasks are suspended.
+        }
+
+        // Suspend the current task
+        osThreadSuspend(NULL);
+    }
+}
+
+// Main function or RTOS setup function
+int main(void) {
+    // Initialize the RTOS scheduler
+
+    // Create the tasks with decreasing priorities
+    // P.S.: The specific priority levels depend on the RTOS
+    osThreadCreate(thread4_task, NULL, osPriorityLow, &thread4_handle); // Lowest priority
+    osThreadCreate(thread3_task, NULL, osPriorityNormal, &thread3_handle);
+    osThreadCreate(thread2_task, NULL, osPriorityHigh, &thread2_handle);
+    osThreadCreate(thread1_task, NULL, osPriorityVeryHigh, &thread1_handle);
+    osThreadCreate(thread0_task, NULL, osPriorityHighest, &thread0_handle); // Highest priority
+
+    // Create the sixth task for printing the sum
+    osThreadCreate(print_sum_task, NULL, osPriorityLow, &print_sum_handle);
+
+    // Start the RTOS scheduler
+    osKernelStart();
+
+    // The code should not reach this point
+    return 0;
+}

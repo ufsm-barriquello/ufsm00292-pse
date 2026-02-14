@@ -246,3 +246,54 @@ void tarefa_8(void)
 		SemaforoLibera(&SemaforoVazio);
 	}
 }
+/*
+ * Prototipos das tarefas
+ */
+void tarefa_1(void);
+// ... outras tarefas
+void tarefa_8(void);
+void tarefa_9(void); // Novo protótipo
+/*
+ * Configuracao dos tamanhos das pilhas
+ */
+// ... outras pilhas
+#define TAM_PILHA_9          (TAM_MINIMO_PILHA + 24) // Novo
+#define TAM_PILHA_OCIOSA     (TAM_MINIMO_PILHA + 24)
+
+/*
+ * Declaracao das pilhas das tarefas
+ */
+// ... outras pilhas
+uint32_t PILHA_TAREFA_9[TAM_PILHA_9]; // Novo
+uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
+
+/*
+ * Funcao principal de entrada do sistema
+ */
+int main(void)
+{
+    // ...
+    /* Criacao das tarefas */
+    /* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
+
+    CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+    CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+    CriaTarefa(tarefa_3, "Tarefa 3", PILHA_TAREFA_3, TAM_PILHA_3, 3); // Para esta nova tarefa, é uma boa ideia ajustar a prioridade das tarefas relacionadas a LED.
+    CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 3); // Nova tarefa
+    
+    // ...
+}
+/* Nova tarefa de exemplo que usa funcoes para suspender as tarefas por algum tempo (atraso/delay) */
+void tarefa_9(void)
+{
+    for(;;)
+    {
+        /* Liga LED_1. */
+        port_pin_set_output_level(LED_1_PIN, LED_1_ACTIVE);
+        TarefaEspera(500);  // Espera 500ms
+
+        /* Desliga LED_1. */
+        port_pin_set_output_level(LED_1_PIN, !LED_1_ACTIVE);
+        TarefaEspera(500);  // Espera 500ms
+    }
+}

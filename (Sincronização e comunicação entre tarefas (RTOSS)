@@ -1,0 +1,20 @@
+#include "FreeRTOS.h"
+#include "task.h"
+
+// Task function
+void vPeriodicPreemptiveTask(void *pvParameters) {
+    const TickType_t xPeriod = pdMS_TO_TICKS(100);
+    TickType_t xLastWakeTime;
+
+    // Initialize the last wake time.
+    xLastWakeTime = xTaskGetTickCount();
+
+    for (;;) {
+        // Task's work goes here.
+        printf("Preemptive task running.\n");
+
+        // Delay until the next period, but accounting for execution time.
+        // The scheduler will preempt this task if a higher-priority task becomes ready.
+        vTaskDelayUntil(&xLastWakeTime, xPeriod);
+    }
+}

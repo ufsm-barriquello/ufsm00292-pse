@@ -1,0 +1,16 @@
+#include "FreeRTOS.h"
+#include "task.h"
+
+// Função da tarefa
+void vTarefaPeriodicaCooperativa(void *pvParameters) {
+    const TickType_t xDelay = pdMS_TO_TICKS(100);
+
+    for (;;) {
+        // O trabalho da tarefa é feito aqui.
+        // Por exemplo, ligar/desligar um LED ou ler um sensor.
+        printf("Tarefa cooperativa executando.\n");
+        
+        // Este é o ponto crucial: a tarefa cede o controle voluntariamente.
+        vTaskDelay(xDelay); 
+    }
+}
