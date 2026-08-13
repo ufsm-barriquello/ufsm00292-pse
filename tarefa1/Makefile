@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -O2
+CFLAGS = -Wall -Wextra -g
 TARGET = tarefa1
 SRCS = buffer.c test.c
 OBJS = $(SRCS:.c=.o)
