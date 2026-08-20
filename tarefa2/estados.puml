@@ -1,0 +1,15 @@
+@startuml maquina
+hide empty description
+
+[*] --> Start
+Start -> Start
+Start --> Quantidade
+Dados : n : uint
+Dados : quantidade : uint
+Quantidade -> Dados
+Dados -> Dados : n < quantidade
+Dados --> Checksum
+Checksum -> Fim
+Checksum -> Start : Erro na verificação
+Fim ---> Start
+@enduml
