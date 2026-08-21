@@ -1,0 +1,10 @@
+# Objetos e Executáveis
+*.o
+*.exe
+
+# Relatórios e arquivos de log
+resultados_testes.txt
+
+# Configurações de IDE e ambiente
+.vscode/
+output/
