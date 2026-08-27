@@ -1,0 +1,16 @@
++-----------------------+                    +-------------------------+                    +-----------------------+
+  |    Protothread TX     |                    |  Canal de Comunicação   |                    |    Protothread RX     |
+  | (pt_transmissor_thread) |                   |    (CanalComunicacao)   |                    | (pt_receptor_thread)  |
+  +-----------------------+                    +-------------------------+                    +-----------------------+
+              |                                             |                                             |
+              | --- 1. barramento (Byte do Pacote) -------->|                                             |
+              | --- 2. novo_byte_disponivel = true -------->|                                             |
+              |                                             | --- 3. Lê byte & processa estado ---------->|
+              |                                             | <--- 4. novo_byte_disponivel = false -------|
+              |                                             |                                             |
+              |                                  [ Transmissão N Bytes ]                                  |
+              |                                             |                                             |
+              |                                             |<--- 5. canal_ack (ACK/NACK) ----------------|
+              |                                             |<--- 6. novo_ack_disponivel = true ----------|
+              |<--- 7. Lê ACK & conclui ou retransmite -----|                                             |
+              | --- 8. novo_ack_disponivel = false -------->|                                             |
