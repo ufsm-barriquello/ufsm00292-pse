@@ -15,10 +15,15 @@
 /* macros de configuracao */
 
 /* numero de tarefas */
-#define NUMERO_DE_TAREFAS	3
+#define NUMERO_DE_TAREFAS	5
 
 /* numero de prioridades/tarefas */
 #define PRIORIDADE_MAXIMA   4
+
+/* modo de escalonamento: 0 = cooperativo, 1 = preemptivo
+ * No modo preemptivo a marca de tempo (SysTick) forca a troca de contexto,
+ * entao uma tarefa de maior prioridade nao precisa esperar outra ceder a CPU. */
+#define MODO_PREEMPTIVO     0
 
 /* frequencia de clock da CPU */
 #define cfg_CPU_CLOCK_HZ 	48000000
