@@ -2,141 +2,148 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <assert.h>
+#include "pt.h" 
 
 #define STX 0x02
 #define ETX 0x03
-#define MAX_BUFFER 256
+#define ACK 0x06
+#define TIMEOUT_MAX 5
 
-// 1. Definição dos Estados
-typedef enum {
-    ST_STX = 0, 
-    ST_QTD, 
-    ST_DATA, 
-    ST_CHK, 
-    ST_ETX
-} States; 
+// simulação hardware
+uint8_t buffer_canal[256];
+int canal_tamanho = 0;
+bool tem_dados = false;
+bool ack_recebido = false;
+int ticks_tempo = 0;
+int retransmissoes = 0;
 
-// 2. Definição do Ponteiro de Função
-typedef void (*Action)(unsigned char data); // Ponteiro de função
+struct pt pt_tx, pt_rx;
 
-// 3. Estrutura da Máquina de Estados (FSM)
-struct StateMachine {
-    States state;
-    unsigned char buffer[MAX_BUFFER];
-    unsigned char chkBuffer;
-    int indBuffer;
-    int qtdBuffer;
-    Action action[5]; // Tabela de estados/eventos (Array de ponteiros)
-} sm; // Estrutura da FSM
-
-bool pacote_valido_recebido = false;
-
-// ==========================================
-// FUNÇÕES DE TRANSIÇÃO DE ESTADO
-// ==========================================
-
-void stSTX(unsigned char data) {
-    if (data == STX) {
-        sm.indBuffer = sm.qtdBuffer = 0;
-        sm.chkBuffer = 0;
-        sm.state = ST_QTD; // Início dos dados
-        pacote_valido_recebido = false;
+// protothread decodificador
+PT_THREAD(thread_receptor(struct pt *pt)) {
+    static int i;
+    static uint8_t chk_calc;
+    
+    PT_BEGIN(pt);
+    
+    while(1) {
+        PT_WAIT_UNTIL(pt, tem_dados); // Aguarda algo chegar
+        
+        // Valida se o formato básico confere (STX e ETX nos lugares certos)
+        if (buffer_canal[0] == STX && buffer_canal[canal_tamanho - 1] == ETX) {
+            chk_calc = buffer_canal[1]; // Inicia com o tamanho
+            for (i = 2; i < canal_tamanho - 2; i++) {
+                chk_calc ^= buffer_canal[i]; // Calcula o CHK dos dados
+            }
+            
+            // Verifica o Checksum
+            if (chk_calc == buffer_canal[canal_tamanho - 2]) {
+                ack_recebido = true; // Pacote válido, envia ACK
+            }
+        }
+        tem_dados = false; // Limpa o canal
     }
-}
-
-void stQtd(unsigned char data) {
-    sm.qtdBuffer = data; // Quantidade de dados
-    sm.chkBuffer ^= data; // Inicializa o checksum (XOR)
-    sm.state = (sm.qtdBuffer > 0) ? ST_DATA : ST_CHK; 
-}
-
-void stData(unsigned char data) {
-    sm.buffer[sm.indBuffer++] = data;
-    sm.chkBuffer ^= data; // Calcula soma de verificação (checksum)
     
-    if (sm.indBuffer == sm.qtdBuffer) {
-        sm.state = ST_CHK;
+    PT_END(pt);
+}
+
+// protothread codificadr 
+PT_THREAD(thread_transmissor(struct pt *pt, uint8_t *dados, uint8_t qtd)) {
+    static int tempo_inicio;
+    static int i;
+    static uint8_t chk;
+    
+    PT_BEGIN(pt);
+    
+    while(1) {
+        // Monta o pacote
+        buffer_canal[0] = STX;
+        buffer_canal[1] = qtd;
+        chk = qtd;
+        
+        for (i = 0; i < qtd; i++) {
+            buffer_canal[2 + i] = dados[i];
+            chk ^= dados[i];
+        }
+        
+        buffer_canal[2 + qtd] = chk;
+        buffer_canal[3 + qtd] = ETX;
+        canal_tamanho = 4 + qtd;
+        
+        tem_dados = true;
+        ack_recebido = false;
+        tempo_inicio = ticks_tempo;
+        
+        // Aguarda o ACK ou o tempo limite
+        PT_WAIT_UNTIL(pt, ack_recebido || (ticks_tempo - tempo_inicio >= TIMEOUT_MAX));
+        
+        if (ack_recebido) {
+            break; // Sucesso, sai do loop
+        } else {
+            retransmissoes++; // Timeout, o loop vai repetir e reenviar
+        }
     }
+    
+    PT_END(pt);
 }
 
-void stChk(unsigned char data) {
-    if (data == sm.chkBuffer) {
-        sm.state = ST_ETX; // Testa checksum
-    } else {
-        sm.state = ST_STX; // Falha no checksum, aborta
-    }
+// tdd
+void test_comunicacao_com_sucesso() {
+    uint8_t payload[] = {0xAA, 0xBB};
+    
+    PT_INIT(&pt_tx);
+    PT_INIT(&pt_rx);
+    ack_recebido = false;
+    retransmissoes = 0;
+    
+    // Ciclo de escalonamento
+    thread_transmissor(&pt_tx, payload, 2); 
+    thread_receptor(&pt_rx);
+    thread_transmissor(&pt_tx, payload, 2); // Retoma para verificar o ACK
+    
+    assert(ack_recebido == true);
+    assert(retransmissoes == 0);
+    printf("[OK] TDD - Dados transmitidos, decodificados e ACK recebido com sucesso.\n");
 }
 
-void stETX(unsigned char data) {
-    if (data == ETX) {
-        pacote_valido_recebido = true; // Simula a impressão/tratamento de dados
-    }
-    sm.state = ST_STX;
+void test_comunicacao_com_retransmissao() {
+    uint8_t payload[] = {0x11};
+    
+    PT_INIT(&pt_tx);
+    PT_INIT(&pt_rx);
+    ack_recebido = false;
+    retransmissoes = 0;
+    
+    // Transmissor envia o pacote
+    thread_transmissor(&pt_tx, payload, 1);
+    
+    // Corrompe o pacote no meio do caminho para forçar falha no checksum
+    buffer_canal[2] = 0xFF; 
+    
+    // Receptor lê o pacote corrompido (não vai gerar ACK)
+    thread_receptor(&pt_rx);
+    
+    // Simula o tempo passando (Timeout)
+    ticks_tempo += TIMEOUT_MAX + 1;
+    
+    // Transmissor percebe o timeout e reenvia
+    thread_transmissor(&pt_tx, payload, 1);
+    assert(retransmissoes == 1);
+    
+    // Desta vez o receptor lê o pacote intacto e gera o ACK
+    thread_receptor(&pt_rx);
+    thread_transmissor(&pt_tx, payload, 1);
+    
+    assert(ack_recebido == true);
+    printf("[OK] TDD - Erro injetado, Timeout processado e pacote retransmitido com sucesso.\n");
 }
-
-// INICIALIZAÇÃO E EXECUÇÃO
-
-
-void initSM() {
-    sm.state = ST_STX;
-    sm.buffer[0] = 0;
-    sm.chkBuffer = 0;
-    sm.indBuffer = 0;
-    sm.qtdBuffer = 0;
-    
-    // Mapeamento da tabela de estados para as funções correspondentes
-    sm.action[ST_STX] = stSTX;
-    sm.action[ST_QTD] = stQtd;
-    sm.action[ST_DATA] = stData;
-    sm.action[ST_CHK] = stChk;
-    sm.action[ST_ETX] = stETX; // Inicialização da FSM
-}
-
-void handleRx(unsigned char *data, int qtd) {
-    for (int i = 0; i < qtd; i++) {
-        // Execução da FSM chamando a função correspondente ao estado atual
-        sm.action[sm.state](data[i]); // Execução da FSM
-    }
-}
-
-// TESTES TDD
-
-void test_recepcao_pacote_valido() {
-    initSM();
-    
-    // Montando um pacote: STX | QTD (2) | DADOS (0x10, 0x20) | CHK (0x02^0x10^0x20 = 0x32) | ETX
-    unsigned char pacote_teste[] = {STX, 0x02, 0x10, 0x20, 0x32, ETX};
-    
-    handleRx(pacote_teste, sizeof(pacote_teste));
-    
-    assert(pacote_valido_recebido == true);
-    printf("[OK] TDD - Pacote valido decodificado com sucesso usando ponteiros de funcao.\n");
-}
-
-void test_falha_de_checksum() {
-    initSM();
-    
-    // Montando pacote com Checksum incorreto (enviado 0xFF em vez de 0x32)
-    unsigned char pacote_erro[] = {STX, 0x02, 0x10, 0x20, 0xFF, ETX};
-    
-    handleRx(pacote_erro, sizeof(pacote_erro));
-    
-    assert(pacote_valido_recebido == false);
-    assert(sm.state == ST_STX); // Deve ter resetado a maquina
-    printf("[OK] TDD - Pacote invalido barrado no Checksum e FSM resetada.\n");
-}
-
-// ==========================================
-// MAIN
-// ==========================================
 
 int main() {
-    printf("\n INICIANDO TESTES TDD (FSM COM PONTEIROS DE FUNCAO) n\n");
+    printf("\n INICIANDO TESTES TDD (PROTOTHREADS) \n\n");
     
-    test_recepcao_pacote_valido();
-    test_falha_de_checksum();
+    test_comunicacao_com_sucesso();
+    test_comunicacao_com_retransmissao();
     
     printf("         TODOS OS TESTES FORAM REALIZADOS COM SUCESSO!      \n");
-    
     return 0;
 }
