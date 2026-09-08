@@ -14,7 +14,7 @@
 /* macros de configuracao */
 
 /* numero de tarefas */
-#define NUMERO_DE_TAREFAS	3
+#define NUMERO_DE_TAREFAS	4
 
 /* número de prioridades/tarefas */
 #define PRIORIDADE_MAXIMA   4
