@@ -90,7 +90,9 @@ __irq void SysTick_Handler(void)
 {	
 	 
 	 ExecutaMarcaDeTempo();    
-	 //TrocaContexto();   /* para o uso como sistema preemptivo */
+#if RTOS_MODO_PREEMPTIVO
+	 TrocaContexto();
+#endif
 }
 
 __irq void HardFault_Handler(void)

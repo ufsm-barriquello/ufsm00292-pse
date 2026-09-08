@@ -8,12 +8,14 @@
  */
 void tarefa_1(void);
 void tarefa_2(void);
+void tarefa_periodica_100ms(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
  */
 #define TAM_PILHA_1		(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_2		(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_PERIODICA	(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -21,7 +23,10 @@ void tarefa_2(void);
  */
 uint32_t PILHA_TAREFA_1[TAM_PILHA_1];
 uint32_t PILHA_TAREFA_2[TAM_PILHA_2];
+uint32_t PILHA_TAREFA_PERIODICA[TAM_PILHA_PERIODICA];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
+
+volatile uint32_t execucoes_tarefa_periodica = 0;
 
 /*
  * Funcao principal de entrada do sistema
@@ -35,6 +40,9 @@ int main(void)
 	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
 	
 	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
+
+	CriaTarefa(tarefa_periodica_100ms, "Tarefa periodica 100 ms",
+		PILHA_TAREFA_PERIODICA, TAM_PILHA_PERIODICA, 3);
 	
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
@@ -71,5 +79,14 @@ void tarefa_2(void)
 	{
 		b++;
 		TarefaSuspende(2);	
+	}
+}
+
+void tarefa_periodica_100ms(void)
+{
+	for(;;)
+	{
+		execucoes_tarefa_periodica++;
+		TarefaEspera(100);
 	}
 }

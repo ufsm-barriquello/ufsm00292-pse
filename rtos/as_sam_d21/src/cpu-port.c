@@ -88,7 +88,9 @@ void SysTick_Handler(void)
 {	
 	 
 	 ExecutaMarcaDeTempo();    
-	 //TrocaContexto();   /* para o uso como sistema preemptivo */
+#if RTOS_MODO_PREEMPTIVO
+	 TrocaContexto();
+#endif
 }
 
 void HardFault_Handler(void)

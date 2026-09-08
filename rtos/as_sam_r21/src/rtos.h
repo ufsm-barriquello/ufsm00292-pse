@@ -15,7 +15,12 @@
 /* macros de configuracao */
 
 /* numero de tarefas */
-#define NUMERO_DE_TAREFAS	3
+#define NUMERO_DE_TAREFAS	4
+
+/* 0: escalonamento cooperativo; 1: escalonamento preemptivo */
+#ifndef RTOS_MODO_PREEMPTIVO
+#define RTOS_MODO_PREEMPTIVO	0
+#endif
 
 /* numero de prioridades/tarefas */
 #define PRIORIDADE_MAXIMA   4

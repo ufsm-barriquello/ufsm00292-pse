@@ -119,7 +119,7 @@ void tarefa_ociosa(void)
 	
 	for(;;)
 	{		
-		#if 0  /* para o uso como sistema cooperativo*/
+		#if !RTOS_MODO_PREEMPTIVO
 			REG_ATOMICA_INICIO();
 			TrocaContexto();				/* tarefa atual solicita troca de contexto */
 			REG_ATOMICA_FIM();
