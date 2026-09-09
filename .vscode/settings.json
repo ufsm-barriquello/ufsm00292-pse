@@ -1,0 +1,8 @@
+{
+    "mplab.mplab-importer.ignorePatterns": [
+        "rtos/as_sam_r21/as_r21.cproj",
+        "rtos/as_sam_d21/mplab_sam_d21.X/nbproject/configurations.xml",
+        "rtos/as_sam_r21/mplab_sam_r21.X/nbproject/configurations.xml",
+        "rtos/as_sam_d21/as_d21.cproj"
+    ]
+}
