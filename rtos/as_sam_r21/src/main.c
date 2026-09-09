@@ -1,250 +1,179 @@
 /**
  * \file
- *
- * \brief Exemplos diversos de tarefas e funcionalidades de um sistema operacional multitarefas.
- *
+ * \brief Atividade 8 - Escalonamento Preemptivo Encadeado de Tarefas com Contadores
  */
 
-/**
- * \mainpage Sistema operacional multitarefas
- *
- * \par Exemplso de tarefas
- *
- * Este arquivo contem exemplos diversos de tarefas e 
- * funcionalidades de um sistema operacional multitarefas.
- *
- *
- * \par Conteudo
- *
- * -# Inclui funcoes do sistema multitarefas (atraves de multitarefas.h)
- * -# Inicializacao do processador e do sistema multitarefas
- * -# Criacao de tarefas de demonstracao
- *
- */
-
-/*
- * Inclusao de arquivos de cabecalhos
- */
 #include <asf.h>
 #include "stdint.h"
 #include "rtos.h"
+#include <stdio.h>
 
 /*
- * Prototipos das tarefas
+ * Identificadores numéricos das tarefas para o RTOS
  */
-void tarefa_1(void);
-void tarefa_2(void);
-void tarefa_3(void);
-void tarefa_4(void);
-void tarefa_5(void);
-void tarefa_6(void);
-void tarefa_7(void);
-void tarefa_8(void);
+#define ID_THREAD0 1
+#define ID_THREAD1 2
+#define ID_THREAD2 3
+#define ID_THREAD3 4
+#define ID_THREAD4 5
+#define ID_MONITOR 6
 
 /*
- * Configuracao dos tamanhos das pilhas
+ * Protótipos das Tarefas
  */
-#define TAM_PILHA_1			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_2			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_3			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_4			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_5			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
+void thread0(void);
+void thread1(void);
+void thread2(void);
+void thread3(void);
+void thread4(void);
+void tarefa_monitor_30s(void);
 
 /*
- * Declaracao das pilhas das tarefas
+ * Configuração dos Tamanhos das Pilhas
  */
-uint32_t PILHA_TAREFA_1[TAM_PILHA_1];
-uint32_t PILHA_TAREFA_2[TAM_PILHA_2];
-uint32_t PILHA_TAREFA_3[TAM_PILHA_3];
-uint32_t PILHA_TAREFA_4[TAM_PILHA_4];
-uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
-uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
-uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
-uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
-uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
+#define TAM_PILHA (TAM_MINIMO_PILHA + 24)
+
+uint32_t PILHA_THREAD0[TAM_PILHA];
+uint32_t PILHA_THREAD1[TAM_PILHA];
+uint32_t PILHA_THREAD2[TAM_PILHA];
+uint32_t PILHA_THREAD3[TAM_PILHA];
+uint32_t PILHA_THREAD4[TAM_PILHA];
+uint32_t PILHA_MONITOR[TAM_PILHA];
+uint32_t PILHA_OCIOSA[TAM_PILHA];
 
 /*
- * Funcao principal de entrada do sistema
+ * Contadores individuais de execução de cada tarefa
+ */
+volatile uint32_t count0 = 0;
+volatile uint32_t count1 = 0;
+volatile uint32_t count2 = 0;
+volatile uint32_t count3 = 0;
+volatile uint32_t count4 = 0;
+
+/*
+ * Função principal de entrada do sistema
  */
 int main(int argc, char** argv)
 {
 #if 0
-	system_init();
+    system_init();
 #endif	
-	/* Criacao das tarefas */
-	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
-	
-	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
-	
-	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
-	
-	/* Cria tarefa ociosa do sistema */
-	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
-	
-	/* Configura marca de tempo */
+
+    /* 
+     * Criacao das 5 Tarefas em ordem decrescente de prioridade (5 é a maior prioridade):
+     * - Thread0 (Maior prioridade) inicia suspensa
+     * - Thread1 a Thread3 iniciam suspensas
+     * - Thread4 (Menor prioridade) inicia rodando
+     */
+    CriaTarefa(thread0, "Thread0", PILHA_THREAD0, TAM_PILHA, 5);
+    CriaTarefa(thread1, "Thread1", PILHA_THREAD1, TAM_PILHA, 4);
+    CriaTarefa(thread2, "Thread2", PILHA_THREAD2, TAM_PILHA, 3);
+    CriaTarefa(thread3, "Thread3", PILHA_THREAD3, TAM_PILHA, 2);
+    CriaTarefa(thread4, "Thread4", PILHA_THREAD4, TAM_PILHA, 1);
+
+    /* 6ª Tarefa: Monitora e imprime a soma a cada 30s (Prioridade alta para garantir impressão) */
+    CriaTarefa(tarefa_monitor_30s, "Monitor30s", PILHA_MONITOR, TAM_PILHA, 6);
+
+    /* Cria tarefa ociosa do sistema */
+    CriaTarefa(tarefa_ociosa, "Tarefa ociosa", PILHA_OCIOSA, TAM_PILHA, 0);
+
+    /* Suspende inicialmente Thread0 a Thread3 conforme especificação */
+    TarefaSuspende(ID_THREAD0);
+    TarefaSuspende(ID_THREAD1);
+    TarefaSuspende(ID_THREAD2);
+    TarefaSuspende(ID_THREAD3);
+
 #if 0
     ConfiguraMarcaTempo();   
 #endif	
-	/* Inicia sistema multitarefas */
-	IniciaMultitarefas();
-	
-	/* Nunca chega aqui */
+
+    /* Inicia sistema multitarefas */
+    IniciaMultitarefas();
+
     return (EXIT_SUCCESS);
-	while (1)
-	{
-	}
 }
 
-/* Tarefas de exemplo que usam funcoes para suspender/continuar as tarefas */
-void tarefa_1(void)
+/* 
+ * Thread 0: Maior Prioridade 
+ */
+void thread0(void)
 {
-	volatile uint16_t a = 0;
-	for(;;)
-	{
-		a++;
-		//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE); /* Liga LED. */
-		TarefaContinua(2);
-	
-	}
+    for (;;)
+    {
+        count0++;
+        TarefaSuspende(ID_THREAD0); /* Suspende a si mesma */
+    }
 }
 
-void tarefa_2(void)
+/* 
+ * Thread 1: Acorda Thread 0 e suspende a si mesma 
+ */
+void thread1(void)
 {
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		b++;
-		TarefaSuspende(2);	
-		//port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
-	}
+    for (;;)
+    {
+        count1++;
+        TarefaContinua(ID_THREAD0); /* Resume Thread0 */
+        TarefaSuspende(ID_THREAD1); /* Suspende a si mesma */
+    }
 }
 
-/* Tarefas de exemplo que usam funcoes para suspender as tarefas por algum tempo (atraso/delay) */
-void tarefa_3(void)
+/* 
+ * Thread 2: Acorda Thread 1 e suspende a si mesma 
+ */
+void thread2(void)
 {
-	volatile uint16_t a = 0;
-	for(;;)
-	{
-		a++;	
-			
-		/* Liga LED. */
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		/* Desliga LED. */
-		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-	}
+    for (;;)
+    {
+        count2++;
+        TarefaContinua(ID_THREAD1); /* Resume Thread1 */
+        TarefaSuspende(ID_THREAD2); /* Suspende a si mesma */
+    }
 }
 
-void tarefa_4(void)
+/* 
+ * Thread 3: Acorda Thread 2 e suspende a si mesma 
+ */
+void thread3(void)
 {
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		b++;
-		TarefaEspera(5);	/* tarefa se coloca em espera por 5 marcas de tempo (ticks) */
-	}
+    for (;;)
+    {
+        count3++;
+        TarefaContinua(ID_THREAD2); /* Resume Thread2 */
+        TarefaSuspende(ID_THREAD3); /* Suspende a si mesma */
+    }
 }
 
-/* Tarefas de exemplo que usam funcoes de semaforo */
-
-semaforo_t SemaforoTeste = {0,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_5(void)
+/* 
+ * Thread 4: Menor Prioridade - Acorda Thread 3 (Reinicia a cadeia) 
+ */
+void thread4(void)
 {
-
-	uint32_t a = 0;			/* inicializacoes para a tarefa */
-	
-	for(;;)
-	{
-		
-		a++;				/* codigo exemplo da tarefa */
-
-		TarefaEspera(3); 	/* tarefa se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		SemaforoLibera(&SemaforoTeste); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-	}
+    for (;;)
+    {
+        count4++;
+        TarefaContinua(ID_THREAD3); /* Resume Thread3 */
+        /* Nao precisa se suspender pois a Thread3 preempta imediatamente por ter prioridade maior */
+    }
 }
 
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_6(void)
+/* 
+ * 6ª Tarefa: Imprime a soma dos contadores no terminal a cada 30 segundos (30000 ms/ticks)
+ */
+void tarefa_monitor_30s(void)
 {
-	
-	uint32_t b = 0;	    /* inicializacoes para a tarefa */
-	
-	for(;;)
-	{
-		
-		b++; 			/* codigo exemplo da tarefa */
-		
-		SemaforoAguarda(&SemaforoTeste); /* tarefa se coloca em espera por semaforo */
+    for (;;)
+    {
+        TarefaEspera(30000); /* Aguarda 30 segundos */
 
-	}
-}
+        REG_ATOMICA_INICIO();
+        uint32_t soma = count0 + count1 + count2 + count3 + count4;
+        REG_ATOMICA_FIM();
 
-/* solucao com buffer compartilhado */
-/* Tarefas de exemplo que usam funcoes de semaforo */
-
-#define TAM_BUFFER 10
-uint8_t buffer[TAM_BUFFER]; /* declaracao de um buffer (vetor) ou fila circular */
-
-semaforo_t SemaforoCheio = {0,0}; /* declaracao e inicializacao de um semaforo */
-semaforo_t SemaforoVazio = {TAM_BUFFER,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_7(void)
-{
-
-	uint8_t a = 1;			/* inicializacoes para a tarefa */
-	uint8_t i = 0;
-	
-	for(;;)
-	{
-		SemaforoAguarda(&SemaforoVazio);
-		
-		buffer[i] = a++;
-		i = (i+1)%TAM_BUFFER;
-		
-		SemaforoLibera(&SemaforoCheio); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-		TarefaEspera(10); 	/* tarefa se coloca em espera por 10 marcas de tempo (ticks), equivale a 10ms */		
-	}
-}
-
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_8(void)
-{
-	static uint8_t f = 0;
-	volatile uint8_t valor;
-		
-	for(;;)
-	{
-		volatile uint8_t contador;
-		
-		do{
-			REG_ATOMICA_INICIO();			
-				contador = SemaforoCheio.contador;			
-			REG_ATOMICA_FIM();
-			
-			if (contador == 0)
-			{
-				TarefaEspera(100);
-			}
-				
-		} while (!contador);
-		
-		SemaforoAguarda(&SemaforoCheio);
-		
-		valor = buffer[f];
-		f = (f+1) % TAM_BUFFER;	
-		
-		(void)valor;	/* leitura da variavel para evitar aviso (warning) do compilador */
-		
-		SemaforoLibera(&SemaforoVazio);
-	}
+        /* Imprime a soma total dos contadores via terminal */
+        printf("\n[RTOS 30s] Soma dos contadores das tarefas: %lu\n", (unsigned long)soma);
+        printf("Count0: %lu | Count1: %lu | Count2: %lu | Count3: %lu | Count4: %lu\n",
+               (unsigned long)count0, (unsigned long)count1, 
+               (unsigned long)count2, (unsigned long)count3, (unsigned long)count4);
+    }
 }
