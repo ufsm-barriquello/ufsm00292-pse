@@ -41,6 +41,9 @@ void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
 
+/* ---> ADICIONE ESTA LINHA <--- */
+void tarefa_periodica_100ms(void);
+
 /*
  * Configuracao dos tamanhos das pilhas
  */
@@ -81,6 +84,9 @@ int main(int argc, char** argv)
 	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
 	
 	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
+	
+	/* ---> ADICIONE ESTA LINHA <--- */
+	CriaTarefa(tarefa_periodica_100ms, "Periodica 100ms", PILHA_TAREFA_3, TAM_PILHA_3, 3);
 	
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
@@ -246,5 +252,22 @@ void tarefa_8(void)
 		(void)valor;	/* leitura da variavel para evitar aviso (warning) do compilador */
 		
 		SemaforoLibera(&SemaforoVazio);
+	}
+}
+
+/* ---> ADICIONE O CORPO DA TAREFA NO FINAL DO ARQUIVO <--- */
+void tarefa_periodica_100ms(void)
+{
+	volatile uint32_t contador = 0;
+	
+	for(;;)
+	{
+		contador++;
+		
+		/* Alterna o LED para indicar a execucao visualmente */
+		port_pin_set_output_level(LED_0_PIN, !port_pin_get_output_level(LED_0_PIN));
+		
+		/* Coloca a tarefa em espera por 100 ticks (100 ms) */
+		TarefaEspera(100);
 	}
 }
