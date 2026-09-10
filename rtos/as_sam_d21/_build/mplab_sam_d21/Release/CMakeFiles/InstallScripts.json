@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

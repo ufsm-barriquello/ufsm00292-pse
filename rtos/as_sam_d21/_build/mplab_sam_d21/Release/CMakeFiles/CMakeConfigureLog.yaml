@@ -1,0 +1,1514 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/bin/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/uname"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/uname"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/uname"
+      - "/home/thomas/.nix-profile/bin/uname"
+      - "/nix/var/nix/profiles/default/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:213 (message)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Linux - 7.2.3-zen1-3-zen - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Program used to build from build.ninja files."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ninja-build"
+      - "ninja"
+      - "samu"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/ninja-build"
+    found: "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/ninja"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/4.4.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-strip"
+      - "strip"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ld"
+      - "ld"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-nm"
+      - "nm"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-nm"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objdump"
+      - "objdump"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-dlltool"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-dlltool"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-dlltool"
+      - "/usr/local/sbin/arm-none-eabi-dlltool"
+      - "/usr/local/bin/arm-none-eabi-dlltool"
+      - "/usr/bin/arm-none-eabi-dlltool"
+      - "/opt/cuda/bin/arm-none-eabi-dlltool"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-dlltool"
+      - "/usr/bin/site_perl/arm-none-eabi-dlltool"
+      - "/usr/bin/vendor_perl/arm-none-eabi-dlltool"
+      - "/usr/bin/core_perl/arm-none-eabi-dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/dlltool"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/dlltool"
+      - "/home/thomas/.nix-profile/bin/dlltool"
+      - "/nix/var/nix/profiles/default/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/opt/cuda/bin/dlltool"
+      - "/usr/lib/jvm/default/bin/dlltool"
+      - "/usr/bin/site_perl/dlltool"
+      - "/usr/bin/vendor_perl/dlltool"
+      - "/usr/bin/core_perl/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-tapi"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-tapi"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-tapi"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-tapi"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-tapi"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-tapi"
+      - "/usr/local/sbin/arm-none-eabi-tapi"
+      - "/usr/local/bin/arm-none-eabi-tapi"
+      - "/usr/bin/arm-none-eabi-tapi"
+      - "/opt/cuda/bin/arm-none-eabi-tapi"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-tapi"
+      - "/usr/bin/site_perl/arm-none-eabi-tapi"
+      - "/usr/bin/vendor_perl/arm-none-eabi-tapi"
+      - "/usr/bin/core_perl/arm-none-eabi-tapi"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/tapi"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/tapi"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/tapi"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/tapi"
+      - "/home/thomas/.nix-profile/bin/tapi"
+      - "/nix/var/nix/profiles/default/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/opt/cuda/bin/tapi"
+      - "/usr/lib/jvm/default/bin/tapi"
+      - "/usr/bin/site_perl/tapi"
+      - "/usr/bin/vendor_perl/tapi"
+      - "/usr/bin/core_perl/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-14.2"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/arm-none-eabi-gcc-ar14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar14"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-14.2"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib14"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/4.4.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-14.2"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/arm-none-eabi-gcc-ar-14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-14"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/arm-none-eabi-gcc-ar14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar14"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-14.2"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-14.2"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-14"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib14"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib14"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib14"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib14"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib14"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1328 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:174 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ar-"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ar-"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ar-"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:271 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/"
+      - "/home/thomas/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+    searched_directories:
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin/arm-none-eabi-gcc-ranlib-"
+      - "/home/thomas/.nix-profile/bin/arm-none-eabi-gcc-ranlib-"
+      - "/nix/var/nix/profiles/default/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/cuda/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/lib/jvm/default/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/site_perl/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/vendor_perl/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/core_perl/arm-none-eabi-gcc-ranlib-"
+    found: "/home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/thomas/.mplab/app-finder/apps/ninja/v1.13.2"
+        - "/home/thomas/.mplab/app-finder/apps/make/v4.4.1/linux"
+        - "/home/thomas/.mplab/app-finder/apps/hexmate/v3.00/dist/linux/bin"
+        - "/home/thomas/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+...

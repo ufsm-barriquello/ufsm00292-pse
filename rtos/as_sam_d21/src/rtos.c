@@ -132,7 +132,7 @@ void IniciaMultitarefas(void)
 {
 	tarefa_atual = escalonador();
 	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
-	SP = ponteiro_de_pilha;
+	SP = (uint32_t) ponteiro_de_pilha;
 	GERA_INTERRUPCAO_SW();
 }
 
@@ -140,7 +140,7 @@ void TrocaContextoDasTarefas(void)
 {
 	
 	/* guarda o valor antigo do stack pointer */
-	TCB[tarefa_atual].stack_pointer = SP;
+	TCB[tarefa_atual].stack_pointer = (stackptr_t) SP;
 		
 	/* executa o escalonador */
 	proxima_tarefa = escalonador();
@@ -151,7 +151,7 @@ void TrocaContextoDasTarefas(void)
 	/* coloca um novo valor no stack pointer */
 	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
 		
-	SP = ponteiro_de_pilha;
+	SP = (uint32_t) ponteiro_de_pilha;
 
 }
 void ExecutaMarcaDeTempo(void)
