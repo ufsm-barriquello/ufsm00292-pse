@@ -1,0 +1,4 @@
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/mplab_sam_d21_Release_Release_ARM_GCC_compile.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/mplab_sam_d21_Release_image_9AC7Y_lO.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/edit_cache.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Release/CMakeFiles/rebuild_cache.dir

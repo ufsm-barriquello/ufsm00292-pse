@@ -1,0 +1,1291 @@
+
+Debug.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name            Size      VMA       LMA       File off  Algn  Flags
+  0 .text           0000068c  00000000  00000000  00001000  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .relocate       00000000  20000000  20000000  0000168c  2**0  CONTENTS
+  2 .bss            000002e8  20000000  20000000  00002000  2**2  ALLOC
+  3 .stack          00002000  200002e8  200002e8  00002000  2**0  ALLOC
+  4 .ARM.attributes 0000002d  00000000  00000000  0000168c  2**0  CONTENTS, READONLY
+  5 .comment        00000045  00000000  00000000  000016b9  2**0  CONTENTS, READONLY
+  6 .debug_info     0000584b  00000000  00000000  000016fe  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev   00000933  00000000  00000000  00006f49  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_loc      0000080f  00000000  00000000  0000787c  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_aranges  00000148  00000000  00000000  0000808b  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_ranges   000001a0  00000000  00000000  000081d3  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_macro    0000142c  00000000  00000000  00008373  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_line     00004d5a  00000000  00000000  0000979f  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_str      00087d6c  00000000  00000000  0000e4f9  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_frame    00000300  00000000  00000000  00096268  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+00000000 <exception_table>:
+_sfixed():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:227
+	}
+}
+
+/* Exemplo de tarefa que usa semaforo */
+void tarefa_8(void)
+{
+   0:	e8 22 00 20 71 01 00 00 6d 01 00 00 55 03 00 00     .". q...m...U...
+	...
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:249
+				
+		} while (!contador);
+		
+		SemaforoAguarda(&SemaforoCheio);
+		
+		valor = buffer[f];
+  2c:	ad 02 00 00 00 00 00 00 00 00 00 00 f1 02 00 00     ................
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:252
+		f = (f+1) % TAM_BUFFER;		
+		
+		SemaforoLibera(&SemaforoVazio);
+  3c:	49 03 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     I...m...m...m...
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:232
+	{
+  4c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  5c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  6c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  7c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  8c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  9c:	6d 01 00 00 6d 01 00 00 6d 01 00 00 6d 01 00 00     m...m...m...m...
+  ac:	6d 01 00 00 00 00 00 00                             m.......
+
+000000b4 <deregister_tm_clones>:
+deregister_tm_clones():
+  b4:	4806      	ldr	r0, [pc, #24]	@ (d0 <deregister_tm_clones+0x1c>)
+  b6:	4b07      	ldr	r3, [pc, #28]	@ (d4 <deregister_tm_clones+0x20>)
+  b8:	b510      	push	{r4, lr}
+  ba:	4283      	cmp	r3, r0
+  bc:	d004      	beq.n	c8 <deregister_tm_clones+0x14>
+  be:	4b06      	ldr	r3, [pc, #24]	@ (d8 <deregister_tm_clones+0x24>)
+  c0:	2b00      	cmp	r3, #0
+  c2:	d001      	beq.n	c8 <deregister_tm_clones+0x14>
+  c4:	f000 f80a 	bl	dc <deregister_tm_clones+0x28>
+  c8:	bc10      	pop	{r4}
+  ca:	bc01      	pop	{r0}
+  cc:	4700      	bx	r0
+  ce:	46c0      	nop			@ (mov r8, r8)
+  d0:	0000068c 	.word	0x0000068c
+  d4:	0000068c 	.word	0x0000068c
+  d8:	00000000 	.word	0x00000000
+  dc:	4718      	bx	r3
+  de:	46c0      	nop			@ (mov r8, r8)
+
+000000e0 <register_tm_clones>:
+register_tm_clones():
+  e0:	4808      	ldr	r0, [pc, #32]	@ (104 <register_tm_clones+0x24>)
+  e2:	4909      	ldr	r1, [pc, #36]	@ (108 <register_tm_clones+0x28>)
+  e4:	1a09      	subs	r1, r1, r0
+  e6:	108b      	asrs	r3, r1, #2
+  e8:	0fc9      	lsrs	r1, r1, #31
+  ea:	18c9      	adds	r1, r1, r3
+  ec:	b510      	push	{r4, lr}
+  ee:	1049      	asrs	r1, r1, #1
+  f0:	d004      	beq.n	fc <register_tm_clones+0x1c>
+  f2:	4b06      	ldr	r3, [pc, #24]	@ (10c <register_tm_clones+0x2c>)
+  f4:	2b00      	cmp	r3, #0
+  f6:	d001      	beq.n	fc <register_tm_clones+0x1c>
+  f8:	f000 f80a 	bl	110 <register_tm_clones+0x30>
+  fc:	bc10      	pop	{r4}
+  fe:	bc01      	pop	{r0}
+ 100:	4700      	bx	r0
+ 102:	46c0      	nop			@ (mov r8, r8)
+ 104:	0000068c 	.word	0x0000068c
+ 108:	0000068c 	.word	0x0000068c
+ 10c:	00000000 	.word	0x00000000
+ 110:	4718      	bx	r3
+ 112:	46c0      	nop			@ (mov r8, r8)
+
+00000114 <__do_global_dtors_aux>:
+__do_global_dtors_aux():
+ 114:	b510      	push	{r4, lr}
+ 116:	4c08      	ldr	r4, [pc, #32]	@ (138 <__do_global_dtors_aux+0x24>)
+ 118:	7823      	ldrb	r3, [r4, #0]
+ 11a:	2b00      	cmp	r3, #0
+ 11c:	d109      	bne.n	132 <__do_global_dtors_aux+0x1e>
+ 11e:	f7ff ffc9 	bl	b4 <deregister_tm_clones>
+ 122:	4b06      	ldr	r3, [pc, #24]	@ (13c <__do_global_dtors_aux+0x28>)
+ 124:	2b00      	cmp	r3, #0
+ 126:	d002      	beq.n	12e <__do_global_dtors_aux+0x1a>
+ 128:	4805      	ldr	r0, [pc, #20]	@ (140 <__do_global_dtors_aux+0x2c>)
+ 12a:	e000      	b.n	12e <__do_global_dtors_aux+0x1a>
+ 12c:	bf00      	nop
+ 12e:	2301      	movs	r3, #1
+ 130:	7023      	strb	r3, [r4, #0]
+ 132:	bc10      	pop	{r4}
+ 134:	bc01      	pop	{r0}
+ 136:	4700      	bx	r0
+ 138:	20000000 	.word	0x20000000
+ 13c:	00000000 	.word	0x00000000
+ 140:	0000068c 	.word	0x0000068c
+
+00000144 <frame_dummy>:
+frame_dummy():
+ 144:	4b06      	ldr	r3, [pc, #24]	@ (160 <frame_dummy+0x1c>)
+ 146:	b510      	push	{r4, lr}
+ 148:	2b00      	cmp	r3, #0
+ 14a:	d003      	beq.n	154 <frame_dummy+0x10>
+ 14c:	4905      	ldr	r1, [pc, #20]	@ (164 <frame_dummy+0x20>)
+ 14e:	4806      	ldr	r0, [pc, #24]	@ (168 <frame_dummy+0x24>)
+ 150:	e000      	b.n	154 <frame_dummy+0x10>
+ 152:	bf00      	nop
+ 154:	f7ff ffc4 	bl	e0 <register_tm_clones>
+ 158:	bc10      	pop	{r4}
+ 15a:	bc01      	pop	{r0}
+ 15c:	4700      	bx	r0
+ 15e:	46c0      	nop			@ (mov r8, r8)
+ 160:	00000000 	.word	0x00000000
+ 164:	20000004 	.word	0x20000004
+ 168:	0000068c 	.word	0x0000068c
+
+0000016c <Dummy_Handler>:
+Dummy_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:286
+/**
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+        while (1) {
+ 16c:	e7fe      	b.n	16c <Dummy_Handler>
+	...
+
+00000170 <Reset_Handler>:
+Reset_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:243
+        if (pSrc != pDest) {
+ 170:	4a1f      	ldr	r2, [pc, #124]	@ (1f0 <Reset_Handler+0x80>)
+ 172:	4b20      	ldr	r3, [pc, #128]	@ (1f4 <Reset_Handler+0x84>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:236
+{
+ 174:	b570      	push	{r4, r5, r6, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:244
+                for (; pDest < &_erelocate;) {
+ 176:	4920      	ldr	r1, [pc, #128]	@ (1f8 <Reset_Handler+0x88>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:243
+        if (pSrc != pDest) {
+ 178:	429a      	cmp	r2, r3
+ 17a:	d133      	bne.n	1e4 <Reset_Handler+0x74>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:251
+                *pDest++ = 0;
+ 17c:	2100      	movs	r1, #0
+ 17e:	4b1f      	ldr	r3, [pc, #124]	@ (1fc <Reset_Handler+0x8c>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:250 (discriminator 1)
+        for (pDest = &_szero; pDest < &_ezero;) {
+ 180:	4a1f      	ldr	r2, [pc, #124]	@ (200 <Reset_Handler+0x90>)
+ 182:	4293      	cmp	r3, r2
+ 184:	d331      	bcc.n	1ea <Reset_Handler+0x7a>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:256
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+ 186:	22ff      	movs	r2, #255	@ 0xff
+ 188:	4b1e      	ldr	r3, [pc, #120]	@ (204 <Reset_Handler+0x94>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:261
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
+ 18a:	2103      	movs	r1, #3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:256
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+ 18c:	4393      	bics	r3, r2
+ 18e:	4a1e      	ldr	r2, [pc, #120]	@ (208 <Reset_Handler+0x98>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:262
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
+ 190:	250c      	movs	r5, #12
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:256
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+ 192:	6093      	str	r3, [r2, #8]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:259
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
+ 194:	2202      	movs	r2, #2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:262
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
+ 196:	2408      	movs	r4, #8
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:259
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
+ 198:	4b1c      	ldr	r3, [pc, #112]	@ (20c <Reset_Handler+0x9c>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:261
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
+ 19a:	481d      	ldr	r0, [pc, #116]	@ (210 <Reset_Handler+0xa0>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:259
+        SBMATRIX->SFR[SBMATRIX_SLAVE_HMCRAMC0].reg = 2;
+ 19c:	625a      	str	r2, [r3, #36]	@ 0x24
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:261
+        USB->DEVICE.QOSCTRL.bit.CQOS = 2;
+ 19e:	78c3      	ldrb	r3, [r0, #3]
+ 1a0:	438b      	bics	r3, r1
+ 1a2:	4313      	orrs	r3, r2
+ 1a4:	70c3      	strb	r3, [r0, #3]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:262
+        USB->DEVICE.QOSCTRL.bit.DQOS = 2;
+ 1a6:	78c3      	ldrb	r3, [r0, #3]
+ 1a8:	43ab      	bics	r3, r5
+ 1aa:	4323      	orrs	r3, r4
+ 1ac:	70c3      	strb	r3, [r0, #3]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:264
+        DMAC->QOSCTRL.bit.DQOS = 2;
+ 1ae:	2030      	movs	r0, #48	@ 0x30
+ 1b0:	4b18      	ldr	r3, [pc, #96]	@ (214 <Reset_Handler+0xa4>)
+ 1b2:	7b9e      	ldrb	r6, [r3, #14]
+ 1b4:	4386      	bics	r6, r0
+ 1b6:	3810      	subs	r0, #16
+ 1b8:	4330      	orrs	r0, r6
+ 1ba:	7398      	strb	r0, [r3, #14]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:265
+        DMAC->QOSCTRL.bit.FQOS = 2;
+ 1bc:	7b98      	ldrb	r0, [r3, #14]
+ 1be:	43a8      	bics	r0, r5
+ 1c0:	4304      	orrs	r4, r0
+ 1c2:	739c      	strb	r4, [r3, #14]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:266
+        DMAC->QOSCTRL.bit.WRBQOS = 2;
+ 1c4:	7b98      	ldrb	r0, [r3, #14]
+ 1c6:	4388      	bics	r0, r1
+ 1c8:	4302      	orrs	r2, r0
+ 1ca:	739a      	strb	r2, [r3, #14]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:269
+        NVMCTRL->CTRLB.bit.MANW = 1;
+ 1cc:	2380      	movs	r3, #128	@ 0x80
+ 1ce:	4a12      	ldr	r2, [pc, #72]	@ (218 <Reset_Handler+0xa8>)
+ 1d0:	6851      	ldr	r1, [r2, #4]
+ 1d2:	430b      	orrs	r3, r1
+ 1d4:	6053      	str	r3, [r2, #4]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:272
+        __libc_init_array();
+ 1d6:	4b11      	ldr	r3, [pc, #68]	@ (21c <Reset_Handler+0xac>)
+ 1d8:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:275
+        main();
+ 1da:	4b11      	ldr	r3, [pc, #68]	@ (220 <Reset_Handler+0xb0>)
+ 1dc:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:278
+        while (1);
+ 1de:	e7fe      	b.n	1de <Reset_Handler+0x6e>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:245
+                        *pDest++ = *pSrc++;
+ 1e0:	ca01      	ldmia	r2!, {r0}
+ 1e2:	c301      	stmia	r3!, {r0}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:244
+                for (; pDest < &_erelocate;) {
+ 1e4:	428b      	cmp	r3, r1
+ 1e6:	d3fb      	bcc.n	1e0 <Reset_Handler+0x70>
+ 1e8:	e7c8      	b.n	17c <Reset_Handler+0xc>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/utils/cmsis/samd21/source/gcc/startup_samd21.c:251
+                *pDest++ = 0;
+ 1ea:	c302      	stmia	r3!, {r1}
+ 1ec:	e7c9      	b.n	182 <Reset_Handler+0x12>
+ 1ee:	46c0      	nop			@ (mov r8, r8)
+ 1f0:	0000068c 	.word	0x0000068c
+ 1f4:	20000000 	.word	0x20000000
+ 1f8:	20000000 	.word	0x20000000
+ 1fc:	20000000 	.word	0x20000000
+ 200:	200002e8 	.word	0x200002e8
+ 204:	00000000 	.word	0x00000000
+ 208:	e000ed00 	.word	0xe000ed00
+ 20c:	410070fc 	.word	0x410070fc
+ 210:	41005000 	.word	0x41005000
+ 214:	41004800 	.word	0x41004800
+ 218:	41004000 	.word	0x41004000
+ 21c:	000005ed 	.word	0x000005ed
+ 220:	000003cd 	.word	0x000003cd
+
+00000224 <CriaContexto>:
+CriaContexto():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:16
+stackptr_t CriaContexto(tarefa_t endereco_tarefa, stackptr_t ptr_pilha)
+{
+	#define INITIAL_XPSR		0x01000000
+	
+	uint32_t reg_val;
+	*(--ptr_pilha) = INITIAL_XPSR;     /* xPSR */
+ 224:	2280      	movs	r2, #128	@ 0x80
+ 226:	1f0b      	subs	r3, r1, #4
+ 228:	0452      	lsls	r2, r2, #17
+ 22a:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:18
+	*(--ptr_pilha) = (uint32_t)endereco_tarefa;  /* R15 */
+	*(--ptr_pilha) = 0x00;				   /* R14 */
+ 22c:	000a      	movs	r2, r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:17
+	*(--ptr_pilha) = (uint32_t)endereco_tarefa;  /* R15 */
+ 22e:	3b04      	subs	r3, #4
+ 230:	6018      	str	r0, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:18
+	*(--ptr_pilha) = 0x00;				   /* R14 */
+ 232:	2300      	movs	r3, #0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:20
+	
+	*(--ptr_pilha) = 0x12;			   /* R12 */
+ 234:	2012      	movs	r0, #18
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:18
+	*(--ptr_pilha) = 0x00;				   /* R14 */
+ 236:	3a0c      	subs	r2, #12
+ 238:	6013      	str	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:20
+	*(--ptr_pilha) = 0x12;			   /* R12 */
+ 23a:	3a04      	subs	r2, #4
+ 23c:	6010      	str	r0, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:24
+	
+	for(reg_val = 3; reg_val > 0; reg_val--)
+	{
+		*(--ptr_pilha) = reg_val;  /* R3, R2, R1 */
+ 23e:	3a04      	subs	r2, #4
+ 240:	380f      	subs	r0, #15
+ 242:	6010      	str	r0, [r2, #0]
+ 244:	3a04      	subs	r2, #4
+ 246:	3801      	subs	r0, #1
+ 248:	6010      	str	r0, [r2, #0]
+ 24a:	3a04      	subs	r2, #4
+ 24c:	3801      	subs	r0, #1
+ 24e:	6010      	str	r0, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:27
+	}
+	
+	*(--ptr_pilha) = 0;		   /* R0 */
+ 250:	3a04      	subs	r2, #4
+ 252:	6013      	str	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:31
+	
+	for(reg_val = 7; reg_val >= 4; reg_val--)
+	{
+		*(--ptr_pilha) = reg_val;  /* R7, R6, R5, R4 */
+ 254:	000b      	movs	r3, r1
+ 256:	2207      	movs	r2, #7
+ 258:	3b24      	subs	r3, #36	@ 0x24
+ 25a:	601a      	str	r2, [r3, #0]
+ 25c:	3b04      	subs	r3, #4
+ 25e:	3a01      	subs	r2, #1
+ 260:	601a      	str	r2, [r3, #0]
+ 262:	3b04      	subs	r3, #4
+ 264:	3a01      	subs	r2, #1
+ 266:	601a      	str	r2, [r3, #0]
+ 268:	3b04      	subs	r3, #4
+ 26a:	3a01      	subs	r2, #1
+ 26c:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:36
+	}
+	
+	for(reg_val = 11; reg_val >= 8; reg_val--)
+	{
+		*(--ptr_pilha) = reg_val;  /* R11, R10, R9, R8 */
+ 26e:	3b04      	subs	r3, #4
+ 270:	3207      	adds	r2, #7
+ 272:	601a      	str	r2, [r3, #0]
+ 274:	3b04      	subs	r3, #4
+ 276:	3a01      	subs	r2, #1
+ 278:	601a      	str	r2, [r3, #0]
+ 27a:	3b04      	subs	r3, #4
+ 27c:	3a01      	subs	r2, #1
+ 27e:	601a      	str	r2, [r3, #0]
+ 280:	2308      	movs	r3, #8
+ 282:	3940      	subs	r1, #64	@ 0x40
+ 284:	0008      	movs	r0, r1
+ 286:	600b      	str	r3, [r1, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:42
+	}
+	
+	return ptr_pilha;
+
+	
+}
+ 288:	4770      	bx	lr
+	...
+
+0000028c <ConfiguraMarcaTempo>:
+ConfiguraMarcaTempo():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:52
+{   
+	
+	    uint32_t cpu_clock_hz = 48000000UL; //system_cpu_clock_get_hz();
+		uint16_t valor_comparador = cpu_clock_hz/cfg_MARCA_TEMPO_HZ; //(cfg_CPU_CLOCK_HZ / cfg_MARCA_TEMPO_HZ);
+		
+		*(NVIC_SYSTICK_CTRL) = 0;						// Desabilita SysTick Timer
+ 28c:	2200      	movs	r2, #0
+ 28e:	4b04      	ldr	r3, [pc, #16]	@ (2a0 <ConfiguraMarcaTempo+0x14>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:53
+		*(NVIC_SYSTICK_LOAD) = valor_comparador - 1;	// Configura a contagem
+ 290:	4904      	ldr	r1, [pc, #16]	@ (2a4 <ConfiguraMarcaTempo+0x18>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:52
+		*(NVIC_SYSTICK_CTRL) = 0;						// Desabilita SysTick Timer
+ 292:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:53
+		*(NVIC_SYSTICK_LOAD) = valor_comparador - 1;	// Configura a contagem
+ 294:	4a04      	ldr	r2, [pc, #16]	@ (2a8 <ConfiguraMarcaTempo+0x1c>)
+ 296:	6011      	str	r1, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:54
+		*(NVIC_SYSTICK_CTRL) = NVIC_SYSTICK_CLK | NVIC_SYSTICK_INT | NVIC_SYSTICK_ENABLE;  // Inicia
+ 298:	2207      	movs	r2, #7
+ 29a:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:55
+}
+ 29c:	4770      	bx	lr
+ 29e:	46c0      	nop			@ (mov r8, r8)
+ 2a0:	e000e010 	.word	0xe000e010
+ 2a4:	0000bb7f 	.word	0x0000bb7f
+ 2a8:	e000e014 	.word	0xe000e014
+
+000002ac <SVC_Handler>:
+SVC_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:61
+
+/* rotinas de interrupcao necessarias */
+__attribute__ ((naked)) void SVC_Handler(void)
+{
+	/* Make PendSV and SysTick the lowest priority interrupts. */
+	*(NVIC_SYSPRI3) |= NVIC_PENDSV_PRI;
+ 2ac:	22f0      	movs	r2, #240	@ 0xf0
+ 2ae:	4b0d      	ldr	r3, [pc, #52]	@ (2e4 <SVC_Handler+0x38>)
+ 2b0:	0412      	lsls	r2, r2, #16
+ 2b2:	6819      	ldr	r1, [r3, #0]
+ 2b4:	430a      	orrs	r2, r1
+ 2b6:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:62
+	*(NVIC_SYSPRI3) |= NVIC_SYSTICK_PRI;
+ 2b8:	22f0      	movs	r2, #240	@ 0xf0
+ 2ba:	6819      	ldr	r1, [r3, #0]
+ 2bc:	0612      	lsls	r2, r2, #24
+ 2be:	430a      	orrs	r2, r1
+ 2c0:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:63
+	RESTAURA_SP(SP);
+ 2c2:	4909      	ldr	r1, [pc, #36]	@ (2e8 <SVC_Handler+0x3c>)
+ 2c4:	6808      	ldr	r0, [r1, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:64
+	RESTAURA_CONTEXTO();
+ 2c6:	c8f0      	ldmia	r0!, {r4, r5, r6, r7}
+ 2c8:	46a0      	mov	r8, r4
+ 2ca:	46a9      	mov	r9, r5
+ 2cc:	46b2      	mov	sl, r6
+ 2ce:	46bb      	mov	fp, r7
+ 2d0:	c8f0      	ldmia	r0!, {r4, r5, r6, r7}
+ 2d2:	f380 8809 	msr	PSP, r0
+ 2d6:	4905      	ldr	r1, [pc, #20]	@ (2ec <SVC_Handler+0x40>)
+ 2d8:	b662      	cpsie	i
+ 2da:	4708      	bx	r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:65
+	RESTAURA_ISR();
+ 2dc:	4903      	ldr	r1, [pc, #12]	@ (2ec <SVC_Handler+0x40>)
+ 2de:	b662      	cpsie	i
+ 2e0:	4708      	bx	r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:66
+}
+ 2e2:	46c0      	nop			@ (mov r8, r8)
+ 2e4:	e000ed20 	.word	0xe000ed20
+ 2e8:	200002a4 	.word	0x200002a4
+ 2ec:	fffffffd 	.word	0xfffffffd
+
+000002f0 <PendSV_Handler>:
+PendSV_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:72
+
+__attribute__ ((naked)) void PendSV_Handler(void)
+{
+	
+	SALVA_ISR();
+	SALVA_CONTEXTO();
+ 2f0:	f3ef 8009 	mrs	r0, PSP
+ 2f4:	3810      	subs	r0, #16
+ 2f6:	c0f0      	stmia	r0!, {r4, r5, r6, r7}
+ 2f8:	4644      	mov	r4, r8
+ 2fa:	464d      	mov	r5, r9
+ 2fc:	4656      	mov	r6, sl
+ 2fe:	465f      	mov	r7, fp
+ 300:	3820      	subs	r0, #32
+ 302:	c0f0      	stmia	r0!, {r4, r5, r6, r7}
+ 304:	3810      	subs	r0, #16
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:73
+	SALVA_SP(SP);
+ 306:	490e      	ldr	r1, [pc, #56]	@ (340 <PendSV_Handler+0x50>)
+ 308:	6008      	str	r0, [r1, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:75
+	
+	Clear_PendSV();
+ 30a:	2280      	movs	r2, #128	@ 0x80
+ 30c:	4b0a      	ldr	r3, [pc, #40]	@ (338 <PendSV_Handler+0x48>)
+ 30e:	0512      	lsls	r2, r2, #20
+ 310:	601a      	str	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:77
+	
+    TrocaContextoDasTarefas();
+ 312:	4b0a      	ldr	r3, [pc, #40]	@ (33c <PendSV_Handler+0x4c>)
+ 314:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:79
+	
+	RESTAURA_SP(SP);
+ 316:	490a      	ldr	r1, [pc, #40]	@ (340 <PendSV_Handler+0x50>)
+ 318:	6808      	ldr	r0, [r1, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:80
+	RESTAURA_CONTEXTO();
+ 31a:	c8f0      	ldmia	r0!, {r4, r5, r6, r7}
+ 31c:	46a0      	mov	r8, r4
+ 31e:	46a9      	mov	r9, r5
+ 320:	46b2      	mov	sl, r6
+ 322:	46bb      	mov	fp, r7
+ 324:	c8f0      	ldmia	r0!, {r4, r5, r6, r7}
+ 326:	f380 8809 	msr	PSP, r0
+ 32a:	4906      	ldr	r1, [pc, #24]	@ (344 <PendSV_Handler+0x54>)
+ 32c:	b662      	cpsie	i
+ 32e:	4708      	bx	r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:81
+	RESTAURA_ISR();
+ 330:	4904      	ldr	r1, [pc, #16]	@ (344 <PendSV_Handler+0x54>)
+ 332:	b662      	cpsie	i
+ 334:	4708      	bx	r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:83
+	
+}
+ 336:	46c0      	nop			@ (mov r8, r8)
+ 338:	e000ed04 	.word	0xe000ed04
+ 33c:	00000569 	.word	0x00000569
+ 340:	200002a4 	.word	0x200002a4
+ 344:	fffffffd 	.word	0xfffffffd
+
+00000348 <SysTick_Handler>:
+SysTick_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:88
+
+/* Codigo dependente de hardware usado para 
+   realizar a marca de tempo do sistema multitarefas - interrupcao */
+void SysTick_Handler(void)
+{	
+ 348:	b510      	push	{r4, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:90
+	 
+	 ExecutaMarcaDeTempo();    
+ 34a:	4b01      	ldr	r3, [pc, #4]	@ (350 <SysTick_Handler+0x8>)
+ 34c:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:92
+	 //TrocaContexto();   /* para o uso como sistema preemptivo */
+}
+ 34e:	bd10      	pop	{r4, pc}
+ 350:	000005ad 	.word	0x000005ad
+
+00000354 <HardFault_Handler>:
+HardFault_Handler():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/cpu-port.c:97
+
+void HardFault_Handler(void)
+{
+	
+	while(1)
+ 354:	e7fe      	b.n	354 <HardFault_Handler>
+	...
+
+00000358 <tarefa_1>:
+tarefa_1():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:110
+{
+ 358:	b573      	push	{r0, r1, r4, r5, r6, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:111
+	volatile uint16_t a = 0;
+ 35a:	466b      	mov	r3, sp
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:514
+
+	/* Set the pin to high or low atomically based on the requested level */
+	if (level) {
+		port_base->OUTSET.reg = pin_mask;
+	} else {
+		port_base->OUTCLR.reg = pin_mask;
+ 35c:	2680      	movs	r6, #128	@ 0x80
+tarefa_1():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:111
+ 35e:	1d9c      	adds	r4, r3, #6
+ 360:	2300      	movs	r3, #0
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:514
+ 362:	4d06      	ldr	r5, [pc, #24]	@ (37c <tarefa_1+0x24>)
+tarefa_1():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:111
+ 364:	8023      	strh	r3, [r4, #0]
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:514
+ 366:	05f6      	lsls	r6, r6, #23
+tarefa_1():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:114
+		a++;
+ 368:	8823      	ldrh	r3, [r4, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:116 (discriminator 1)
+		TarefaContinua(2);
+ 36a:	2002      	movs	r0, #2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:114
+		a++;
+ 36c:	3301      	adds	r3, #1
+ 36e:	b29b      	uxth	r3, r3
+ 370:	8023      	strh	r3, [r4, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:116 (discriminator 1)
+		TarefaContinua(2);
+ 372:	4b03      	ldr	r3, [pc, #12]	@ (380 <tarefa_1+0x28>)
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:514
+ 374:	616e      	str	r6, [r5, #20]
+tarefa_1():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:116 (discriminator 1)
+ 376:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:112
+	for(;;)
+ 378:	e7f6      	b.n	368 <tarefa_1+0x10>
+ 37a:	46c0      	nop			@ (mov r8, r8)
+ 37c:	41004480 	.word	0x41004480
+ 380:	000004f5 	.word	0x000004f5
+
+00000384 <tarefa_9>:
+tarefa_9():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:258
+	}
+}
+
+//Tarefa do exercicio, incrementa um valor global
+void tarefa_9(void)
+{
+ 384:	b510      	push	{r4, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:260
+	for(;;) {
+		valor_obsevavel++;
+ 386:	4a04      	ldr	r2, [pc, #16]	@ (398 <tarefa_9+0x14>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:261 (discriminator 1)
+		TarefaContinua(2);
+ 388:	2002      	movs	r0, #2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:260
+		valor_obsevavel++;
+ 38a:	8813      	ldrh	r3, [r2, #0]
+ 38c:	3301      	adds	r3, #1
+ 38e:	b29b      	uxth	r3, r3
+ 390:	8013      	strh	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:261 (discriminator 1)
+		TarefaContinua(2);
+ 392:	4b02      	ldr	r3, [pc, #8]	@ (39c <tarefa_9+0x18>)
+ 394:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:259
+	for(;;) {
+ 396:	e7f6      	b.n	386 <tarefa_9+0x2>
+ 398:	2000001c 	.word	0x2000001c
+ 39c:	000004f5 	.word	0x000004f5
+
+000003a0 <tarefa_2>:
+tarefa_2():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:122
+{
+ 3a0:	b537      	push	{r0, r1, r2, r4, r5, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:123
+	volatile uint16_t b = 0;
+ 3a2:	466b      	mov	r3, sp
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:512
+		port_base->OUTSET.reg = pin_mask;
+ 3a4:	2580      	movs	r5, #128	@ 0x80
+tarefa_2():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:123
+ 3a6:	1d9c      	adds	r4, r3, #6
+ 3a8:	2300      	movs	r3, #0
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:512
+ 3aa:	05ed      	lsls	r5, r5, #23
+tarefa_2():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:123
+ 3ac:	8023      	strh	r3, [r4, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:126
+		b++;
+ 3ae:	8823      	ldrh	r3, [r4, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:127
+		TarefaSuspende(2);	
+ 3b0:	2002      	movs	r0, #2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:126
+		b++;
+ 3b2:	3301      	adds	r3, #1
+ 3b4:	b29b      	uxth	r3, r3
+ 3b6:	8023      	strh	r3, [r4, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:127
+		TarefaSuspende(2);	
+ 3b8:	4b02      	ldr	r3, [pc, #8]	@ (3c4 <tarefa_2+0x24>)
+ 3ba:	4798      	blx	r3
+port_pin_set_output_level():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/cmake/mplab_sam_d21/Debug/../../../src/ASF/sam0/drivers/port/port.h:512
+ 3bc:	4b02      	ldr	r3, [pc, #8]	@ (3c8 <tarefa_2+0x28>)
+ 3be:	619d      	str	r5, [r3, #24]
+tarefa_2():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:124
+	for(;;)
+ 3c0:	e7f5      	b.n	3ae <tarefa_2+0xe>
+ 3c2:	46c0      	nop			@ (mov r8, r8)
+ 3c4:	000004cd 	.word	0x000004cd
+ 3c8:	41004480 	.word	0x41004480
+
+000003cc <main>:
+main():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:87
+	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+ 3cc:	2302      	movs	r3, #2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:78
+{
+ 3ce:	b513      	push	{r0, r1, r4, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:87
+	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+ 3d0:	4a10      	ldr	r2, [pc, #64]	@ (414 <main+0x48>)
+ 3d2:	4c11      	ldr	r4, [pc, #68]	@ (418 <main+0x4c>)
+ 3d4:	4911      	ldr	r1, [pc, #68]	@ (41c <main+0x50>)
+ 3d6:	4812      	ldr	r0, [pc, #72]	@ (420 <main+0x54>)
+ 3d8:	9300      	str	r3, [sp, #0]
+ 3da:	3326      	adds	r3, #38	@ 0x26
+ 3dc:	47a0      	blx	r4
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:89
+	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+ 3de:	2301      	movs	r3, #1
+ 3e0:	4a10      	ldr	r2, [pc, #64]	@ (424 <main+0x58>)
+ 3e2:	4911      	ldr	r1, [pc, #68]	@ (428 <main+0x5c>)
+ 3e4:	4811      	ldr	r0, [pc, #68]	@ (42c <main+0x60>)
+ 3e6:	9300      	str	r3, [sp, #0]
+ 3e8:	3327      	adds	r3, #39	@ 0x27
+ 3ea:	47a0      	blx	r4
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:91
+	CriaTarefa(tarefa_9, "Tarefa 9", PILHA_TAREFA_9, TAM_PILHA_9, 3);
+ 3ec:	2303      	movs	r3, #3
+ 3ee:	4a10      	ldr	r2, [pc, #64]	@ (430 <main+0x64>)
+ 3f0:	4910      	ldr	r1, [pc, #64]	@ (434 <main+0x68>)
+ 3f2:	4811      	ldr	r0, [pc, #68]	@ (438 <main+0x6c>)
+ 3f4:	9300      	str	r3, [sp, #0]
+ 3f6:	3325      	adds	r3, #37	@ 0x25
+ 3f8:	47a0      	blx	r4
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:94
+	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
+ 3fa:	2300      	movs	r3, #0
+ 3fc:	4a0f      	ldr	r2, [pc, #60]	@ (43c <main+0x70>)
+ 3fe:	4910      	ldr	r1, [pc, #64]	@ (440 <main+0x74>)
+ 400:	4810      	ldr	r0, [pc, #64]	@ (444 <main+0x78>)
+ 402:	9300      	str	r3, [sp, #0]
+ 404:	3328      	adds	r3, #40	@ 0x28
+ 406:	47a0      	blx	r4
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:97
+	ConfiguraMarcaTempo();   
+ 408:	4b0f      	ldr	r3, [pc, #60]	@ (448 <main+0x7c>)
+ 40a:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:100
+	IniciaMultitarefas();
+ 40c:	4b0f      	ldr	r3, [pc, #60]	@ (44c <main+0x80>)
+ 40e:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c:103
+	while (1)
+ 410:	e7fe      	b.n	410 <main+0x44>
+ 412:	46c0      	nop			@ (mov r8, r8)
+ 414:	20000200 	.word	0x20000200
+ 418:	00000485 	.word	0x00000485
+ 41c:	00000640 	.word	0x00000640
+ 420:	00000359 	.word	0x00000359
+ 424:	20000160 	.word	0x20000160
+ 428:	00000649 	.word	0x00000649
+ 42c:	000003a1 	.word	0x000003a1
+ 430:	200000c0 	.word	0x200000c0
+ 434:	00000652 	.word	0x00000652
+ 438:	00000385 	.word	0x00000385
+ 43c:	20000020 	.word	0x20000020
+ 440:	0000065b 	.word	0x0000065b
+ 444:	0000051d 	.word	0x0000051d
+ 448:	0000028d 	.word	0x0000028d
+ 44c:	00000531 	.word	0x00000531
+
+00000450 <escalonador>:
+escalonador():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:26
+/* funcao para realizar o escalonamento de tarefas por prioridades 
+   que retorna a proxima tarefa que sera executada, isto e, aquela que
+   tem a maior prioridade e que esta pronta para executar */
+   
+uint8_t escalonador(void)
+{
+ 450:	b530      	push	{r4, r5, lr}
+ 452:	2300      	movs	r3, #0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:38
+    for (prioridade=PRIORIDADE_MAXIMA;prioridade>0;prioridade--)
+	{ 
+      if(Prioridades[prioridade] != 0)
+	  {        
+        tarefa_selecionada = Prioridades[prioridade];
+        if(TCB[tarefa_selecionada].estado == PRONTA)
+ 454:	250c      	movs	r5, #12
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:35
+      if(Prioridades[prioridade] != 0)
+ 456:	4908      	ldr	r1, [pc, #32]	@ (478 <escalonador+0x28>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:38
+        if(TCB[tarefa_selecionada].estado == PRONTA)
+ 458:	4c08      	ldr	r4, [pc, #32]	@ (47c <escalonador+0x2c>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:35
+      if(Prioridades[prioridade] != 0)
+ 45a:	5cc8      	ldrb	r0, [r1, r3]
+ 45c:	2800      	cmp	r0, #0
+ 45e:	d005      	beq.n	46c <escalonador+0x1c>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:38
+        if(TCB[tarefa_selecionada].estado == PRONTA)
+ 460:	002a      	movs	r2, r5
+ 462:	4342      	muls	r2, r0
+ 464:	18a2      	adds	r2, r4, r2
+ 466:	7a12      	ldrb	r2, [r2, #8]
+ 468:	2a00      	cmp	r2, #0
+ 46a:	d004      	beq.n	476 <escalonador+0x26>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:33 (discriminator 1)
+    for (prioridade=PRIORIDADE_MAXIMA;prioridade>0;prioridade--)
+ 46c:	3b01      	subs	r3, #1
+ 46e:	1d1a      	adds	r2, r3, #4
+ 470:	d1f3      	bne.n	45a <escalonador+0xa>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:50
+    
+	/* caso nenhuma esteja pronta para executar, retorna a de menor prioridade, 
+	 a qual sempre deve estar pronta para executar */
+    if(prioridade == 0) 
+	{
+    	tarefa_selecionada = Prioridades[prioridade];
+ 472:	4b03      	ldr	r3, [pc, #12]	@ (480 <escalonador+0x30>)
+ 474:	7818      	ldrb	r0, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:54
+    }
+	
+	return tarefa_selecionada;
+}
+ 476:	bd30      	pop	{r4, r5, pc}
+ 478:	200002ac 	.word	0x200002ac
+ 47c:	200002b4 	.word	0x200002b4
+ 480:	200002a8 	.word	0x200002a8
+
+00000484 <CriaTarefa>:
+CriaTarefa():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:61
+
+
+/*********************************************/
+void CriaTarefa(tarefa_t p, const char * nome,
+stackptr_t pilha, uint16_t tamanho, prioridade_t prioridade)
+{
+ 484:	b570      	push	{r4, r5, r6, lr}
+ 486:	000d      	movs	r5, r1
+ 488:	a904      	add	r1, sp, #16
+ 48a:	780c      	ldrb	r4, [r1, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:63
+	
+	if(tamanho < TAM_MINIMO_PILHA)
+ 48c:	2b0f      	cmp	r3, #15
+ 48e:	d914      	bls.n	4ba <CriaTarefa+0x36>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:68
+	{
+		return;
+	}
+	
+	pilha = CriaContexto(p, pilha + tamanho);
+ 490:	009b      	lsls	r3, r3, #2
+ 492:	18d1      	adds	r1, r2, r3
+ 494:	4b09      	ldr	r3, [pc, #36]	@ (4bc <CriaTarefa+0x38>)
+ 496:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:74
+	
+	/* incrementa o numero de tarefas instaladas */
+	numero_tarefas++;
+
+	/* guardar os dados no bloco de controle da tarefa (TCB) */
+	TCB[numero_tarefas].nome = nome;
+ 498:	210c      	movs	r1, #12
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:71
+	numero_tarefas++;
+ 49a:	4b09      	ldr	r3, [pc, #36]	@ (4c0 <CriaTarefa+0x3c>)
+ 49c:	781a      	ldrb	r2, [r3, #0]
+ 49e:	3201      	adds	r2, #1
+ 4a0:	b2d2      	uxtb	r2, r2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:74
+	TCB[numero_tarefas].nome = nome;
+ 4a2:	4351      	muls	r1, r2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:71
+	numero_tarefas++;
+ 4a4:	701a      	strb	r2, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:74
+	TCB[numero_tarefas].nome = nome;
+ 4a6:	4b07      	ldr	r3, [pc, #28]	@ (4c4 <CriaTarefa+0x40>)
+ 4a8:	50cd      	str	r5, [r1, r3]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:75
+	TCB[numero_tarefas].stack_pointer = (stackptr_t)(pilha);
+ 4aa:	185b      	adds	r3, r3, r1
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:76
+	TCB[numero_tarefas].estado = PRONTA;
+ 4ac:	2100      	movs	r1, #0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:75
+	TCB[numero_tarefas].stack_pointer = (stackptr_t)(pilha);
+ 4ae:	6058      	str	r0, [r3, #4]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:76
+	TCB[numero_tarefas].estado = PRONTA;
+ 4b0:	7219      	strb	r1, [r3, #8]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:77
+	TCB[numero_tarefas].prioridade = prioridade;
+ 4b2:	725c      	strb	r4, [r3, #9]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:78
+	TCB[numero_tarefas].tempo_espera = 0;
+ 4b4:	8159      	strh	r1, [r3, #10]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:81
+	  
+	/* guardar o numero da tarefa (TCB) no vetor de prioridades das tarefas */
+	Prioridades[prioridade]=numero_tarefas;
+ 4b6:	4b04      	ldr	r3, [pc, #16]	@ (4c8 <CriaTarefa+0x44>)
+ 4b8:	551a      	strb	r2, [r3, r4]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:83
+
+}
+ 4ba:	bd70      	pop	{r4, r5, r6, pc}
+ 4bc:	00000225 	.word	0x00000225
+ 4c0:	200002a0 	.word	0x200002a0
+ 4c4:	200002b4 	.word	0x200002b4
+ 4c8:	200002a8 	.word	0x200002a8
+
+000004cc <TarefaSuspende>:
+TarefaSuspende():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:89
+
+
+
+/* Servicos do gerenciador de tarefas */
+void TarefaSuspende(uint8_t id_tarefa)
+{
+ 4cc:	0002      	movs	r2, r0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:90
+	REG_ATOMICA_INICIO();
+ 4ce:	b672      	cpsid	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:91
+	TCB[id_tarefa].estado = ESPERA; /* tarefa colocada em espera */
+ 4d0:	200c      	movs	r0, #12
+ 4d2:	4350      	muls	r0, r2
+ 4d4:	2201      	movs	r2, #1
+ 4d6:	4b05      	ldr	r3, [pc, #20]	@ (4ec <TarefaSuspende+0x20>)
+ 4d8:	181b      	adds	r3, r3, r0
+ 4da:	721a      	strb	r2, [r3, #8]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:92
+	TrocaContexto(); 		   		/* tarefa atual solicita troca de contexto */
+ 4dc:	2280      	movs	r2, #128	@ 0x80
+ 4de:	4b04      	ldr	r3, [pc, #16]	@ (4f0 <TarefaSuspende+0x24>)
+ 4e0:	0552      	lsls	r2, r2, #21
+ 4e2:	601a      	str	r2, [r3, #0]
+ 4e4:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:93
+	REG_ATOMICA_FIM();
+ 4e6:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:94
+}
+ 4e8:	4770      	bx	lr
+ 4ea:	46c0      	nop			@ (mov r8, r8)
+ 4ec:	200002b4 	.word	0x200002b4
+ 4f0:	e000ed04 	.word	0xe000ed04
+
+000004f4 <TarefaContinua>:
+TarefaContinua():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:97
+
+void TarefaContinua(uint8_t id_tarefa)
+{
+ 4f4:	0002      	movs	r2, r0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:98
+	REG_ATOMICA_INICIO();
+ 4f6:	b672      	cpsid	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:99
+	TCB[id_tarefa].estado = PRONTA;			/* tarefa colocada na fila de prontas */
+ 4f8:	200c      	movs	r0, #12
+ 4fa:	4350      	muls	r0, r2
+ 4fc:	2200      	movs	r2, #0
+ 4fe:	4b05      	ldr	r3, [pc, #20]	@ (514 <TarefaContinua+0x20>)
+ 500:	181b      	adds	r3, r3, r0
+ 502:	721a      	strb	r2, [r3, #8]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:100
+	TrocaContexto(); 		   				/* tarefa atual solicita troca de contexto */
+ 504:	2280      	movs	r2, #128	@ 0x80
+ 506:	4b04      	ldr	r3, [pc, #16]	@ (518 <TarefaContinua+0x24>)
+ 508:	0552      	lsls	r2, r2, #21
+ 50a:	601a      	str	r2, [r3, #0]
+ 50c:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:101
+	REG_ATOMICA_FIM();
+ 50e:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:102
+}
+ 510:	4770      	bx	lr
+ 512:	46c0      	nop			@ (mov r8, r8)
+ 514:	200002b4 	.word	0x200002b4
+ 518:	e000ed04 	.word	0xe000ed04
+
+0000051c <tarefa_ociosa>:
+tarefa_ociosa():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:124
+	
+	for(;;)
+	{		
+		#if 1
+			REG_ATOMICA_INICIO();
+			TrocaContexto();				/* tarefa atual solicita troca de contexto */
+ 51c:	2280      	movs	r2, #128	@ 0x80
+ 51e:	4b03      	ldr	r3, [pc, #12]	@ (52c <tarefa_ociosa+0x10>)
+ 520:	0552      	lsls	r2, r2, #21
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:123
+			REG_ATOMICA_INICIO();
+ 522:	b672      	cpsid	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:124
+			TrocaContexto();				/* tarefa atual solicita troca de contexto */
+ 524:	601a      	str	r2, [r3, #0]
+ 526:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:125 (discriminator 1)
+			REG_ATOMICA_FIM();
+ 528:	b662      	cpsie	i
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:120
+	for(;;)
+ 52a:	e7fa      	b.n	522 <tarefa_ociosa+0x6>
+ 52c:	e000ed04 	.word	0xe000ed04
+
+00000530 <IniciaMultitarefas>:
+IniciaMultitarefas():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:132
+	}
+}
+
+
+void IniciaMultitarefas(void)
+{
+ 530:	b510      	push	{r4, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:133
+	tarefa_atual = escalonador();
+ 532:	4b08      	ldr	r3, [pc, #32]	@ (554 <IniciaMultitarefas+0x24>)
+ 534:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:134
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 536:	220c      	movs	r2, #12
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:133 (discriminator 1)
+	tarefa_atual = escalonador();
+ 538:	4b07      	ldr	r3, [pc, #28]	@ (558 <IniciaMultitarefas+0x28>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:134
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 53a:	4342      	muls	r2, r0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:133 (discriminator 1)
+	tarefa_atual = escalonador();
+ 53c:	7018      	strb	r0, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:134
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 53e:	4b07      	ldr	r3, [pc, #28]	@ (55c <IniciaMultitarefas+0x2c>)
+ 540:	189b      	adds	r3, r3, r2
+ 542:	685b      	ldr	r3, [r3, #4]
+ 544:	4a06      	ldr	r2, [pc, #24]	@ (560 <IniciaMultitarefas+0x30>)
+ 546:	6013      	str	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:135
+	SP = (uint32_t) ponteiro_de_pilha;
+ 548:	4a06      	ldr	r2, [pc, #24]	@ (564 <IniciaMultitarefas+0x34>)
+ 54a:	6013      	str	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:136
+	GERA_INTERRUPCAO_SW();
+ 54c:	b662      	cpsie	i
+ 54e:	df00      	svc	0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:137
+}
+ 550:	bd10      	pop	{r4, pc}
+ 552:	46c0      	nop			@ (mov r8, r8)
+ 554:	00000451 	.word	0x00000451
+ 558:	200002e5 	.word	0x200002e5
+ 55c:	200002b4 	.word	0x200002b4
+ 560:	200002b0 	.word	0x200002b0
+ 564:	200002a4 	.word	0x200002a4
+
+00000568 <TrocaContextoDasTarefas>:
+TrocaContextoDasTarefas():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:140
+
+void TrocaContextoDasTarefas(void)
+{
+ 568:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:143
+	
+	/* guarda o valor antigo do stack pointer */
+	TCB[tarefa_atual].stack_pointer = (stackptr_t) SP;
+ 56a:	250c      	movs	r5, #12
+ 56c:	4f09      	ldr	r7, [pc, #36]	@ (594 <TrocaContextoDasTarefas+0x2c>)
+ 56e:	4e0a      	ldr	r6, [pc, #40]	@ (598 <TrocaContextoDasTarefas+0x30>)
+ 570:	783b      	ldrb	r3, [r7, #0]
+ 572:	4c0a      	ldr	r4, [pc, #40]	@ (59c <TrocaContextoDasTarefas+0x34>)
+ 574:	436b      	muls	r3, r5
+ 576:	6832      	ldr	r2, [r6, #0]
+ 578:	18e3      	adds	r3, r4, r3
+ 57a:	605a      	str	r2, [r3, #4]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:146
+		
+	/* executa o escalonador */
+	proxima_tarefa = escalonador();
+ 57c:	4b08      	ldr	r3, [pc, #32]	@ (5a0 <TrocaContextoDasTarefas+0x38>)
+ 57e:	4798      	blx	r3
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:152
+		
+	/* seleciona a nova tarefa */
+	tarefa_atual = proxima_tarefa;
+		
+	/* coloca um novo valor no stack pointer */
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 580:	4345      	muls	r5, r0
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:146 (discriminator 1)
+	proxima_tarefa = escalonador();
+ 582:	4b08      	ldr	r3, [pc, #32]	@ (5a4 <TrocaContextoDasTarefas+0x3c>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:152
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 584:	1964      	adds	r4, r4, r5
+ 586:	4a08      	ldr	r2, [pc, #32]	@ (5a8 <TrocaContextoDasTarefas+0x40>)
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:146 (discriminator 1)
+	proxima_tarefa = escalonador();
+ 588:	7018      	strb	r0, [r3, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:152
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 58a:	6863      	ldr	r3, [r4, #4]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:149
+	tarefa_atual = proxima_tarefa;
+ 58c:	7038      	strb	r0, [r7, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:154
+		
+	SP = (uint32_t) ponteiro_de_pilha;
+ 58e:	6033      	str	r3, [r6, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:152
+	ponteiro_de_pilha = TCB[tarefa_atual].stack_pointer;
+ 590:	6013      	str	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:156
+
+}
+ 592:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 594:	200002e5 	.word	0x200002e5
+ 598:	200002a4 	.word	0x200002a4
+ 59c:	200002b4 	.word	0x200002b4
+ 5a0:	00000451 	.word	0x00000451
+ 5a4:	200002e4 	.word	0x200002e4
+ 5a8:	200002b0 	.word	0x200002b0
+
+000005ac <ExecutaMarcaDeTempo>:
+ExecutaMarcaDeTempo():
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:162
+void ExecutaMarcaDeTempo(void)
+{
+	
+	uint8_t tarefa = 0;
+		
+	++contador_marcas; /* incrementa contador de marcas de tempo */
+ 5ac:	4a0c      	ldr	r2, [pc, #48]	@ (5e0 <ExecutaMarcaDeTempo+0x34>)
+ 5ae:	8813      	ldrh	r3, [r2, #0]
+ 5b0:	3301      	adds	r3, #1
+ 5b2:	8013      	strh	r3, [r2, #0]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:166
+	
+	/* laco para decrementar tempo de espera das tarefas 
+	 * e coloca-las na fila de prontas para executar  */	
+	for (tarefa=numero_tarefas;tarefa > 0;tarefa--)
+ 5b4:	4b0b      	ldr	r3, [pc, #44]	@ (5e4 <ExecutaMarcaDeTempo+0x38>)
+ 5b6:	4a0c      	ldr	r2, [pc, #48]	@ (5e8 <ExecutaMarcaDeTempo+0x3c>)
+ 5b8:	7819      	ldrb	r1, [r3, #0]
+ 5ba:	230c      	movs	r3, #12
+ 5bc:	434b      	muls	r3, r1
+ 5be:	189b      	adds	r3, r3, r2
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:166 (discriminator 1)
+ 5c0:	2900      	cmp	r1, #0
+ 5c2:	d100      	bne.n	5c6 <ExecutaMarcaDeTempo+0x1a>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:180
+				/* coloca a tarefa na fila de prontas para executar */	
+				TCB[tarefa].estado = PRONTA;	        				
+			}
+		}
+	 }
+}
+ 5c4:	4770      	bx	lr
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:169
+		if(TCB[tarefa].tempo_espera > 0 ) /* se esta esperando algum tempo */
+ 5c6:	895a      	ldrh	r2, [r3, #10]
+ 5c8:	2a00      	cmp	r2, #0
+ 5ca:	d005      	beq.n	5d8 <ExecutaMarcaDeTempo+0x2c>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:171
+			TCB[tarefa].tempo_espera--; /* decrementa tempo de espera */
+ 5cc:	3a01      	subs	r2, #1
+ 5ce:	b292      	uxth	r2, r2
+ 5d0:	815a      	strh	r2, [r3, #10]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:173
+			if(TCB[tarefa].tempo_espera == 0 )
+ 5d2:	2a00      	cmp	r2, #0
+ 5d4:	d100      	bne.n	5d8 <ExecutaMarcaDeTempo+0x2c>
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:176
+				TCB[tarefa].estado = PRONTA;	        				
+ 5d6:	721a      	strb	r2, [r3, #8]
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c:166 (discriminator 2)
+	for (tarefa=numero_tarefas;tarefa > 0;tarefa--)
+ 5d8:	3901      	subs	r1, #1
+ 5da:	b2c9      	uxtb	r1, r1
+ 5dc:	3b0c      	subs	r3, #12
+ 5de:	e7ef      	b.n	5c0 <ExecutaMarcaDeTempo+0x14>
+ 5e0:	200002a2 	.word	0x200002a2
+ 5e4:	200002a0 	.word	0x200002a0
+ 5e8:	200002b4 	.word	0x200002b4
+
+000005ec <__libc_init_array>:
+__libc_init_array():
+ 5ec:	b570      	push	{r4, r5, r6, lr}
+ 5ee:	2600      	movs	r6, #0
+ 5f0:	4c0e      	ldr	r4, [pc, #56]	@ (62c <__libc_init_array+0x40>)
+ 5f2:	4d0f      	ldr	r5, [pc, #60]	@ (630 <__libc_init_array+0x44>)
+ 5f4:	1b64      	subs	r4, r4, r5
+ 5f6:	10a4      	asrs	r4, r4, #2
+ 5f8:	42a6      	cmp	r6, r4
+ 5fa:	d10b      	bne.n	614 <__libc_init_array+0x28>
+ 5fc:	2600      	movs	r6, #0
+ 5fe:	f000 f835 	bl	66c <_init>
+ 602:	4c0c      	ldr	r4, [pc, #48]	@ (634 <__libc_init_array+0x48>)
+ 604:	4d0c      	ldr	r5, [pc, #48]	@ (638 <__libc_init_array+0x4c>)
+ 606:	1b64      	subs	r4, r4, r5
+ 608:	10a4      	asrs	r4, r4, #2
+ 60a:	42a6      	cmp	r6, r4
+ 60c:	d108      	bne.n	620 <__libc_init_array+0x34>
+ 60e:	bc70      	pop	{r4, r5, r6}
+ 610:	bc01      	pop	{r0}
+ 612:	4700      	bx	r0
+ 614:	00b3      	lsls	r3, r6, #2
+ 616:	58eb      	ldr	r3, [r5, r3]
+ 618:	f000 f810 	bl	63c <__libc_init_array+0x50>
+ 61c:	3601      	adds	r6, #1
+ 61e:	e7eb      	b.n	5f8 <__libc_init_array+0xc>
+ 620:	00b3      	lsls	r3, r6, #2
+ 622:	58eb      	ldr	r3, [r5, r3]
+ 624:	f000 f80a 	bl	63c <__libc_init_array+0x50>
+ 628:	3601      	adds	r6, #1
+ 62a:	e7ee      	b.n	60a <__libc_init_array+0x1e>
+ 62c:	00000678 	.word	0x00000678
+ 630:	00000678 	.word	0x00000678
+ 634:	0000067c 	.word	0x0000067c
+ 638:	00000678 	.word	0x00000678
+ 63c:	4718      	bx	r3
+ 63e:	46c0      	nop			@ (mov r8, r8)
+ 640:	65726154 	.word	0x65726154
+ 644:	31206166 	.word	0x31206166
+ 648:	72615400 	.word	0x72615400
+ 64c:	20616665 	.word	0x20616665
+ 650:	61540032 	.word	0x61540032
+ 654:	61666572 	.word	0x61666572
+ 658:	54003920 	.word	0x54003920
+ 65c:	66657261 	.word	0x66657261
+ 660:	636f2061 	.word	0x636f2061
+ 664:	61736f69 	.word	0x61736f69
+ 668:	00000000 	.word	0x00000000
+
+0000066c <_init>:
+_init():
+ 66c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 66e:	46c0      	nop			@ (mov r8, r8)
+ 670:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 672:	bc08      	pop	{r3}
+ 674:	469e      	mov	lr, r3
+ 676:	4770      	bx	lr
+
+00000678 <__frame_dummy_init_array_entry>:
+__preinit_array_end():
+ 678:	0145 0000                                   E...
+
+0000067c <_fini>:
+_fini():
+ 67c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+__init_array_end():
+ 67e:	46c0      	nop			@ (mov r8, r8)
+ 680:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 682:	bc08      	pop	{r3}
+ 684:	469e      	mov	lr, r3
+ 686:	4770      	bx	lr
+
+00000688 <__do_global_dtors_aux_fini_array_entry>:
+__fini_array_start():
+ 688:	0115 0000                                   ....
