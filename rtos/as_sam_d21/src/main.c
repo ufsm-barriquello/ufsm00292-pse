@@ -258,7 +258,7 @@ void tarefa_9(void)
 {
 	for(;;) {
 		valor_obsevavel++;
-		TarefaContinua(2);
+		TarefaEspera(5);
 	}
 
 }

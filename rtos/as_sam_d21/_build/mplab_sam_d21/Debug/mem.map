@@ -3023,8 +3023,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
  .data          0x00000000        0x0 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
  .bss           0x00000000        0x0 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
- .text.TarefaEspera
-                0x00000000       0x34 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
  .text.SemaforoAguarda
                 0x00000000       0x3c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
  .text.SemaforoLibera
@@ -3595,7 +3593,7 @@ LOAD /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.
 LOAD /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtn.o
                 0x00002000                        STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x00000000      0x68c
+.text           0x00000000      0x6c0
                 0x00000000                        . = ALIGN (0x4)
                 0x00000000                        _sfixed = .
  *(.vectors .vectors.*)
@@ -3669,12 +3667,12 @@ LOAD /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.
  .text.tarefa_1
                 0x00000358       0x2c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
                 0x00000358                tarefa_1
- .text.tarefa_9
-                0x00000384       0x1c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
-                0x00000384                tarefa_9
  .text.tarefa_2
-                0x000003a0       0x2c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
-                0x000003a0                tarefa_2
+                0x00000384       0x2c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
+                0x00000384                tarefa_2
+ .text.tarefa_9
+                0x000003b0       0x1c CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
+                0x000003b0                tarefa_9
  .text.startup.main
                 0x000003cc       0x84 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
                 0x000003cc                main
@@ -3690,101 +3688,104 @@ LOAD /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.
  .text.TarefaContinua
                 0x000004f4       0x28 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
                 0x000004f4                TarefaContinua
+ .text.TarefaEspera
+                0x0000051c       0x34 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
+                0x0000051c                TarefaEspera
  .text.tarefa_ociosa
-                0x0000051c       0x14 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
-                0x0000051c                tarefa_ociosa
+                0x00000550       0x14 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
+                0x00000550                tarefa_ociosa
  .text.IniciaMultitarefas
-                0x00000530       0x38 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
-                0x00000530                IniciaMultitarefas
+                0x00000564       0x38 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
+                0x00000564                IniciaMultitarefas
  .text.TrocaContextoDasTarefas
-                0x00000568       0x44 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
-                0x00000568                TrocaContextoDasTarefas
+                0x0000059c       0x44 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
+                0x0000059c                TrocaContextoDasTarefas
  .text.ExecutaMarcaDeTempo
-                0x000005ac       0x40 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
-                0x000005ac                ExecutaMarcaDeTempo
+                0x000005e0       0x40 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/rtos.c.o
+                0x000005e0                ExecutaMarcaDeTempo
  .text.__libc_init_array
-                0x000005ec       0x54 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/nofp/libg_nano.a(libc_a-init.o)
-                0x000005ec                __libc_init_array
+                0x00000620       0x54 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/nofp/libg_nano.a(libc_a-init.o)
+                0x00000620                __libc_init_array
  *(.glue_7t)
- .glue_7t       0x00000640        0x0 linker stubs
+ .glue_7t       0x00000674        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00000640        0x0 linker stubs
+ .glue_7        0x00000674        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.main.str1.1
-                0x00000640       0x29 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
+                0x00000674       0x29 CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000066c                        . = ALIGN (0x4)
- *fill*         0x00000669        0x3 
+                0x000006a0                        . = ALIGN (0x4)
+ *fill*         0x0000069d        0x3 
  *(.init)
- .init          0x0000066c        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crti.o
-                0x0000066c                _init
- .init          0x00000670        0x8 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtn.o
-                0x00000678                        . = ALIGN (0x4)
-                0x00000678                        __preinit_array_start = .
+ .init          0x000006a0        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crti.o
+                0x000006a0                _init
+ .init          0x000006a4        0x8 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtn.o
+                0x000006ac                        . = ALIGN (0x4)
+                0x000006ac                        __preinit_array_start = .
  *(.preinit_array)
-                0x00000678                        __preinit_array_end = .
-                0x00000678                        . = ALIGN (0x4)
-                0x00000678                        __init_array_start = .
+                0x000006ac                        __preinit_array_end = .
+                0x000006ac                        . = ALIGN (0x4)
+                0x000006ac                        __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x00000678        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
-                0x0000067c                        __init_array_end = .
-                0x0000067c                        . = ALIGN (0x4)
+ .init_array    0x000006ac        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+                0x000006b0                        __init_array_end = .
+                0x000006b0                        . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x0000067c                        . = ALIGN (0x4)
+                0x000006b0                        . = ALIGN (0x4)
  *(.fini)
- .fini          0x0000067c        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crti.o
-                0x0000067c                _fini
- .fini          0x00000680        0x8 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtn.o
-                0x00000688                        . = ALIGN (0x4)
-                0x00000688                        __fini_array_start = .
+ .fini          0x000006b0        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crti.o
+                0x000006b0                _fini
+ .fini          0x000006b4        0x8 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtn.o
+                0x000006bc                        . = ALIGN (0x4)
+                0x000006bc                        __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000688        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+ .fini_array    0x000006bc        0x4 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000068c                        __fini_array_end = .
+                0x000006c0                        __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
-                0x0000068c                        . = ALIGN (0x4)
-                0x0000068c                        _efixed = .
+                0x000006c0                        . = ALIGN (0x4)
+                0x000006c0                        _efixed = .
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.vfp11_veneer   0x0000068c        0x0
- .vfp11_veneer  0x0000068c        0x0 linker stubs
+.vfp11_veneer   0x000006c0        0x0
+ .vfp11_veneer  0x000006c0        0x0 linker stubs
 
-.v4_bx          0x0000068c        0x0
- .v4_bx         0x0000068c        0x0 linker stubs
+.v4_bx          0x000006c0        0x0
+ .v4_bx         0x000006c0        0x0 linker stubs
 
-.iplt           0x0000068c        0x0
- .iplt          0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+.iplt           0x000006c0        0x0
+ .iplt          0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
 
-.eh_frame       0x0000068c        0x0
- .eh_frame      0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+.eh_frame       0x000006c0        0x0
+ .eh_frame      0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
 
-.rel.dyn        0x0000068c        0x0
- .rel.iplt      0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+.rel.dyn        0x000006c0        0x0
+ .rel.iplt      0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
 
 .tm_clone_table
-                0x0000068c        0x0
+                0x000006c0        0x0
  .tm_clone_table
-                0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+                0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
  .tm_clone_table
-                0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtend.o
+                0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtend.o
 
-.igot.plt       0x0000068c        0x0
- .igot.plt      0x0000068c        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
+.igot.plt       0x000006c0        0x0
+ .igot.plt      0x000006c0        0x0 /home/thomas/.mplab/app-finder/apps/arm-gcc/v14.2.1/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/nofp/crtbegin.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                        PROVIDE (__exidx_end = .)
-                0x0000068c                        . = ALIGN (0x4)
-                0x0000068c                        _etext = .
+                0x000006c0                        . = ALIGN (0x4)
+                0x000006c0                        _etext = .
 
-.relocate       0x20000000        0x0 load address 0x0000068c
+.relocate       0x20000000        0x0 load address 0x000006c0
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _srelocate = .
  *(.ramfunc .ramfunc.*)

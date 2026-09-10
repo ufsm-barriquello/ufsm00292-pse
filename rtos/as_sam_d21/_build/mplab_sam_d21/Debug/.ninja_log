@@ -29,3 +29,5 @@
 4	272	1789048768028165169	CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/gclk.c.o	9d0800abaeb7ca08
 4	302	1789048768027979913	CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock.c.o	a886b6d70a58882f
 302	416	1789048768325084874	/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/out/mplab_sam_d21/Debug.elf	6f8ce95851970149
+3	301	1789059006437035205	CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/src/main.c.o	969b2d3d26f7dc08
+301	430	1789059006735035216	/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/out/mplab_sam_d21/Debug.elf	6f8ce95851970149
