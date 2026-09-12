@@ -1,250 +1,102 @@
 /**
- * \file
+ * \file main.c
+ * \brief Exercicio 02 - Comparacao entre escalonamento cooperativo e preemptivo
  *
- * \brief Exemplos diversos de tarefas e funcionalidades de um sistema operacional multitarefas.
+ * COMPARACAO ENTRE OS MODOS:
+ * 
+ * 1. Modo Preemptivo:
+ *    - O SysTick gera interrupcoes a cada 1 ms (cfg_MARCA_TEMPO_HZ = 1000).
+ *    - Dentro de SysTick_Handler(), TrocaContexto() eh chamada a cada tick.
+ *    - A tarefa periodica de 100 ms (maior prioridade) acorda exatamente a cada
+ *      100 ms, preemptando imediatamente a tarefa de carga (menor prioridade).
+ *    - O determinismo e a precisao temporal sao garantidos por hardware.
  *
+ * 2. Modo Cooperativo:
+ *    - Se comentarmos TrocaContexto() em SysTick_Handler(), o escalonamento
+ *      passa a depender de liberacao voluntaria da CPU pelas tarefas.
+ *    - Caso a tarefa de menor prioridade execute um processamento demorado
+ *      sem ceder a CPU voluntariamente, a tarefa de 100 ms sofre atraso (jitter)
+ *      ou pode ser impedida de rodar no prazo previsto.
  */
 
-/**
- * \mainpage Sistema operacional multitarefas
- *
- * \par Exemplso de tarefas
- *
- * Este arquivo contem exemplos diversos de tarefas e 
- * funcionalidades de um sistema operacional multitarefas.
- *
- *
- * \par Conteudo
- *
- * -# Inclui funcoes do sistema multitarefas (atraves de multitarefas.h)
- * -# Inicializacao do processador e do sistema multitarefas
- * -# Criacao de tarefas de demonstracao
- *
- */
-
-/*
- * Inclusao de arquivos de cabecalhos
- */
 #include <asf.h>
 #include "stdint.h"
 #include "rtos.h"
 
-/*
- * Prototipos das tarefas
- */
-void tarefa_1(void);
-void tarefa_2(void);
-void tarefa_3(void);
-void tarefa_4(void);
-void tarefa_5(void);
-void tarefa_6(void);
-void tarefa_7(void);
-void tarefa_8(void);
+/* Prototipos das tarefas */
+void tarefa_100ms(void);
+void tarefa_carga(void);
 
-/*
- * Configuracao dos tamanhos das pilhas
- */
-#define TAM_PILHA_1			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_2			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_3			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_4			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_5			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
-#define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
+/* Configuracao do tamanho das pilhas */
+#define TAM_PILHA_1          (TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_2          (TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_OCIOSA     (TAM_MINIMO_PILHA + 24)
 
-/*
- * Declaracao das pilhas das tarefas
- */
+/* Declaracao das pilhas */
 uint32_t PILHA_TAREFA_1[TAM_PILHA_1];
 uint32_t PILHA_TAREFA_2[TAM_PILHA_2];
-uint32_t PILHA_TAREFA_3[TAM_PILHA_3];
-uint32_t PILHA_TAREFA_4[TAM_PILHA_4];
-uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
-uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
-uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
-uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
-/*
- * Funcao principal de entrada do sistema
- */
+/* Variaveis globais de inspecao */
+volatile uint32_t contador_100ms = 0;
+volatile uint32_t contador_carga = 0;
+
 int main(int argc, char** argv)
 {
 #if 0
-	system_init();
-#endif	
-	/* Criacao das tarefas */
-	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
-	
-	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 1);
-	
-	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 2);
-	
-	/* Cria tarefa ociosa do sistema */
-	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
-	
-	/* Configura marca de tempo */
-#if 0
-    ConfiguraMarcaTempo();   
-#endif	
-	/* Inicia sistema multitarefas */
-	IniciaMultitarefas();
-	
-	/* Nunca chega aqui */
+    system_init();
+#endif
+
+    /*
+     * Criacao das tarefas:
+     * - tarefa_100ms recebe prioridade 2 (maior)
+     * - tarefa_carga recebe prioridade 1 (menor)
+     * - tarefa_ociosa recebe prioridade 0 (minima)
+     */
+    CriaTarefa(tarefa_100ms, "Periodica 100ms", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+    CriaTarefa(tarefa_carga, "Carga CPU", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+    CriaTarefa(tarefa_ociosa, "Ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
+
+    /* Habilita o timer SysTick para temporizacao do sistema */
+    ConfiguraMarcaTempo();
+
+    /* Inicia o kernel multitarefas */
+    IniciaMultitarefas();
+
+    /* O fluxo nunca atinge este ponto */
     return (EXIT_SUCCESS);
-	while (1)
-	{
-	}
+    while (1)
+    {
+    }
 }
 
-/* Tarefas de exemplo que usam funcoes para suspender/continuar as tarefas */
-void tarefa_1(void)
+/**
+ * \brief Tarefa periodica executada a cada 100 ms (100 ticks com tick de 1 ms)
+ */
+void tarefa_100ms(void)
 {
-	volatile uint16_t a = 0;
-	for(;;)
-	{
-		a++;
-		//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE); /* Liga LED. */
-		TarefaContinua(2);
-	
-	}
+    for(;;)
+    {
+        contador_100ms++;
+        
+        /* Coloca a tarefa em espera por 100 marcas de tempo (100 ms) */
+        TarefaEspera(100);
+    }
 }
 
-void tarefa_2(void)
+/**
+ * \brief Tarefa continua concorrente para testar a preempcao
+ */
+void tarefa_carga(void)
 {
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		b++;
-		TarefaSuspende(2);	
-		//port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); 	/* Turn LED off. */
-	}
-}
-
-/* Tarefas de exemplo que usam funcoes para suspender as tarefas por algum tempo (atraso/delay) */
-void tarefa_3(void)
-{
-	volatile uint16_t a = 0;
-	for(;;)
-	{
-		a++;	
-			
-		/* Liga LED. */
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		/* Desliga LED. */
-		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE);
-		TarefaEspera(1000); 	/* tarefa 1 se coloca em espera por 3 marcas de tempo (ticks) */
-	}
-}
-
-void tarefa_4(void)
-{
-	volatile uint16_t b = 0;
-	for(;;)
-	{
-		b++;
-		TarefaEspera(5);	/* tarefa se coloca em espera por 5 marcas de tempo (ticks) */
-	}
-}
-
-/* Tarefas de exemplo que usam funcoes de semaforo */
-
-semaforo_t SemaforoTeste = {0,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_5(void)
-{
-
-	uint32_t a = 0;			/* inicializacoes para a tarefa */
-	
-	for(;;)
-	{
-		
-		a++;				/* codigo exemplo da tarefa */
-
-		TarefaEspera(3); 	/* tarefa se coloca em espera por 3 marcas de tempo (ticks) */
-		
-		SemaforoLibera(&SemaforoTeste); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-	}
-}
-
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_6(void)
-{
-	
-	uint32_t b = 0;	    /* inicializacoes para a tarefa */
-	
-	for(;;)
-	{
-		
-		b++; 			/* codigo exemplo da tarefa */
-		
-		SemaforoAguarda(&SemaforoTeste); /* tarefa se coloca em espera por semaforo */
-
-	}
-}
-
-/* solucao com buffer compartilhado */
-/* Tarefas de exemplo que usam funcoes de semaforo */
-
-#define TAM_BUFFER 10
-uint8_t buffer[TAM_BUFFER]; /* declaracao de um buffer (vetor) ou fila circular */
-
-semaforo_t SemaforoCheio = {0,0}; /* declaracao e inicializacao de um semaforo */
-semaforo_t SemaforoVazio = {TAM_BUFFER,0}; /* declaracao e inicializacao de um semaforo */
-
-void tarefa_7(void)
-{
-
-	uint8_t a = 1;			/* inicializacoes para a tarefa */
-	uint8_t i = 0;
-	
-	for(;;)
-	{
-		SemaforoAguarda(&SemaforoVazio);
-		
-		buffer[i] = a++;
-		i = (i+1)%TAM_BUFFER;
-		
-		SemaforoLibera(&SemaforoCheio); /* tarefa libera semaforo para tarefa que esta esperando-o */
-		
-		TarefaEspera(10); 	/* tarefa se coloca em espera por 10 marcas de tempo (ticks), equivale a 10ms */		
-	}
-}
-
-/* Exemplo de tarefa que usa semaforo */
-void tarefa_8(void)
-{
-	static uint8_t f = 0;
-	volatile uint8_t valor;
-		
-	for(;;)
-	{
-		volatile uint8_t contador;
-		
-		do{
-			REG_ATOMICA_INICIO();			
-				contador = SemaforoCheio.contador;			
-			REG_ATOMICA_FIM();
-			
-			if (contador == 0)
-			{
-				TarefaEspera(100);
-			}
-				
-		} while (!contador);
-		
-		SemaforoAguarda(&SemaforoCheio);
-		
-		valor = buffer[f];
-		f = (f+1) % TAM_BUFFER;	
-		
-		(void)valor;	/* leitura da variavel para evitar aviso (warning) do compilador */
-		
-		SemaforoLibera(&SemaforoVazio);
-	}
+    for(;;)
+    {
+        contador_carga++;
+        
+        /* 
+         * No modo preemptivo, o SysTick interrompe este loop automaticamente.
+         * No modo cooperativo, este laco reteria a CPU indefinidamente se
+         * nao houvesse uma chamada explicita para ceder o controle.
+         */
+    }
 }
