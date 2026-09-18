@@ -40,6 +40,8 @@ void tarefa_5(void);
 void tarefa_6(void);
 void tarefa_7(void);
 void tarefa_8(void);
+void tarefa_9_cooperativa(void);
+void tarefa_9_preemptiva(void);
 
 /*
  * Configuracao dos tamanhos das pilhas
@@ -52,6 +54,7 @@ void tarefa_8(void);
 #define TAM_PILHA_6			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_7			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_8			(TAM_MINIMO_PILHA + 24)
+#define TAM_PILHA_9			(TAM_MINIMO_PILHA + 24)
 #define TAM_PILHA_OCIOSA	(TAM_MINIMO_PILHA + 24)
 
 /*
@@ -65,8 +68,12 @@ uint32_t PILHA_TAREFA_5[TAM_PILHA_5];
 uint32_t PILHA_TAREFA_6[TAM_PILHA_6];
 uint32_t PILHA_TAREFA_7[TAM_PILHA_7];
 uint32_t PILHA_TAREFA_8[TAM_PILHA_8];
+uint32_t PILHA_TAREFA_9_C[TAM_PILHA_9];
+uint32_t PILHA_TAREFA_9_P[TAM_PILHA_9];
 uint32_t PILHA_TAREFA_OCIOSA[TAM_PILHA_OCIOSA];
 
+static volatile uint32_t contador_preemptivo = 0;
+static volatile uint32_t contador_cooperativo = 0;
 /*
  * Funcao principal de entrada do sistema
  */
@@ -80,9 +87,9 @@ int main(void)
 	/* Criacao das tarefas */
 	/* Parametros: ponteiro, nome, ponteiro da pilha, tamanho da pilha, prioridade da tarefa */
     
-	CriaTarefa(tarefa_1, "Tarefa 1", PILHA_TAREFA_1, TAM_PILHA_1, 2);
+	CriaTarefa(tarefa_9_cooperativa, "Tarefa 9 cooperativa", PILHA_TAREFA_9_C, TAM_PILHA_9, 2);
 	
-	CriaTarefa(tarefa_2, "Tarefa 2", PILHA_TAREFA_2, TAM_PILHA_2, 1);
+	CriaTarefa(tarefa_9_preemptiva, "Tarefa 9 preemptiva", PILHA_TAREFA_9_P, TAM_PILHA_9, 1);
 	
 	/* Cria tarefa ociosa do sistema */
 	CriaTarefa(tarefa_ociosa,"Tarefa ociosa", PILHA_TAREFA_OCIOSA, TAM_PILHA_OCIOSA, 0);
@@ -246,3 +253,25 @@ void tarefa_8(void)
 		SemaforoLibera(&SemaforoVazio);
 	}
 }
+
+/* Tarefa cooperativa: libera a CPU voluntariamente a cada iteracao. */
+void tarefa_9_cooperativa(void)
+{
+	for(;;)
+	{
+		contador_cooperativo++;
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE); /* Liga LED. */
+		TarefaEspera(5); /* bloqueia a si mesma por 5 marcas de tempo */
+	}
+}
+
+/* Tarefa preemptiva: nunca cede a CPU; e interrompida pela marca de tempo. */
+void tarefa_9_preemptiva(void)
+{
+	for(;;)
+	{
+		contador_preemptivo++;
+		port_pin_set_output_level(LED_0_PIN, !LED_0_ACTIVE); /* Liga LED. */
+	}
+}
+

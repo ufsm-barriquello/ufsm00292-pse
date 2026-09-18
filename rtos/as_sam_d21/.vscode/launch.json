@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug SAMD21 (QEMU)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "qemu",
+            "executable": "${workspaceFolder}/out/mplab_sam_d21/Debug.elf",
+            "cwd": "${workspaceFolder}",
+            "cpu": "cortex-m0",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/ATSAMD21J18A.svd",
+            "postLaunchCommands": [
+                "set pagination off",
+                "set confirm off",
+                "set mem inaccessible-by-default off"
+            ]
+        },
+    ]
+}

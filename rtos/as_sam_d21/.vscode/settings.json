@@ -1,0 +1,11 @@
+{
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}/_build/mplab_sam_d21/Release",
+    "memory-inspector.debugTypes": [
+        "arm-debugger",
+        "embedded-debug",
+        "gdb",
+        "gdbtarget",
+        "mplab-core-da"
+    ],
+    "terminal.integrated.stickyScroll.enabled": false
+}
