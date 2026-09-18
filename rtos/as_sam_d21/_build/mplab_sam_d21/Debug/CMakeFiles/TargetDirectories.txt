@@ -1,0 +1,4 @@
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Debug/CMakeFiles/mplab_sam_d21_Debug_Debug_ARM_GCC_compile.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Debug/CMakeFiles/mplab_sam_d21_Debug_image_vh_EUdiN.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Debug/CMakeFiles/edit_cache.dir
+/home/thomas/prog/barco/ufsm00292-pse/rtos/as_sam_d21/_build/mplab_sam_d21/Debug/CMakeFiles/rebuild_cache.dir

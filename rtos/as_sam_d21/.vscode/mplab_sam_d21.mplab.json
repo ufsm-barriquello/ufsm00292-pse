@@ -1,0 +1,738 @@
+{
+    "version": "1.9",
+    "importedFrom": "mplab_sam_d21.X",
+    "configurations": [
+        {
+            "name": "Release",
+            "id": "",
+            "device": "ATSAMD21J18A",
+            "imageType": "application",
+            "imagePath": "./out/mplab_sam_d21/Release.elf",
+            "toolProperties": "Release-tool-base",
+            "tool": "Simulator",
+            "packs": [
+                {
+                    "name": "SAMD21_DFP",
+                    "version": "3.8.270",
+                    "vendor": "Microchip"
+                },
+                {
+                    "name": "CMSIS",
+                    "version": "5.9.0",
+                    "vendor": "ARM"
+                }
+            ],
+            "fileSet": "Release files",
+            "toolchain": "Release-ARM-GCC",
+            "includeLegacyMacros": true
+        },
+        {
+            "name": "Debug",
+            "id": "conf2",
+            "device": "ATSAMD21J18A",
+            "imageType": "application",
+            "imagePath": "./out/mplab_sam_d21/Debug.elf",
+            "tool": "Simulator",
+            "packs": [
+                {
+                    "name": "SAMD21_DFP",
+                    "vendor": "Microchip",
+                    "version": "3.8.270"
+                },
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "5.9.0"
+                }
+            ],
+            "fileSet": "Debug files",
+            "toolchain": "Debug-ARM-GCC",
+            "includeLegacyMacros": true
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "Debug-ARM-GCC",
+            "extend": "ARM-GCC",
+            "provider": "microchip.toolchains:arm-gcc@14.2.1",
+            "properties": {
+                "compiler.preprocessor-macros": "DEBUG;BOARD=SAMD21_XPLAINED_PRO;__SAMD21J18A__;ARM_MATH_CM0PLUS=true",
+                "compiler.additional-options": [
+                    "-pipe",
+                    "-fno-strict-aliasing",
+                    "-Wall",
+                    "-Wstrict-prototypes",
+                    "-Wmissing-prototypes",
+                    "-Werror-implicit-function-declaration",
+                    "-Wpointer-arith",
+                    "-std=gnu99",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-Wchar-subscripts",
+                    "-Wcomment",
+                    "-Wformat=2",
+                    "-Wimplicit-int",
+                    "-Wmain",
+                    "-Wparentheses",
+                    "-Wsequence-point",
+                    "-Wreturn-type",
+                    "-Wswitch",
+                    "-Wtrigraphs",
+                    "-Wunused",
+                    "-Wuninitialized",
+                    "-Wunknown-pragmas",
+                    "-Wfloat-equal",
+                    "-Wundef",
+                    "-Wshadow",
+                    "-Wbad-function-cast",
+                    "-Wwrite-strings",
+                    "-Wsign-compare",
+                    "-Waggregate-return",
+                    "-Wmissing-declarations",
+                    "-Wformat",
+                    "-Wmissing-format-attribute",
+                    "-Wno-deprecated-declarations",
+                    "-Wpacked",
+                    "-Wredundant-decls",
+                    "-Wnested-externs",
+                    "-Wlong-long",
+                    "-Wunreachable-code",
+                    "-Wcast-align",
+                    "--param",
+                    "max-inline-insns-single=500",
+                    "-fdata-sections",
+                    "-g3"
+                ],
+                "linker.additional-options": [
+                    "-Wl,--entry=Reset_Handler",
+                    "-Wl,--cref",
+                    "-mthumb",
+                    "-T../src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
+                ]
+            }
+        },
+        {
+            "name": "Release-ARM-GCC",
+            "extend": "ARM-GCC",
+            "provider": "microchip.toolchains:arm-gcc@14.2.1",
+            "properties": {
+                "compiler.optimization-level": "-Os",
+                "compiler.preprocessor-macros": "NDEBUG;BOARD=SAMD21_XPLAINED_PRO;__SAMD21J18A__;ARM_MATH_CM0PLUS=true",
+                "compiler.additional-options": [
+                    "-pipe",
+                    "-fno-strict-aliasing",
+                    "-Wall",
+                    "-Wstrict-prototypes",
+                    "-Wmissing-prototypes",
+                    "-Werror-implicit-function-declaration",
+                    "-Wpointer-arith",
+                    "-std=gnu99",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-Wchar-subscripts",
+                    "-Wcomment",
+                    "-Wformat=2",
+                    "-Wimplicit-int",
+                    "-Wmain",
+                    "-Wparentheses",
+                    "-Wsequence-point",
+                    "-Wreturn-type",
+                    "-Wswitch",
+                    "-Wtrigraphs",
+                    "-Wunused",
+                    "-Wuninitialized",
+                    "-Wunknown-pragmas",
+                    "-Wfloat-equal",
+                    "-Wundef",
+                    "-Wshadow",
+                    "-Wbad-function-cast",
+                    "-Wwrite-strings",
+                    "-Wsign-compare",
+                    "-Waggregate-return",
+                    "-Wmissing-declarations",
+                    "-Wformat",
+                    "-Wmissing-format-attribute",
+                    "-Wno-deprecated-declarations",
+                    "-Wpacked",
+                    "-Wredundant-decls",
+                    "-Wnested-externs",
+                    "-Wlong-long",
+                    "-Wunreachable-code",
+                    "-Wcast-align",
+                    "--param",
+                    "max-inline-insns-single=500",
+                    "-fdata-sections"
+                ],
+                "linker.additional-options": [
+                    "-Wl,--entry=Reset_Handler",
+                    "-Wl,--cref",
+                    "-mthumb",
+                    "-T../src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
+                ]
+            }
+        },
+        {
+            "name": "ARM-GCC",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:arm-gcc@10.3.1",
+            "properties": {
+                "compiler.additional-warnings": true,
+                "compiler.called-functions-located": true,
+                "compiler.default-bitfield-type": false,
+                "compiler.default-char-type": false,
+                "compiler.extra-include-directories": "src/ASF/sam0/utils/header_files;src/ASF/sam0/drivers/system/power/power_sam_d_r;src/ASF/common/utils;src/ASF/sam0/drivers/system/pinmux;src/ASF/sam0/drivers/system/power;src/ASF/sam0/drivers/system/reset/reset_sam_d_r;src/ASF/common/boards;src/ASF/sam0/drivers/port;src/ASF/sam0/boards;src/ASF/sam0/utils;src/ASF/thirdparty/CMSIS/Include;src/config;src/ASF/thirdparty/CMSIS/Lib/GCC;src/ASF/sam0/drivers/system/reset;src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21;src/ASF/sam0/boards/samd21_xplained_pro;src;src/ASF/sam0/utils/preprocessor;src/ASF/sam0/utils/cmsis/samd21/include;src/ASF/sam0/drivers/system;src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da;src/ASF/sam0/utils/cmsis/samd21/source;src/ASF/sam0/drivers/system/clock;src/ASF/sam0/drivers/system/interrupt;mplab_sam_d21.X",
+                "compiler.extra-warnings": false,
+                "compiler.fast-math": false,
+                "compiler.garbage-collect-data": false,
+                "compiler.garbage-collect-functions": true,
+                "compiler.inhibit-all": false,
+                "compiler.make-warnings-into-errors": false,
+                "compiler.no-system-directories": false,
+                "compiler.position-independent": false,
+                "compiler.strict-ansi": false,
+                "compiler.strict-ansi-errors": false,
+                "compiler.support-ansi": false,
+                "compiler.syntax-only": false,
+                "compiler.undefined-identifier": false,
+                "compiler.unsafe-math": false,
+                "compiler.verbose": false,
+                "compiler++.additional-warnings": true,
+                "compiler++.called-functions-located": true,
+                "compiler++.default-bitfield-type": false,
+                "compiler++.default-char-type": false,
+                "compiler++.disable-extra-code-exception": true,
+                "compiler++.disable-extra-code-generation": true,
+                "compiler++.extra-include-directories": "mplab_sam_d21.X",
+                "compiler++.extra-warnings": false,
+                "compiler++.fast-math": false,
+                "compiler++.garbage-collect-data": false,
+                "compiler++.garbage-collect-functions": false,
+                "compiler++.inhibit-all": false,
+                "compiler++.make-warnings-into-errors": false,
+                "compiler++.no-system-directories": false,
+                "compiler++.position-independent": false,
+                "compiler++.preprocess-only": false,
+                "compiler++.strict-ansi": false,
+                "compiler++.strict-ansi-errors": false,
+                "compiler++.syntax-only": false,
+                "compiler++.undefined-identifier": false,
+                "compiler++.unsafe-math": false,
+                "compiler++.use-rodata": false,
+                "compiler++.verbose": false,
+                "assembler.announce-version": false,
+                "assembler.include-paths": "../src/ASF/sam0/utils/header_files;../src/ASF/sam0/drivers/system/power/power_sam_d_r;../src/ASF/common/utils;../src/ASF/sam0/drivers/system/pinmux;../src/ASF/sam0/drivers/system/power;../src/ASF/sam0/drivers/system/reset/reset_sam_d_r;../src/ASF/common/boards;../src/ASF/sam0/drivers/port;../src/ASF/sam0/boards;../src/ASF/sam0/utils;../src/ASF/thirdparty/CMSIS/Include;../src/config;../src/ASF/thirdparty/CMSIS/Lib/GCC;../src/ASF/sam0/drivers/system/reset;../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21;../src/ASF/sam0/boards/samd21_xplained_pro;../src;../src/ASF/sam0/utils/preprocessor;../src/ASF/sam0/utils/cmsis/samd21/include;../src/ASF/sam0/drivers/system;../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da;../src/ASF/sam0/utils/cmsis/samd21/source;../src/ASF/sam0/drivers/system/clock;../src/ASF/sam0/drivers/system/interrupt",
+                "assembler.suppress-warnings": false,
+                "archiver.archiver-flags": "-r",
+                "linker.exclude-standard-libraries": false,
+                "linker.extra-lib-directories": "src/ASF/thirdparty/CMSIS/Lib/GCC;mplab_sam_d21.X",
+                "linker.fast-math": false,
+                "linker.generate-map-file": true,
+                "linker.input-libraries": "arm_cortexM0l_math;m",
+                "linker.no-default-libs": false,
+                "linker.no-shared-libraries": false,
+                "linker.no-startup-files": false,
+                "linker.omit-symbol-information": false,
+                "linker.position-independent": false,
+                "linker.remove-unused-sections": true,
+                "linker.size-optimized-library": true,
+                "linker.unsafe-math": false,
+                "global.bin": true,
+                "global.eep": true,
+                "global.hex": true,
+                "global.lss": true,
+                "global.omit-pack-options": true,
+                "global.processor-mode": "-mthumb",
+                "global.srec": true
+            }
+        },
+        {
+            "name": "Release-tool-base",
+            "type": "tool",
+            "properties": {}
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "Release files",
+            "files": [
+                "mplab_sam_d21.X/Makefile",
+                {
+                    "include": "src/ASF/common/boards/*",
+                    "exclude": "src/ASF/common/boards/board.h"
+                },
+                {
+                    "include": "src/ASF/common/utils/**/*",
+                    "exclude": [
+                        "src/ASF/common/utils/interrupt.h",
+                        "src/ASF/common/utils/interrupt/interrupt_sam_nvic.h",
+                        "src/ASF/common/utils/parts.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/boards/samd21_xplained_pro/*",
+                    "exclude": "src/ASF/sam0/boards/samd21_xplained_pro/samd21_xplained_pro.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/port/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/port/port.h",
+                        "src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/clock/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/clock/clock.h",
+                        "src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_config_check.h",
+                        "src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_feature.h",
+                        "src/ASF/sam0/drivers/system/clock/gclk.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/interrupt/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/interrupt/system_interrupt.h",
+                        "src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21/system_interrupt_features.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/pinmux/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/pinmux/pinmux.h",
+                        "src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/power/power_sam_d_r/*",
+                    "exclude": "src/ASF/sam0/drivers/system/power/power_sam_d_r/power.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/reset/reset_sam_d_r/*",
+                    "exclude": "src/ASF/sam0/drivers/system/reset/reset_sam_d_r/reset.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/*",
+                    "exclude": "src/ASF/sam0/drivers/system/system.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/cmsis/samd21/include/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/ac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/adc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dmac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dsu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/eic.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/evsys.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/gclk.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/hmatrixb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/i2s.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/mtb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/nvmctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/pac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/pm.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/port.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/rtc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/sercom.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/sysctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tcc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tcc_lighting.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/usb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/wdt.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/ac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/ac1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/adc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dmac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dsu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/eic.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/evsys.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/gclk.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/i2s.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/mtb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/nvmctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pm.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/port.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/rtc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sbmatrix.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom3.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom4.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom5.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sysctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc3.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc4.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc5.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc6.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc7.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/usb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/wdt.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g17au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g18au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j18a.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/cmsis/samd21/source/**/*",
+                    "exclude": "src/ASF/sam0/utils/cmsis/samd21/source/system_samd21.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/compiler.h",
+                        "src/ASF/sam0/utils/status_codes.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/header_files/*",
+                    "exclude": "src/ASF/sam0/utils/header_files/io.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/preprocessor/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/preprocessor/mrecursion.h",
+                        "src/ASF/sam0/utils/preprocessor/mrepeat.h",
+                        "src/ASF/sam0/utils/preprocessor/preprocessor.h",
+                        "src/ASF/sam0/utils/preprocessor/stringz.h",
+                        "src/ASF/sam0/utils/preprocessor/tpaste.h"
+                    ]
+                },
+                {
+                    "include": "src/*",
+                    "exclude": "src/asf.h"
+                },
+                {
+                    "include": "src/config/*",
+                    "exclude": [
+                        "src/config/conf_board.h",
+                        "src/config/conf_clocks.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/linker_scripts/samd21/gcc/*",
+                    "exclude": "src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
+                },
+                "src/ASF/sam0/utils/syscalls/gcc/*",
+                {
+                    "include": "src/ASF/sam0/utils/make/*",
+                    "exclude": "src/ASF/sam0/utils/make/Makefile.sam.in"
+                },
+                {
+                    "include": "src/ASF/thirdparty/CMSIS/**/*",
+                    "exclude": [
+                        "src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt",
+                        "src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf",
+                        "src/ASF/thirdparty/CMSIS/Include/arm_math.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h",
+                        "src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a",
+                        "src/ASF/thirdparty/CMSIS/Lib/license.txt",
+                        "src/ASF/thirdparty/CMSIS/README.txt"
+                    ]
+                }
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "Debug files",
+            "files": [
+                "mplab_sam_d21.X/Makefile",
+                {
+                    "include": "src/ASF/common/boards/*",
+                    "exclude": "src/ASF/common/boards/board.h"
+                },
+                {
+                    "include": "src/ASF/common/utils/**/*",
+                    "exclude": [
+                        "src/ASF/common/utils/interrupt.h",
+                        "src/ASF/common/utils/interrupt/interrupt_sam_nvic.h",
+                        "src/ASF/common/utils/parts.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/boards/samd21_xplained_pro/*",
+                    "exclude": "src/ASF/sam0/boards/samd21_xplained_pro/samd21_xplained_pro.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/port/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/port/port.h",
+                        "src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/clock/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/clock/clock.h",
+                        "src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_config_check.h",
+                        "src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da/clock_feature.h",
+                        "src/ASF/sam0/drivers/system/clock/gclk.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/interrupt/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/interrupt/system_interrupt.h",
+                        "src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd21/system_interrupt_features.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/pinmux/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/drivers/system/pinmux/pinmux.h",
+                        "src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/power/power_sam_d_r/*",
+                    "exclude": "src/ASF/sam0/drivers/system/power/power_sam_d_r/power.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/reset/reset_sam_d_r/*",
+                    "exclude": "src/ASF/sam0/drivers/system/reset/reset_sam_d_r/reset.h"
+                },
+                {
+                    "include": "src/ASF/sam0/drivers/system/*",
+                    "exclude": "src/ASF/sam0/drivers/system/system.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/cmsis/samd21/include/**/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/ac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/adc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dmac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/dsu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/eic.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/evsys.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/gclk.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/hmatrixb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/i2s.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/mtb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/nvmctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/pac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/pm.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/port.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/rtc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/sercom.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/sysctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tcc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/tcc_lighting.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/usb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/component/wdt.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/ac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/ac1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/adc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dmac.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/dsu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/eic.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/evsys.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/gclk.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/i2s.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/mtb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/nvmctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pac2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/pm.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/port.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/rtc.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sbmatrix.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom3.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom4.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sercom5.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/sysctrl.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc3.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc4.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc5.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc6.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tc7.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc0.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc1.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/tcc2.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/usb.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/instance/wdt.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21e18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g17au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21g18au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/pio/samd21j18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16bu.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21e18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g15l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g16l.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g17au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g18a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21g18au.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j15a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j15b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j16a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j16b.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j17a.h",
+                        "src/ASF/sam0/utils/cmsis/samd21/include/samd21j18a.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/cmsis/samd21/source/**/*",
+                    "exclude": "src/ASF/sam0/utils/cmsis/samd21/source/system_samd21.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/compiler.h",
+                        "src/ASF/sam0/utils/status_codes.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/header_files/*",
+                    "exclude": "src/ASF/sam0/utils/header_files/io.h"
+                },
+                {
+                    "include": "src/ASF/sam0/utils/preprocessor/*",
+                    "exclude": [
+                        "src/ASF/sam0/utils/preprocessor/mrecursion.h",
+                        "src/ASF/sam0/utils/preprocessor/mrepeat.h",
+                        "src/ASF/sam0/utils/preprocessor/preprocessor.h",
+                        "src/ASF/sam0/utils/preprocessor/stringz.h",
+                        "src/ASF/sam0/utils/preprocessor/tpaste.h"
+                    ]
+                },
+                {
+                    "include": "src/*",
+                    "exclude": "src/asf.h"
+                },
+                {
+                    "include": "src/config/*",
+                    "exclude": [
+                        "src/config/conf_board.h",
+                        "src/config/conf_clocks.h"
+                    ]
+                },
+                {
+                    "include": "src/ASF/sam0/utils/linker_scripts/samd21/gcc/*",
+                    "exclude": "src/ASF/sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld"
+                },
+                "src/ASF/sam0/utils/syscalls/gcc/*",
+                {
+                    "include": "src/ASF/sam0/utils/make/*",
+                    "exclude": "src/ASF/sam0/utils/make/Makefile.sam.in"
+                },
+                {
+                    "include": "src/ASF/thirdparty/CMSIS/**/*",
+                    "exclude": [
+                        "src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt",
+                        "src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf",
+                        "src/ASF/thirdparty/CMSIS/Include/arm_math.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h",
+                        "src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h",
+                        "src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a",
+                        "src/ASF/thirdparty/CMSIS/Lib/license.txt",
+                        "src/ASF/thirdparty/CMSIS/README.txt"
+                    ]
+                }
+            ],
+            "encoding": "UTF-8"
+        }
+    ]
+}
